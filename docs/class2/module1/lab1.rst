@@ -9,58 +9,58 @@ Connection Servers (Internal use case without F5 integration)
 
 |image1|
 
-Figure 1 - Accessing internal View Desktop
+Figure 1 - Accessing internal View Desktop--
 
 Access the VDI with a client on the internal network. The workstation
 will be preconfigured to initiate the connection through a specific
 connection server. Security servers are not used by internal VDI users
 
-1. Use the RDP function on your laptop to connect to the “corporate-pc“
+#. Use the RDP function on your laptop to connect to the “corporate-pc“
    RDP server/workstation
 
  |image2|
 
-1.  When prompted for credentials
+#.  When prompted for credentials
 
-    a. Username: agility
+    a. Username: Agility
 
     b. Password: F5Agility
 
        |image3|
 
-2.  Use the VMware Horizon View client to access the connection server
+#.  Use the VMware Horizon View client to access the connection server
 
     a. VMware Horizon Client
 
     b. + New server
 
-3.  Connection Server address “vmw-connsvr1c.demoisfun.net”
+#.  Connection Server address “vmw-connsvr1c.demoisfun.net”
 
-4.  When prompted for credentials
+#.  When prompted for credentials
 
     a. Username: demo01
 
     b. Password: password
 
-5.  Select the View desktop (Agility—Rt click and Launch)
+#.  Select the View desktop (Agility—Rt click and Launch)
 
-6.  Scroll down to task bar if needed
+#.  Scroll down to task bar if needed
 
-7.  Open Notepad and type in something.
+#.  Open Notepad and type in something.
 
-8.  Slide the blue RDP indicator to the left
+#.  Slide the blue RDP indicator to the left
 
-9.  Close the View client. (press the X in Agility Toolbar-was under the
+#.  Close the View client. (press the X in Agility Toolbar-was under the
     RDP)
 
-10. Open View client and try to reconnect to “vmw-connsvr1c.
+#. Open View client and try to reconnect to “vmw-connsvr1c.
     demoisfun.net”
 
-11. Notepad should still be on the desktop with the test you input
+#. Notepad should still be on the desktop with the test you input
 
-12. Close the View client. (press the X in Agility Toolbar)
+#. Close the View client. (press the X in Agility Toolbar)
 
-13. **Keep the RDP session open for Task 2 **
+#. **Keep the RDP session open for Task 2 **
 
 TASK 2 – Load Balance VMware View connection servers
 ----------------------------------------------------

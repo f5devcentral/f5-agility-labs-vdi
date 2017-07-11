@@ -6,7 +6,7 @@ COMMAND="/bin/bash"
 
 . ./containthedocs-image
 
-exec docker run --rm -it \
+exec docker run --rm \
   -v "$PWD":"$PWD" --workdir "$PWD" \
   ${DOCKER_RUN_ARGS} \
   -e "LOCAL_USER_ID=$(id -u)" \

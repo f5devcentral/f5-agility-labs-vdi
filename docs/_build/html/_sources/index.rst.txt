@@ -16,6 +16,5 @@ for high availability, optimization, and security.
    :caption: Contents:
    :glob:
 
-   intro*
    class*/class*
    

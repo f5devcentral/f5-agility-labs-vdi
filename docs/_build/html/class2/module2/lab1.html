@@ -5,7 +5,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>2.2.1. Lab 2 – Solutions for Citrix XenDesktop &#8212; F5 Solutions for VDI  documentation</title>
+    <title>1.3.1. Lab 2.1: Solutions for Citrix XenDesktop &#8212; F5 Solutions for VDI  documentation</title>
     
     <link rel="stylesheet" href="../../_static/css/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
@@ -28,8 +28,8 @@
     <script type="text/javascript" src="../../_static/doctools.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="2.3. Module 3 – Microsoft RDS Proxy" href="../module3/module3.html" />
-    <link rel="prev" title="2.2. Module 2 – Solutions for Citrix XenDesktop" href="module2.html" />
+    <link rel="next" title="1.4. Module 3: Microsoft RDS Proxy" href="../module3/module3.html" />
+    <link rel="prev" title="1.3. Module 2: Solutions for Citrix XenDesktop" href="module2.html" />
 <!--
 # Copyright 2017 F5 Networks
 #
@@ -212,16 +212,16 @@
    <span class="caption-text">Current Page</span>
   </p>
   <ul>
-<li><a class="reference internal" href="#">2.2.1. Lab 2 – Solutions for Citrix XenDesktop</a><ul>
-<li><a class="reference internal" href="#task-1-access-xendesktop-without-f5">2.2.1.1. TASK 1 – Access XenDesktop without F5</a></li>
-<li><a class="reference internal" href="#task-2-load-balance-storefront">2.2.1.2. TASK 2 – Load Balance StoreFront</a><ul>
-<li><a class="reference internal" href="#iapp-configuration">2.2.1.2.1. iApp Configuration</a></li>
-<li><a class="reference internal" href="#test-connectivity">2.2.1.2.2. Test connectivity</a></li>
+<li><a class="reference internal" href="#">1.3.1. Lab 2.1: Solutions for Citrix XenDesktop</a><ul>
+<li><a class="reference internal" href="#task-1-access-xendesktop-without-f5">1.3.1.1. Task 1 – Access XenDesktop without F5</a></li>
+<li><a class="reference internal" href="#task-2-load-balance-storefront">1.3.1.2. Task 2 – Load Balance StoreFront</a><ul>
+<li><a class="reference internal" href="#iapp-configuration">1.3.1.2.1. iApp Configuration</a></li>
+<li><a class="reference internal" href="#test-connectivity">1.3.1.2.2. Test connectivity</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#task-3-reconfigure-the-iapp-to-replace-storefront">2.2.1.3. TASK 3 – Reconfigure the iApp to Replace StoreFront</a><ul>
-<li><a class="reference internal" href="#id5">2.2.1.3.1. iApp Configuration</a></li>
-<li><a class="reference internal" href="#id6">2.2.1.3.2. Test connectivity</a></li>
+<li><a class="reference internal" href="#task-3-replace-storefront">1.3.1.3. Task 3 – Replace StoreFront</a><ul>
+<li><a class="reference internal" href="#id1">1.3.1.3.1. iApp Configuration</a></li>
+<li><a class="reference internal" href="#id2">1.3.1.3.2. Test connectivity</a></li>
 </ul>
 </li>
 </ul>
@@ -231,21 +231,21 @@
 
 <p class="caption"><span class="caption-text">Contents:</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../../intro.html">1. Getting Started</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="../class1.html">2. 201 - VDI the F5 Way</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="../module1/module1.html">2.1. Module 1 - Solutions for VMware View</a></li>
-<li class="toctree-l2 current"><a class="reference internal" href="module2.html">2.2. Module 2 – Solutions for Citrix XenDesktop</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../module3/module3.html">2.3. Module 3 – Microsoft RDS Proxy</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../class2.html">1. 201: VDI the F5 Way</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../labinfo.html">1.1. Getting Started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module1/module1.html">1.2. Module 1: Solutions for VMware View</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="module2.html">1.3. Module 2: Solutions for Citrix XenDesktop</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module3/module3.html">1.4. Module 3: Microsoft RDS Proxy</a></li>
 </ul>
 </li>
 </ul>
 
   <h4>Previous topic</h4>
   <p class="topless"><a href="module2.html"
-                        title="previous chapter">2.2. Module 2 – Solutions for Citrix XenDesktop</a></p>
+                        title="previous chapter">1.3. Module 2: Solutions for Citrix XenDesktop</a></p>
   <h4>Next topic</h4>
   <p class="topless"><a href="../module3/module3.html"
-                        title="next chapter">2.3. Module 3 – Microsoft RDS Proxy</a></p>
+                        title="next chapter">1.4. Module 3: Microsoft RDS Proxy</a></p>
         
       </div>
       <div class="col-md-offset-3 col-sm-offset-3 main">
@@ -254,66 +254,67 @@
           <span class="right"><a href="../../genindex.html">Index</a></span>
         </h4>
         
-  <div class="section" id="lab-2-solutions-for-citrix-xendesktop">
-<h1>2.2.1. Lab 2 – Solutions for Citrix XenDesktop<a class="headerlink" href="#lab-2-solutions-for-citrix-xendesktop" title="Permalink to this headline">¶</a></h1>
-<p>The purpose of this lab is to build out 2 common F5 deployment with
-XenDesktop.</p>
-<p>Note: The connectivity in this environment is slower than a typical
-production environment—please be patient</p>
+  <div class="section" id="lab-2-1-solutions-for-citrix-xendesktop">
+<h1>1.3.1. Lab 2.1: Solutions for Citrix XenDesktop<a class="headerlink" href="#lab-2-1-solutions-for-citrix-xendesktop" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="task-1-access-xendesktop-without-f5">
-<h2>2.2.1.1. TASK 1 – Access XenDesktop without F5<a class="headerlink" href="#task-1-access-xendesktop-without-f5" title="Permalink to this headline">¶</a></h2>
-<p><a class="reference internal" href="../../_images/image14.png"><img alt="image15" src="../../_images/image14.png" style="width: 5.14583in; height: 3.45833in;" /></a></p>
-<ol class="arabic simple">
-<li>From “corporate-pc”, use IE and browse to Citrix Storefront at
-<a class="reference external" href="http://ctx-sf1a.demoisfun.net/Citrix/AgilityStoreWeb/">http://ctx-sf1a.demoisfun.net/Citrix/AgilityStoreWeb/</a></li>
-<li>When prompted for credentials<ol class="loweralpha">
-<li>Username: demoisfun\demo01</li>
-<li>Password: password</li>
-</ol>
+<h2>1.3.1.1. Task 1 – Access XenDesktop without F5<a class="headerlink" href="#task-1-access-xendesktop-without-f5" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference internal" href="../../_images/image14.png"><img alt="image12" src="../../_images/image14.png" style="width: 5.14583in; height: 3.45833in;" /></a></p>
+<p>Figure 7 - Access XenDesktop through StoreFront</p>
+<ol class="arabic">
+<li><p class="first">From “corporate-pc”</p>
 </li>
-<li>Right Click “Agility” and select “Start” icon to launch XenDesktop.<ol class="loweralpha">
-<li><em>Note: This takes a long time due to the Ravello implementation</em></li>
-</ol>
+<li><p class="first">Use IE and browse to Citrix Storefront</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">http://ctx-sf1a.demoisfun.net/Citrix/AgilityStoreWeb/</span></code></li>
+</ul>
 </li>
-<li>Citrix “Desktop Viewer” launches and connects to XenDesktop.</li>
-<li>When the windows Activation Screen Pops up..Press Cancel (windows was
-not activated due to external connectivity limitations)</li>
-<li>Log off using the windows start icon in the lower left corner</li>
-<li>Log off the Citrix receiver client using the 01 Demo pulldown in the
-upper right corner</li>
-<li>Close the browser Window</li>
+<li><p class="first">When prompted for credentials</p>
+<ul class="simple">
+<li>Username: <code class="docutils literal"><span class="pre">demoisfun\demo01</span></code></li>
+<li>Password: <code class="docutils literal"><span class="pre">password</span></code></li>
+</ul>
+</li>
+<li><p class="first">Click “Agility” to launch XenDesktop.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This takes a long time due to the Ravello implementation*</p>
+</div>
+</li>
+<li><p class="first">Citrix “Desktop Viewer” launches and connects to XenDesktop</p>
+</li>
+<li><p class="first">Verify virtual desktop function</p>
+</li>
+<li><p class="first">In Citrix Agility desktop, click Start and Logoff</p>
+</li>
+<li><p class="first">Log off the Citrix receiver client using the <code class="docutils literal"><span class="pre">01</span> <span class="pre">Demo</span></code> pulldown in the
+upper right corner</p>
+</li>
+<li><p class="first">Close the browser Window</p>
+</li>
 </ol>
 </div>
 <div class="section" id="task-2-load-balance-storefront">
-<h2>2.2.1.2. TASK 2 – Load Balance StoreFront<a class="headerlink" href="#task-2-load-balance-storefront" title="Permalink to this headline">¶</a></h2>
-<p><a class="reference internal" href="../../_images/image15.png"><img alt="image16" src="../../_images/image15.png" style="width: 5.30208in; height: 2.98958in;" /></a></p>
+<h2>1.3.1.2. Task 2 – Load Balance StoreFront<a class="headerlink" href="#task-2-load-balance-storefront" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference internal" href="../../_images/image15.png"><img alt="image13" src="../../_images/image15.png" style="width: 5.30208in; height: 2.98958in;" /></a></p>
+<p>Figure 8 - Load balance StoreFront</p>
 <p><strong>Deploy the iApp</strong></p>
 <ol class="arabic simple">
-<li>Use the RDP function on your laptop to connect to the “corporate-pc”</li>
+<li>From “corporate-pc”</li>
 <li>Create a new Application Service by selecting iApps -&gt; Application
-Services and selecting Create<ol class="loweralpha">
+Services and selecting Create<ul>
 <li>iApps &gt;&gt; Application Services</li>
 <li>Press the <strong>Create</strong> button</li>
-<li>Name the Application Service <strong>VM_LAB_2_LBSF</strong></li>
-<li>Select <strong>f5.citrix_vdi.v2.3.0</strong> for the template</li>
-</ol>
+<li>Name the Application Service <code class="docutils literal"><span class="pre">VM_LAB_2_LBSF</span></code></li>
+<li>Select <code class="docutils literal"><span class="pre">f5.citrix_vdi.v2.4.1rc1</span></code> for the template</li>
+</ul>
 </li>
 </ol>
-<table border="1" class="docutils">
-<colgroup>
-<col width="100%" />
-</colgroup>
-<tbody valign="top">
-<tr class="row-odd"><td>&#160;</td>
-</tr>
-</tbody>
-</table>
 <div class="section" id="iapp-configuration">
-<h3>2.2.1.2.1. iApp Configuration<a class="headerlink" href="#iapp-configuration" title="Permalink to this headline">¶</a></h3>
-<ol class="arabic simple">
-<li>Review the <strong>Welcome to the iApp template for XenDesktop and XenApp</strong></li>
-<li><strong>General</strong></li>
-</ol>
+<h3>1.3.1.2.1. iApp Configuration<a class="headerlink" href="#iapp-configuration" title="Permalink to this headline">¶</a></h3>
+<ol class="arabic">
+<li><p class="first">Review the <strong>Welcome to the iApp template for XenDesktop and XenApp</strong></p>
+</li>
+<li><p class="first"><strong>General</strong></p>
 <table border="1" class="docutils">
 <colgroup>
 <col width="64%" />
@@ -330,9 +331,8 @@ Services and selecting Create<ol class="loweralpha">
 </tr>
 </tbody>
 </table>
-<ol class="arabic simple">
-<li><strong>BIG-IP Access Policy Manager</strong></li>
-</ol>
+</li>
+<li><p class="first"><strong>BIG-IP Access Policy Manager</strong></p>
 <table border="1" class="docutils">
 <colgroup>
 <col width="79%" />
@@ -349,9 +349,8 @@ Services and selecting Create<ol class="loweralpha">
 </tr>
 </tbody>
 </table>
-<ol class="arabic simple">
-<li><a href="#id1"><span class="problematic" id="id2">**</span></a>Virtual Server for Web Interface or StoreFront servers **</li>
-</ol>
+</li>
+<li><p class="first"><strong>Virtual Server for Web Interface or StoreFront servers</strong></p>
 <table border="1" class="docutils">
 <colgroup>
 <col width="58%" />
@@ -373,8 +372,8 @@ Services and selecting Create<ol class="loweralpha">
 <td>192.168.3.160</td>
 </tr>
 <tr class="row-odd"><td>Did you deploy Citrix StoreFront?</td>
-<td><p class="first">Yes,…StoreFront 3.0 or 3.6</p>
-<p class="last">Note: we are running SF 3.9</p>
+<td><p class="first">Yes, …StoreFront 3.0 or 3.6</p>
+<p class="last"><strong>Note:</strong> we are running SF 3.9</p>
 </td>
 </tr>
 <tr class="row-even"><td>What is the URI used on StoreFront or Web Interface servers for XenApp or XenDesktop?</td>
@@ -384,9 +383,8 @@ Services and selecting Create<ol class="loweralpha">
 </tr>
 </tbody>
 </table>
-<ol class="arabic simple">
-<li><strong>Web Interface or StoreFront servers</strong></li>
-</ol>
+</li>
+<li><p class="first"><strong>Web Interface or StoreFront servers</strong></p>
 <table border="1" class="docutils">
 <colgroup>
 <col width="76%" />
@@ -411,10 +409,9 @@ Services and selecting Create<ol class="loweralpha">
 </tr>
 </tbody>
 </table>
-<ol class="arabic simple">
-<li><strong>Virtual Server for XML Broker or Desktop Delivery Controller (DDC)
-Servers</strong></li>
-</ol>
+</li>
+<li><p class="first"><strong>Virtual Server for XML Broker or Desktop Delivery Controller (DDC)
+Servers</strong></p>
 <table border="1" class="docutils">
 <colgroup>
 <col width="58%" />
@@ -431,9 +428,8 @@ Servers</strong></li>
 </tr>
 </tbody>
 </table>
-<ol class="arabic simple">
-<li><a href="#id3"><span class="problematic" id="id4">**</span></a>XML Broker or DDC Servers **</li>
-</ol>
+</li>
+<li><p class="first"><strong>XML Broker or DDC Servers</strong></p>
 <table border="1" class="docutils">
 <colgroup>
 <col width="78%" />
@@ -452,102 +448,94 @@ Servers</strong></li>
 </tr>
 </tbody>
 </table>
-<ol class="arabic simple">
-<li>Press the <strong>Finished</strong> button</li>
+</li>
+<li><p class="first">Press the <strong>Finished</strong> button</p>
+</li>
 </ol>
 </div>
 <div class="section" id="test-connectivity">
-<h3>2.2.1.2.2. Test connectivity<a class="headerlink" href="#test-connectivity" title="Permalink to this headline">¶</a></h3>
+<h3>1.3.1.2.2. Test connectivity<a class="headerlink" href="#test-connectivity" title="Permalink to this headline">¶</a></h3>
 <ol class="arabic simple">
 <li>Use the RDP function on your laptop to connect to the “home-pc”</li>
-<li>Launch IE and browse to <a class="reference external" href="http://ctx-lb-sf.demoisfun.net">http://ctx-lb-sf.demoisfun.net</a></li>
-<li>When prompted for credentials<ol class="loweralpha">
-<li>Username: demo01</li>
-<li>Password: password</li>
-</ol>
+<li>Launch IE and browse to,<ul>
+<li><code class="docutils literal"><span class="pre">http://ctx-lb-sf.demoisfun.net</span></code></li>
+</ul>
 </li>
-<li>Storefront is displayed with Agility icon.</li>
-<li>Right Click on “Agility” and select “Start” icon to launch
-XenDesktop.<ol class="loweralpha">
-<li><em>Note: This takes a long time due to the Ravello implementation</em></li>
-</ol>
+<li>When prompted for credentials<ul>
+<li>Username: <code class="docutils literal"><span class="pre">demo01</span></code></li>
+<li>Password: <code class="docutils literal"><span class="pre">password</span></code></li>
+</ul>
 </li>
-<li>Log off using the windows start icon in the lower left corner</li>
+<li>Storefront is displayed with Agility icon<ul>
+<li>Click “Agility” to launch XenDesktop</li>
+</ul>
+</li>
+<li>In the Citrix Agility desktop, click Start and Logoff</li>
 <li>Log off the Citrix receiver client using the 01 Demo pulldown in the
 upper right corner</li>
 <li>Close the browser Window</li>
 </ol>
 </div>
 </div>
-<div class="section" id="task-3-reconfigure-the-iapp-to-replace-storefront">
-<h2>2.2.1.3. TASK 3 – Reconfigure the iApp to Replace StoreFront<a class="headerlink" href="#task-3-reconfigure-the-iapp-to-replace-storefront" title="Permalink to this headline">¶</a></h2>
-<p><a class="reference internal" href="../../_images/image16.png"><img alt="image17" src="../../_images/image16.png" style="width: 5.39583in; height: 3.21875in;" /></a></p>
+<div class="section" id="task-3-replace-storefront">
+<h2>1.3.1.3. Task 3 – Replace StoreFront<a class="headerlink" href="#task-3-replace-storefront" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference internal" href="../../_images/image16.png"><img alt="image14" src="../../_images/image16.png" style="width: 5.39583in; height: 3.21875in;" /></a></p>
+<p>Figure 9 - BIG-IP replaces StoreFront</p>
 <p><strong>Deploy the iApp</strong></p>
 <ol class="arabic simple">
-<li>Use the RDP function on your laptop to connect to the “corporate-pc”</li>
+<li>From “corporate-pc”</li>
 <li>Create a new Application Service by selecting iApps -&gt; Application
-Services and selecting Create<ol class="loweralpha">
+Services and selecting Create<ul>
 <li>iApps &gt;&gt; Application Services</li>
-<li>Click on <strong>VM_LAB_2_LBSF</strong></li>
+<li>Click on <code class="docutils literal"><span class="pre">VM_LAB_2_LBSF</span></code></li>
 <li>Click the <strong>Reconfigure</strong> link near the top</li>
-</ol>
+</ul>
 </li>
 </ol>
-<table border="1" class="docutils">
-<colgroup>
-<col width="100%" />
-</colgroup>
-<tbody valign="top">
-<tr class="row-odd"><td>&#160;</td>
-</tr>
-</tbody>
-</table>
-<div class="section" id="id5">
-<h3>2.2.1.3.1. iApp Configuration<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
-<ol class="arabic simple">
-<li><strong>BIG-IP Access Policy Manager</strong></li>
-</ol>
+<div class="section" id="id1">
+<h3>1.3.1.3.1. iApp Configuration<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<ol class="arabic">
+<li><p class="first"><strong>BIG-IP Access Policy Manager</strong></p>
 <table border="1" class="docutils">
 <colgroup>
 <col width="78%" />
 <col width="22%" />
 </colgroup>
-<thead valign="bottom">
-<tr class="row-odd"><th class="head">Do you want to replace Citrix Web Interface or StoreFront servers with the BIG-IP system?</th>
-<th class="head">“Yes, replace Citrix…”</th>
-</tr>
-</thead>
 <tbody valign="top">
-<tr class="row-even"><td>&#160;</td>
-<td>&#160;</td>
+<tr class="row-odd"><td>Do you want to replace Citrix Web Interface or StoreFront servers with the BIG-IP system?</td>
+<td>“Yes, replace Citrix…”</td>
 </tr>
 </tbody>
 </table>
-<ol class="arabic simple">
-<li>Scroll through the template and note that the storefront pool members
-are no longer present</li>
-<li>Press the <strong>Finished</strong> button</li>
+</li>
+<li><p class="first">Scroll through the template and note that the storefront pool members
+are no longer present</p>
+</li>
+<li><p class="first">Press the <strong>Finished</strong> button</p>
+</li>
 </ol>
 </div>
-<div class="section" id="id6">
-<h3>2.2.1.3.2. Test connectivity<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id2">
+<h3>1.3.1.3.2. Test connectivity<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
 <ol class="arabic simple">
-<li>Use the RDP function on your laptop to connect to the “home-pc”</li>
-<li>Launch IE and browse to <a class="reference external" href="http://ctx-lb-sf.demoisfun.net">http://ctx-lb-sf.demoisfun.net</a></li>
-<li>When prompted for credentials<ol class="loweralpha">
-<li>Username: demo01</li>
-<li>Password: password</li>
-</ol>
+<li>From “home-pc”</li>
+<li>Launch IE and browse to<ul>
+<li><code class="docutils literal"><span class="pre">http://ctx-lb-sf.demoisfun.net</span></code></li>
+</ul>
 </li>
-<li>APM webtop is displayed with Agility icon.</li>
-<li>Click on Agility icon to launch XenDesktop.</li>
-<li>When the windows Activation Screen Pops up..Press Cancel (windows was
-not activated due to external connectivity limitations)</li>
-<li>Log off using the windows start icon in the lower left
-corner<a class="reference internal" href="../../_images/image17.png"><img alt="image18" src="../../_images/image17.png" style="width: 4.53125in; height: 2.03125in;" /></a></li>
-<li>Logout using the Logout button in the upper right corner of the
-screen</li>
-<li>Close the broiwser window</li>
+<li>When prompted for credentials<ul>
+<li>Username: <code class="docutils literal"><span class="pre">demo01</span></code></li>
+<li>Password: <code class="docutils literal"><span class="pre">password</span></code></li>
+</ul>
+</li>
+<li>APM webtop is displayed with Agility icon</li>
+<li>Click on Agility to launch XenDesktop</li>
+<li>Click Open to launch the Citrix ICA client <em>(pop up box at bottom)</em></li>
+<li>Verify that desktop is functional</li>
+<li>In Citrix Agility desktop, click on Start and Logoff</li>
+<li>Logout of APM Webtop using the Logout button in the upper right
+corner</li>
+<li>Close the browser window</li>
 </ol>
 </div>
 </div>
@@ -558,10 +546,10 @@ screen</li>
 		     <div class="row next-prev-btn-row">
            <div class="col-lg-12">
            
-		        <a href="module2.html" title="2.2. Module 2 – Solutions for Citrix XenDesktop" accesskey="p" class="btn btn-primary pull-left"><i class="fa fa-arrow-circle-left" aria-hidden="true"></i> Previous</a>
+		        <a href="module2.html" title="1.3. Module 2: Solutions for Citrix XenDesktop" accesskey="p" class="btn btn-primary pull-left"><i class="fa fa-arrow-circle-left" aria-hidden="true"></i> Previous</a>
            
            
-              <a href="../module3/module3.html" title="2.3. Module 3 – Microsoft RDS Proxy" accesskey="n" class="btn btn-primary pull-right">Next <i class="fa fa-arrow-circle-right" aria-hidden="true"></i></a>
+              <a href="../module3/module3.html" title="1.4. Module 3: Microsoft RDS Proxy" accesskey="n" class="btn btn-primary pull-right">Next <i class="fa fa-arrow-circle-right" aria-hidden="true"></i></a>
            
 		     </div>
          </div>

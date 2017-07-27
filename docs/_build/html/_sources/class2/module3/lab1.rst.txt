@@ -1,167 +1,179 @@
-Lab 3 – Microsoft RDS proxy
-===========================
+Lab 3.1: Microsoft RDS proxy
+============================
 
 The purpose of this lab is access an internal RDS server from an
 external client.
 
-TASK 1 – Access Terminal Server from external
----------------------------------------------
+Task 1 – Access Terminal Server from external network
+-----------------------------------------------------
 
-|image19|
+|image15|
+
+Figure 10 - BIG-IP proxy RDP connection
 
 **Deploy the iApp**
 
-1. Use the RDP function on your laptop to connect to the “corporate-pc”
+#. From "corporate-pc"
 
-2. Connect to the F5 config GUI
+#. Connect to the F5 config GUI
 
-   a. https://192.168.10.216
+   - ``https://f5-bigip1a.demosifun.net``
 
-   b. Username: admin
+   - Username: ``admin``
 
-   c. Password: password
+   - Password: ``password``
 
-3. Create an NTLM Machine Account
+#. Create an NTLM Machine Account
 
-   a. Access >>Authentication>>NTLM>>Machine Account
+   - Access >>Authentication>>NTLM>>Machine Account
 
-+--------------------------+-------------------------+
-| Name                     | AD1-f5-bigip1a          |
-+==========================+=========================+
-| Machine Account Name     | f5-bigip1a              |
-+--------------------------+-------------------------+
-| Domain FQDN              | demoisfun.net           |
-+--------------------------+-------------------------+
-| Domain Controller FQDN   | dif-ad1.demoisfun.net   |
-+--------------------------+-------------------------+
-| Admin User               | administrator           |
-+--------------------------+-------------------------+
-| Password                 | password                |
-+--------------------------+-------------------------+
+     +--------------------------+-------------------------+
+     | Name                     | AD1-f5-bigip1a          |
+     +==========================+=========================+
+     | Machine Account Name     | f5-bigip1a              |
+     +--------------------------+-------------------------+
+     | Domain FQDN              | demoisfun.net           |
+     +--------------------------+-------------------------+
+     | Domain Controller FQDN   | dif-ad1.demoisfun.net   |
+     +--------------------------+-------------------------+
+     | Admin User               | administrator           |
+     +--------------------------+-------------------------+
+     | Password                 | password                |
+     +--------------------------+-------------------------+
 
-1. Us the **JOIN** button to create the machine account
+#. Click the **JOIN** button to create the machine account
 
-2. Create a new Application Service by selecting iApps -> Application
+#. Create a new Application Service by selecting iApps -> Application
    Services and selecting Create
 
-   a. iApps >> Application Services
+   - iApps >> Application Services
 
-   b. Press the **Create** button
+   - Press the **Create** button
 
-   c. Name the Application Service **VM\_LAB\_3\_RDS**
+   - Name the Application Service ``VM_LAB_3_RDS``
 
-   d. Select **f5.microsoft\_rds\_remote\_access.v1.0.0** for the
+   - Select ``f5.microsoft_rds_remote_access.v1.0.2`` for the
       template
-
-+----+
-+----+
 
 iApp Configuration
 ~~~~~~~~~~~~~~~~~~
 
-1. Review the **Welcome to the iApp template for Remote Desktop
+#. Review the **Welcome to the iApp template for Remote Desktop
    Gateway**
 
-2. **Template Options**
+#. **Template Options**
 
-+-----------------------------------------------------+--------------------------------------------+
-| Do you want to deploy BIG-IP APM as an RDP proxy?   | Yes, deploy BIG-IP Access Policy Manager   |
-+=====================================================+============================================+
-+-----------------------------------------------------+--------------------------------------------+
+   +-----------------------------------------------------+--------------------------------------------+
+   | Do you want to deploy BIG-IP APM as an RDP proxy?   | Yes, deploy BIG-IP Access Policy Manager   |
+   +-----------------------------------------------------+--------------------------------------------+
 
-1. **Access Policy Manager**
+#. **Access Policy Manager**
 
-+--------------------------------------------------------------------------+------------------+
-| Do you want to create a new AAA server, or use an existing AAA server?   | AD1              |
-+==========================================================================+==================+
-| Which NTLM machine account should be used for Kerberos delegation?       | AD1-f5-bigip1a   |
-+--------------------------------------------------------------------------+------------------+
+   +--------------------------------------------------------------------------+------------------+
+   | Do you want to create a new AAA server, or use an existing AAA server?   | AD1              |
+   +==========================================================================+==================+
+   | Which NTLM machine account should be used for Kerberos delegation?       | AD1-f5-bigip1a   |
+   +--------------------------------------------------------------------------+------------------+
 
-1. **Network (leave defaults)**
+#. **SSL Encryption**
 
-2. **SSL Encryption**
+   +---------------------------------------------+--------------------------+
+   | Which SSL certificate do you want to use?   | wild.demoisfun.net.crt   |
+   +=============================================+==========================+
+   | Which SSL private key do you want to use?   | wild.demoisfun.net.key   |
+   +---------------------------------------------+--------------------------+
 
-+---------------------------------------------+--------------------------+
-| Which SSL certificate do you want to use?   | wild.demoisfun.net.crt   |
-+=============================================+==========================+
-| Which SSL private key do you want to use?   | wild.demoisfun.net.key   |
-+---------------------------------------------+--------------------------+
+#. **Virtual Servers and Pools**
 
-1. **Virtual Servers and Pools **
+   +-----------------------------------------------------------------+------------------+
+   | What IP address do you want to use for the virtual server(s)?   | 192.168.3.156    |
+   +=================================================================+==================+
+   | How would you like to secure your hosts?                        | Allow any host   |
+   +-----------------------------------------------------------------+------------------+
 
-+-----------------------------------------------------------------+------------------+
-| What IP address do you want to use for the virtual server(s)?   | 192.168.3.156    |
-+=================================================================+==================+
-| How would you like to secure your hosts?                        | Allow any host   |
-+-----------------------------------------------------------------+------------------+
-
-1. Press the **Finished** button
+#. Press the **Finished** button
 
 Test the RDS proxy functionality using RDS Client
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-1. Use the RDP function on your laptop to connect to the “home-pc”
+#. From "home-pc"
 
-2. Launch RDS client (on desktop).
+#. Launch RDS client (on desktop).
 
-   a. Select the “Show Options” Pulldown
+   - Select the "Show Options" Pulldown
 
-      i. Select the “Advanced” tab
+   - Select the "Advanced" tab
 
-         1. Select the Settings button
+   - Click the Settings button
 
-         2. Note the configuration of the RD Gateway.
-            msft-proxy-rds.demoisfun.net resolves to the address
-            192.168.3.156 which was configured in the iApp
+   - In the "RDS Gateway..." window,
 
-    |image20|
+     -  In Server name field, type in ``msft-proxy-rds.demoisfun.net``.
+        Note this address resolves to the address ``192.168.3.156`` which
+        was configured in the iApp
 
-1. Verify the settings and click the OK button
+        |image16|
 
-i.   Under “General” tab, in the “Computer” field, type in the name of
-     the host you want to RDP to which is “dif-termsvr.demoisfun.net”
+     -  Verify the other default settings on this window
 
-     |image21|
+     -  Click OK
 
-ii.  Clock “Save”
+#. Under "General" tab, in the "Computer" field, type in the name of the
+   host you want to RDP to which is ``dif-termsvr.demoisfun.net``
 
-iii. Click “Connect”
+   - In the "User name" field, type in ``demoisfun\demo01``
 
-a. When prompted for credentials
+     |image17|
 
-   i.  Username: demo01
+   - Click "Save"
 
-   ii. Password: password
+   - Click "Connect"
 
-b. Accept Certificate warning
+#. When prompted for credentials
 
-    |image22|
+   - Username: ``demo01``
 
-a. You are connected to dif-termsvr.demoisfun.net
+   - Password: ``password``
 
-1. Use the “Corporate PC” to Connect to the F5 Big IP GUI
-   https://192.168.10.216
+#. Accept Certificate warning
 
-2. Access>>Overview>>Active Sessions
+   |image18|
 
-3. Click on the session to view details
+#. You are connected to dif-termsvr.demoisfun.net
 
-    |image23|
+#. From "corporate-pc", open IE to Connect to BIG-IP GUI at
 
-4. Log off using the windows start icon in the lower left corner
+   - ``https://f5-bigip1a.demoisfun.net``
 
-.. |image19| image:: /_static/image18.png
+#. On the left side menu, click Access -> Overview -> Active Sessions
+
+#. Click on the session to view details
+
+   |image19|
+
+#. Log off using the windows start icon in the lower left corner
+
+FINAL GRADE
+~~~~~~~~~~~
+
+…for this "VDI the F5 Way" lab team. Please complete the **SURVEY** to
+let us know how we did. We value your feedbacks and continuously looking
+for ways to improve.
+
+**THANK YOU FOR CHOOSING F5 !!!**
+
+.. |image15| image:: /_static/class1/image17.png
    :width: 5.58333in
    :height: 2.96875in
-.. |image20| image:: /_static/image19.png
-   :width: 2.05729in
-   :height: 2.31385in
-.. |image21| image:: /_static/image20.png
-   :width: 2.06771in
-   :height: 2.38695in
-.. |image22| image:: /_static/image21.png
+.. |image16| image:: /_static/class1/image18.png
+   :width: 3.25126in
+   :height: 3.65672in
+.. |image17| image:: /_static/class1/image19.png
+   :width: 3.28358in
+   :height: 3.79055in
+.. |image18| image:: /_static/class1/image20.png
    :width: 1.82813in
    :height: 1.68013in
-.. |image23| image:: /_static/image22.png
+.. |image19| image:: /_static/class1/image21.png
    :width: 5.25486in
    :height: 1.65269in

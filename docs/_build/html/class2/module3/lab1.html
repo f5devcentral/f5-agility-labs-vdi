@@ -5,7 +5,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>2.3.1. Lab 3 – Microsoft RDS proxy &#8212; F5 Solutions for VDI  documentation</title>
+    <title>1.4.1. Lab 3.1: Microsoft RDS proxy &#8212; F5 Solutions for VDI  documentation</title>
     
     <link rel="stylesheet" href="../../_static/css/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
@@ -28,7 +28,7 @@
     <script type="text/javascript" src="../../_static/doctools.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="prev" title="2.3. Module 3 – Microsoft RDS Proxy" href="module3.html" />
+    <link rel="prev" title="1.4. Module 3: Microsoft RDS Proxy" href="module3.html" />
 <!--
 # Copyright 2017 F5 Networks
 #
@@ -211,10 +211,11 @@
    <span class="caption-text">Current Page</span>
   </p>
   <ul>
-<li><a class="reference internal" href="#">2.3.1. Lab 3 – Microsoft RDS proxy</a><ul>
-<li><a class="reference internal" href="#task-1-access-terminal-server-from-external">2.3.1.1. TASK 1 – Access Terminal Server from external</a><ul>
-<li><a class="reference internal" href="#iapp-configuration">2.3.1.1.1. iApp Configuration</a></li>
-<li><a class="reference internal" href="#test-the-rds-proxy-functionality-using-rds-client">2.3.1.1.2. Test the RDS proxy functionality using RDS Client</a></li>
+<li><a class="reference internal" href="#">1.4.1. Lab 3.1: Microsoft RDS proxy</a><ul>
+<li><a class="reference internal" href="#task-1-access-terminal-server-from-external-network">1.4.1.1. Task 1 – Access Terminal Server from external network</a><ul>
+<li><a class="reference internal" href="#iapp-configuration">1.4.1.1.1. iApp Configuration</a></li>
+<li><a class="reference internal" href="#test-the-rds-proxy-functionality-using-rds-client">1.4.1.1.2. Test the RDS proxy functionality using RDS Client</a></li>
+<li><a class="reference internal" href="#final-grade">1.4.1.1.3. FINAL GRADE</a></li>
 </ul>
 </li>
 </ul>
@@ -224,18 +225,18 @@
 
 <p class="caption"><span class="caption-text">Contents:</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../../intro.html">1. Getting Started</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="../class1.html">2. 201 - VDI the F5 Way</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="../module1/module1.html">2.1. Module 1 - Solutions for VMware View</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../module2/module2.html">2.2. Module 2 – Solutions for Citrix XenDesktop</a></li>
-<li class="toctree-l2 current"><a class="reference internal" href="module3.html">2.3. Module 3 – Microsoft RDS Proxy</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../class2.html">1. 201: VDI the F5 Way</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../labinfo.html">1.1. Getting Started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module1/module1.html">1.2. Module 1: Solutions for VMware View</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module2/module2.html">1.3. Module 2: Solutions for Citrix XenDesktop</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="module3.html">1.4. Module 3: Microsoft RDS Proxy</a></li>
 </ul>
 </li>
 </ul>
 
   <h4>Previous topic</h4>
   <p class="topless"><a href="module3.html"
-                        title="previous chapter">2.3. Module 3 – Microsoft RDS Proxy</a></p>
+                        title="previous chapter">1.4. Module 3: Microsoft RDS Proxy</a></p>
         
       </div>
       <div class="col-md-offset-3 col-sm-offset-3 main">
@@ -244,27 +245,28 @@
           <span class="right"><a href="../../genindex.html">Index</a></span>
         </h4>
         
-  <div class="section" id="lab-3-microsoft-rds-proxy">
-<h1>2.3.1. Lab 3 – Microsoft RDS proxy<a class="headerlink" href="#lab-3-microsoft-rds-proxy" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="lab-3-1-microsoft-rds-proxy">
+<h1>1.4.1. Lab 3.1: Microsoft RDS proxy<a class="headerlink" href="#lab-3-1-microsoft-rds-proxy" title="Permalink to this headline">¶</a></h1>
 <p>The purpose of this lab is access an internal RDS server from an
 external client.</p>
-<div class="section" id="task-1-access-terminal-server-from-external">
-<h2>2.3.1.1. TASK 1 – Access Terminal Server from external<a class="headerlink" href="#task-1-access-terminal-server-from-external" title="Permalink to this headline">¶</a></h2>
-<p><a class="reference internal" href="../../_images/image18.png"><img alt="image19" src="../../_images/image18.png" style="width: 5.58333in; height: 2.96875in;" /></a></p>
+<div class="section" id="task-1-access-terminal-server-from-external-network">
+<h2>1.4.1.1. Task 1 – Access Terminal Server from external network<a class="headerlink" href="#task-1-access-terminal-server-from-external-network" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference internal" href="../../_images/image17.png"><img alt="image15" src="../../_images/image17.png" style="width: 5.58333in; height: 2.96875in;" /></a></p>
+<p>Figure 10 - BIG-IP proxy RDP connection</p>
 <p><strong>Deploy the iApp</strong></p>
-<ol class="arabic simple">
-<li>Use the RDP function on your laptop to connect to the “corporate-pc”</li>
-<li>Connect to the F5 config GUI<ol class="loweralpha">
-<li><a class="reference external" href="https://192.168.10.216">https://192.168.10.216</a></li>
-<li>Username: admin</li>
-<li>Password: password</li>
-</ol>
+<ol class="arabic">
+<li><p class="first">From “corporate-pc”</p>
 </li>
-<li>Create an NTLM Machine Account<ol class="loweralpha">
-<li>Access &gt;&gt;Authentication&gt;&gt;NTLM&gt;&gt;Machine Account</li>
-</ol>
+<li><p class="first">Connect to the F5 config GUI</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">https://f5-bigip1a.demosifun.net</span></code></li>
+<li>Username: <code class="docutils literal"><span class="pre">admin</span></code></li>
+<li>Password: <code class="docutils literal"><span class="pre">password</span></code></li>
+</ul>
 </li>
-</ol>
+<li><p class="first">Create an NTLM Machine Account</p>
+<ul>
+<li><p class="first">Access &gt;&gt;Authentication&gt;&gt;NTLM&gt;&gt;Machine Account</p>
 <table border="1" class="docutils">
 <colgroup>
 <col width="51%" />
@@ -293,53 +295,45 @@ external client.</p>
 </tr>
 </tbody>
 </table>
-<ol class="arabic simple">
-<li>Us the <strong>JOIN</strong> button to create the machine account</li>
-<li>Create a new Application Service by selecting iApps -&gt; Application
-Services and selecting Create<ol class="loweralpha">
+</li>
+</ul>
+</li>
+<li><p class="first">Click the <strong>JOIN</strong> button to create the machine account</p>
+</li>
+<li><p class="first">Create a new Application Service by selecting iApps -&gt; Application
+Services and selecting Create</p>
+<ul class="simple">
 <li>iApps &gt;&gt; Application Services</li>
 <li>Press the <strong>Create</strong> button</li>
-<li>Name the Application Service <strong>VM_LAB_3_RDS</strong></li>
-<li>Select <strong>f5.microsoft_rds_remote_access.v1.0.0</strong> for the
-template</li>
-</ol>
+<li>Name the Application Service <code class="docutils literal"><span class="pre">VM_LAB_3_RDS</span></code></li>
+<li><dl class="first docutils">
+<dt>Select <code class="docutils literal"><span class="pre">f5.microsoft_rds_remote_access.v1.0.2</span></code> for the</dt>
+<dd>template</dd>
+</dl>
+</li>
+</ul>
 </li>
 </ol>
-<table border="1" class="docutils">
-<colgroup>
-<col width="100%" />
-</colgroup>
-<tbody valign="top">
-<tr class="row-odd"><td>&#160;</td>
-</tr>
-</tbody>
-</table>
 <div class="section" id="iapp-configuration">
-<h3>2.3.1.1.1. iApp Configuration<a class="headerlink" href="#iapp-configuration" title="Permalink to this headline">¶</a></h3>
-<ol class="arabic simple">
-<li>Review the <strong>Welcome to the iApp template for Remote Desktop
-Gateway</strong></li>
-<li><strong>Template Options</strong></li>
-</ol>
+<h3>1.4.1.1.1. iApp Configuration<a class="headerlink" href="#iapp-configuration" title="Permalink to this headline">¶</a></h3>
+<ol class="arabic">
+<li><p class="first">Review the <strong>Welcome to the iApp template for Remote Desktop
+Gateway</strong></p>
+</li>
+<li><p class="first"><strong>Template Options</strong></p>
 <table border="1" class="docutils">
 <colgroup>
 <col width="55%" />
 <col width="45%" />
 </colgroup>
-<thead valign="bottom">
-<tr class="row-odd"><th class="head">Do you want to deploy BIG-IP APM as an RDP proxy?</th>
-<th class="head">Yes, deploy BIG-IP Access Policy Manager</th>
-</tr>
-</thead>
 <tbody valign="top">
-<tr class="row-even"><td>&#160;</td>
-<td>&#160;</td>
+<tr class="row-odd"><td>Do you want to deploy BIG-IP APM as an RDP proxy?</td>
+<td>Yes, deploy BIG-IP Access Policy Manager</td>
 </tr>
 </tbody>
 </table>
-<ol class="arabic simple">
-<li><strong>Access Policy Manager</strong></li>
-</ol>
+</li>
+<li><p class="first"><strong>Access Policy Manager</strong></p>
 <table border="1" class="docutils">
 <colgroup>
 <col width="80%" />
@@ -356,10 +350,8 @@ Gateway</strong></li>
 </tr>
 </tbody>
 </table>
-<ol class="arabic simple">
-<li><strong>Network (leave defaults)</strong></li>
-<li><strong>SSL Encryption</strong></li>
-</ol>
+</li>
+<li><p class="first"><strong>SSL Encryption</strong></p>
 <table border="1" class="docutils">
 <colgroup>
 <col width="63%" />
@@ -376,9 +368,8 @@ Gateway</strong></li>
 </tr>
 </tbody>
 </table>
-<ol class="arabic simple">
-<li><a href="#id1"><span class="problematic" id="id2">**</span></a>Virtual Servers and Pools **</li>
-</ol>
+</li>
+<li><p class="first"><strong>Virtual Servers and Pools</strong></p>
 <table border="1" class="docutils">
 <colgroup>
 <col width="78%" />
@@ -395,76 +386,82 @@ Gateway</strong></li>
 </tr>
 </tbody>
 </table>
-<ol class="arabic simple">
-<li>Press the <strong>Finished</strong> button</li>
+</li>
+<li><p class="first">Press the <strong>Finished</strong> button</p>
+</li>
 </ol>
 </div>
 <div class="section" id="test-the-rds-proxy-functionality-using-rds-client">
-<h3>2.3.1.1.2. Test the RDS proxy functionality using RDS Client<a class="headerlink" href="#test-the-rds-proxy-functionality-using-rds-client" title="Permalink to this headline">¶</a></h3>
+<h3>1.4.1.1.2. Test the RDS proxy functionality using RDS Client<a class="headerlink" href="#test-the-rds-proxy-functionality-using-rds-client" title="Permalink to this headline">¶</a></h3>
 <ol class="arabic">
-<li><p class="first">Use the RDP function on your laptop to connect to the “home-pc”</p>
+<li><p class="first">From “home-pc”</p>
 </li>
 <li><p class="first">Launch RDS client (on desktop).</p>
-<ol class="loweralpha simple">
-<li>Select the “Show Options” Pulldown<ol class="lowerroman">
-<li>Select the “Advanced” tab<ol class="arabic">
-<li>Select the Settings button</li>
-<li>Note the configuration of the RD Gateway.
-msft-proxy-rds.demoisfun.net resolves to the address
-192.168.3.156 which was configured in the iApp</li>
-</ol>
+<ul>
+<li><p class="first">Select the “Show Options” Pulldown</p>
 </li>
-</ol>
+<li><p class="first">Select the “Advanced” tab</p>
 </li>
-</ol>
-<blockquote>
-<div><p><a class="reference internal" href="../../_images/image19.png"><img alt="image20" src="../../_images/image19.png" style="width: 2.05729in; height: 2.31385in;" /></a></p>
-</div></blockquote>
+<li><p class="first">Click the Settings button</p>
 </li>
-</ol>
-<ol class="arabic simple">
-<li>Verify the settings and click the OK button</li>
-</ol>
-<ol class="lowerroman">
-<li><p class="first">Under “General” tab, in the “Computer” field, type in the name of
-the host you want to RDP to which is “dif-termsvr.demoisfun.net”</p>
-<p><a class="reference internal" href="../../_images/image20.png"><img alt="image21" src="../../_images/image20.png" style="width: 2.06771in; height: 2.38695in;" /></a></p>
+<li><p class="first">In the “RDS Gateway…” window,</p>
+<ul>
+<li><p class="first">In Server name field, type in <code class="docutils literal"><span class="pre">msft-proxy-rds.demoisfun.net</span></code>.
+Note this address resolves to the address <code class="docutils literal"><span class="pre">192.168.3.156</span></code> which
+was configured in the iApp</p>
+<p><a class="reference internal" href="../../_images/image18.png"><img alt="image16" src="../../_images/image18.png" style="width: 3.25126in; height: 3.65672in;" /></a></p>
 </li>
-<li><p class="first">Clock “Save”</p>
+<li><p class="first">Verify the other default settings on this window</p>
+</li>
+<li><p class="first">Click OK</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p class="first">Under “General” tab, in the “Computer” field, type in the name of the
+host you want to RDP to which is <code class="docutils literal"><span class="pre">dif-termsvr.demoisfun.net</span></code></p>
+<ul>
+<li><p class="first">In the “User name” field, type in <code class="docutils literal"><span class="pre">demoisfun\demo01</span></code></p>
+<p><a class="reference internal" href="../../_images/image19.png"><img alt="image17" src="../../_images/image19.png" style="width: 3.28358in; height: 3.79055in;" /></a></p>
+</li>
+<li><p class="first">Click “Save”</p>
 </li>
 <li><p class="first">Click “Connect”</p>
 </li>
-</ol>
-<ol class="loweralpha">
+</ul>
+</li>
 <li><p class="first">When prompted for credentials</p>
-<ol class="lowerroman simple">
-<li>Username: demo01</li>
-<li>Password: password</li>
-</ol>
+<ul class="simple">
+<li>Username: <code class="docutils literal"><span class="pre">demo01</span></code></li>
+<li>Password: <code class="docutils literal"><span class="pre">password</span></code></li>
+</ul>
 </li>
 <li><p class="first">Accept Certificate warning</p>
-<blockquote>
-<div><p><a class="reference internal" href="../../_images/image21.png"><img alt="image22" src="../../_images/image21.png" style="width: 1.82813in; height: 1.68013in;" /></a></p>
-</div></blockquote>
+<p><a class="reference internal" href="../../_images/image20.png"><img alt="image18" src="../../_images/image20.png" style="width: 1.82813in; height: 1.68013in;" /></a></p>
 </li>
-</ol>
-<ol class="loweralpha simple">
-<li>You are connected to dif-termsvr.demoisfun.net</li>
-</ol>
-<ol class="arabic">
-<li><p class="first">Use the “Corporate PC” to Connect to the F5 Big IP GUI
-<a class="reference external" href="https://192.168.10.216">https://192.168.10.216</a></p>
+<li><p class="first">You are connected to dif-termsvr.demoisfun.net</p>
 </li>
-<li><p class="first">Access&gt;&gt;Overview&gt;&gt;Active Sessions</p>
+<li><p class="first">From “corporate-pc”, open IE to Connect to BIG-IP GUI at</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">https://f5-bigip1a.demoisfun.net</span></code></li>
+</ul>
+</li>
+<li><p class="first">On the left side menu, click Access -&gt; Overview -&gt; Active Sessions</p>
 </li>
 <li><p class="first">Click on the session to view details</p>
-<blockquote>
-<div><p><a class="reference internal" href="../../_images/image22.png"><img alt="image23" src="../../_images/image22.png" style="width: 5.25486in; height: 1.65269in;" /></a></p>
-</div></blockquote>
+<p><a class="reference internal" href="../../_images/image21.png"><img alt="image19" src="../../_images/image21.png" style="width: 5.25486in; height: 1.65269in;" /></a></p>
 </li>
 <li><p class="first">Log off using the windows start icon in the lower left corner</p>
 </li>
 </ol>
+</div>
+<div class="section" id="final-grade">
+<h3>1.4.1.1.3. FINAL GRADE<a class="headerlink" href="#final-grade" title="Permalink to this headline">¶</a></h3>
+<p>…for this “VDI the F5 Way” lab team. Please complete the <strong>SURVEY</strong> to
+let us know how we did. We value your feedbacks and continuously looking
+for ways to improve.</p>
+<p><strong>THANK YOU FOR CHOOSING F5 !!!</strong></p>
 </div>
 </div>
 </div>
@@ -474,7 +471,7 @@ the host you want to RDP to which is “dif-termsvr.demoisfun.net”</p>
 		     <div class="row next-prev-btn-row">
            <div class="col-lg-12">
            
-		        <a href="module3.html" title="2.3. Module 3 – Microsoft RDS Proxy" accesskey="p" class="btn btn-primary pull-left"><i class="fa fa-arrow-circle-left" aria-hidden="true"></i> Previous</a>
+		        <a href="module3.html" title="1.4. Module 3: Microsoft RDS Proxy" accesskey="p" class="btn btn-primary pull-left"><i class="fa fa-arrow-circle-left" aria-hidden="true"></i> Previous</a>
            
            
 		     </div>

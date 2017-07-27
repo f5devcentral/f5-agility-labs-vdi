@@ -1,722 +1,566 @@
-Lab 1 – Solutions for VMware View
-=================================
+Lab 1.1: Solutions for VMware View
+==================================
 
-TASK 1 – Access VMware View Desktop environment without F5 
+Task 1 – Access VMware View Desktop environment without F5 
 -----------------------------------------------------------
 
 Test the functional VMware view environment using the internal
 Connection Servers (Internal use case without F5 integration)
 
-|image1|
-
-Figure 1 - Accessing internal View Desktop--
-
 Access the VDI with a client on the internal network. The workstation
 will be preconfigured to initiate the connection through a specific
 connection server. Security servers are not used by internal VDI users
 
-#. Use the RDP function on your laptop to connect to the “corporate-pc“
-   RDP server/workstation
+|image3|
 
- |image2|
+Figure 2 - Accessing Internal View Desktop
 
-#.  When prompted for credentials
+#. From the "corporate-pc".
 
-    a. Username: Agility
+#. Use the VMware Horizon View client to access the connection server
 
-    b. Password: F5Agility
+   |image4|
 
-       |image3|
+   - VMware Horizon Client
 
-#.  Use the VMware Horizon View client to access the connection server
+   - \+ New server
 
-    a. VMware Horizon Client
+#. Connection Server address "vmw-connsvr1c.demoisfun.net"
 
-    b. + New server
+#. When prompted for credentials
 
-#.  Connection Server address “vmw-connsvr1c.demoisfun.net”
+   - Username: ``demo01``
 
-#.  When prompted for credentials
+   - Password: ``password``
 
-    a. Username: demo01
+#. Double-click the "Agility" icon to launch virtual desktop.
 
-    b. Password: password
+#. In the Agility virtual desktop, open Notepad and type in something.
 
-#.  Select the View desktop (Agility—Rt click and Launch)
+#. Disconnect from Agility desktop by closing View client. (RDP Toolbar
+   on top. May need to slide the blue RDP bar to the left in order to
+   click the X in Agility Toolbar)
 
-#.  Scroll down to task bar if needed
+#. Open View client and try to reconnect to "vmw-connsvr1c.
+   demoisfun.net"
 
-#.  Open Notepad and type in something.
-
-#.  Slide the blue RDP indicator to the left
-
-#.  Close the View client. (press the X in Agility Toolbar-was under the
-    RDP)
-
-#. Open View client and try to reconnect to “vmw-connsvr1c.
-    demoisfun.net”
-
-#. Notepad should still be on the desktop with the test you input
+#. Notepad should still be on the desktop with the text you input.
 
 #. Close the View client. (press the X in Agility Toolbar)
 
-#. **Keep the RDP session open for Task 2 **
+#. Keep the RDP session open for Task 2
 
-TASK 2 – Load Balance VMware View connection servers
-----------------------------------------------------
+Task 2 – Load Balance Connection Servers
+----------------------------------------
 
 Use the F5 iApp for VMware View to configure a load balancing
 environment for the Connection Servers. This will increase the number of
 Connection Servers available to internal users and load balance access
 to these resources (Internal use case with F5 load balancing)
 
-|image4|
+|image5|
 
-Figure 2 - Load balance Connection Servers
+Figure 3 - Load balance Connection Servers
 
 **Deploy the iApp**
 
-1. Access the F5 Config GUI from the “corporate-pc” RDP
-   server/workstation –
+#. From "corporate-pc".
 
-   a. https://f5-bigip1a.demoisfun.net (192.168.10.216)
+#. Use browser to access the F5 Admin GUI
 
-      i.  Username: admin
+   - ``https://f5-bigip1a.demoisfun.net``
 
-      ii. Password: password
+     - Username: ``admin``
 
-2. Create a new Application Service
+     - Password: ``password``
 
-   a. iApps >> Application Services
+#. Create a new Application Service
 
-   b. Press the **Create** button
+   - iApps >> Application Services
 
-   c. Name the Application Service **VM\_LAB\_1\_LBCS**
+   - Press the **Create** button
 
-   d. Select **f5.vmware\_view.v1.5.1** for the template
+   - Name the Application Service ``VM_LAB_1_LBCS``
 
-+----+
-+----+
+   - Select ``f5.vmware_view.v1.5.1`` for the template
 
-1. Review the **Welcome to the iAPP template for VMware Horizon View**
+#. Review the **Welcome to the iAPP template for VMware Horizon View**
 
-2. Note the **Template Options** (leave these default)
+#. Note the **Template Options** (leave these default)
 
-3. **Big-IP Access Policy Manager** (Set this to **No** for this
+#. **Big-IP Access Policy Manager** (Set this to **No** for this
    exercise)
 
-4. SSL Encryption (Certs are preloaded for this exercise)
+#. **SSL Encryption** (Certs are preloaded for this exercise)
 
-+----------------------------------------------------------+------------------------------------------------------------------------+
-| How should the BIG-IP system handle encrypted traffic?   | Terminate SSL for clients, re-encrypt to View servers (SSL-bridging)   |
-+==========================================================+========================================================================+
-| Which SSL certificate do you want to use?                | wild.demoisfun.net.crt                                                 |
-+----------------------------------------------------------+------------------------------------------------------------------------+
-| Which SSL private key do you want to use                 | wild.demoisfun.net.key                                                 |
-+----------------------------------------------------------+------------------------------------------------------------------------+
+   +----------------------------------------------------------+------------------------------------------------------------------------+
+   | How should the BIG-IP system handle encrypted traffic?   | Terminate SSL for clients, re-encrypt to View servers (SSL-bridging)   |
+   +==========================================================+========================================================================+
+   | Which SSL certificate do you want to use?                | wild.demoisfun.net.crt                                                 |
+   +----------------------------------------------------------+------------------------------------------------------------------------+
+   | Which SSL private key do you want to use                 | wild.demoisfun.net.key                                                 |
+   +----------------------------------------------------------+------------------------------------------------------------------------+
 
-1. **PC Over IP** (leave these default – No PCoIP connections…)
+#. **PC Over IP** (leave these default – No PCoIP connections…)
 
-2. **Virtual Servers and Pools **
+#. **Virtual Servers and Pools**
 
-+------------------------------------------------------------------------------------+---------------------------+
-| What virtual server IP address do you want to use for remote, untrusted clients?   | 192.168.10.150            |
-+====================================================================================+===========================+
-| What is the associated service port?                                               | 443                       |
-+------------------------------------------------------------------------------------+---------------------------+
-| What FQDN will clients use to access the View environment                          | vmw-LB-CS.demoisfun.net   |
-+------------------------------------------------------------------------------------+---------------------------+
-| Which Servers should be included in this pool                                      | 192.168.10.212            |
-|                                                                                    |                           |
-|                                                                                    | 192.168.10.213            |
-+------------------------------------------------------------------------------------+---------------------------+
+   +------------------------------------------------------------------------------------+---------------------------+
+   | What virtual server IP address do you want to use for remote, untrusted clients?   | 192.168.10.150            |
+   +====================================================================================+===========================+
+   | What is the associated service port?                                               | 443                       |
+   +------------------------------------------------------------------------------------+---------------------------+
+   | What FQDN will clients use to access the View environment                          | vmw-LB-CS.demoisfun.net   |
+   +------------------------------------------------------------------------------------+---------------------------+
+   | Which Servers should be included in this pool                                      | 192.168.10.212            |
+   |                                                                                    |                           |
+   |                                                                                    | 192.168.10.213            |
+   +------------------------------------------------------------------------------------+---------------------------+
 
-1. **Client Optimization** (leave these default—Do not compress…)
+#. **Client Optimization** (leave these default—Do not compress…)
 
-2. **Application Health**
+#. **Application Health**
 
-   a. Use the pulldown to select a standard https monitor
+   - Use the pulldown to select a standard https monitor
 
-3. Press the **Finished** button
+#. Press the **Finished** button
 
 View the objects which were created by the iApp
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-1. Select the Components tab at the top of the page
+#. Select the Components tab at the top of the page
 
-    |image5|
+   |image6|
 
-1. Is the Virtual server available?
+#. Is the Virtual server available?
 
-2. Are the pool members available?
+#. Are the pool members available?
 
-3. What is the node status? Why?
+#. What is the node status? Why?
 
-4. Note that a persistence profile was created
+#. Note that a persistence profile was created
 
-   a. Check Match Across Services
+   - Check Match Across Services
 
-   b. Press update
+   - Press update
 
-   c. Note the error at the top of the page
+   - Note the error at the top of the page
 
-5. Return to iApp>>Application Services
+#. Return to iApp>>Application Services
 
-6. Review the remaining parameters (any questions)
+#. Review the remaining parameters (any questions)
 
 View the properties of the iApp
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-1. Select the Properties tab at the top of the page
+#. Select the Properties tab at the top of the page
 
-2. |image6|
+   |image7|
 
-3. Use the pull down next to Application Service:
+#. Use the pull down next to Application Service:
 
-4. Select Advanced
+#. Select Advanced
 
-5. Note the check in Strict Updates
+#. Note the check in Strict Updates
 
-   a. Is this related to the screen when editing the persistence
-      profile?
+   - Is this related to the screen when editing the persistence profile?
 
-   b. What are the pro’s and con’s of unchecking this parameter?
+   - What are the pro’s and con’s of unchecking this parameter?
 
 Test the connection server load balancing using both VMware View client and browser access methods. 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-1.  Use the RDP function on your laptop to connect to the “corporate-pc”
-    RDP server/workstation
+#.  From "corporate-pc"
 
-    i. Same process as Task 1 if you are not still connected
-
-2.  Open View client and connect to the Virtual Server just created with
+#.  Open View client and connect to the Virtual Server just created with
     iApp.
 
-    a. +New Server
+    - \+ New Server
 
-       i.  vmw-LB-CS.demoisfun.net (192.168.10.150)
+      - ``vmw-LB-CS.demoisfun.net``
 
-       ii. IP address will not work—Certificate contains demoisfun.net
+      - Connect Button
 
-3.  When prompted for credentials
+        - IP address will not work—Certificate contains demoisfun.net
 
-    a. Username: demo01
+#.  When prompted for credentials
 
-    b. Password: password
+    - Username: ``demo01``
 
-4.  Select the View desktop (Agility)
+    - Password: ``password``
 
-5.  Use connect button to access
+    - Login Button
 
-6.  Slide the blue RDP indicator to the left
+#.  Double-click Agility icon to launch View desktop
 
-7.  Close the View client. (press the X in Agility Toolbar-was under the
-    RDP)
+#.  Verify that the Agility desktop functions
 
-8.  Use a supported browser to access the VDI (IE on the RDP
-    workstation)
+#.  Close the View client. (May need to slide the RDP Toolbar out of the
+    way)
 
-    |image7|
+#.  Open IE and browse to ``https://vmw-LB-CS.demoisfun.net``
 
-9.  https://vmw-LB-CS.demoisfun.net
+#.  Select VMware Horizon View HTML access
 
-10. Select VMware Horizon View HTML access
+#.  Log in
 
-11. Log in
+    - Username: ``demo01``
 
-    a. Username: demo01
+    - Password: ``password``
 
-    b. Password: password
+#.  Double click to launch Agility desktop
 
-12. Select (Agility)
+#.  At the Cert Warning, click "Continue to this website"
 
-13. Accept Cert Warnings
+#.  Verify that the Agility desktop functions
 
-14. Verify that the desktop functions
+#.  Close the IE browser window
 
-15. Close the browser window
-
-TASK 3 – Access View Desktop environment through Security Server
-----------------------------------------------------------------
+Task 3 – Access View Desktop through Security Server
+----------------------------------------------------
 
 Test the functional VMware View environment using external Security
 Servers. (External use case without F5 integration)
 
-Note: This environment shows a user connecting to a native VMware
-security server which is statically mapped to a VMware connection
-server. This is a non-redundant external access model
+This environment shows a user connecting to a native VMware security
+server which is statically mapped to a VMware connection server. This is
+a non-redundant external access model
 
 |image8|
 
-Figure 3 - Access external View Desktop
+Figure 4 - Access external View Desktop
 
-Access the VDI using the Security Server from a Windows Server RDP
-session
+#.  From the "home-pc"
 
-1. Use the RDP function on your laptop to connect to the
-   “\ **home-pc**\ ” RDP server/workstation
+    |image9|
 
-|image9|
+#.  Use the VMware Horizon View client to access the security server
 
-1.  When prompted for credentials
+    - \+ New Server
 
-    a. Username: agility
+    - Security Server address ``vmw-secursvr1a.demoisfun.net``
 
-    b. Password: F5Agility
+    - Press Connect Button
 
-       |image10|
+#.  When prompted for credentials
 
-2.  Use the VMware Horizon View client to access the security server
+    - Username: ``demo01``
 
-    a. +New Server
+    - Password: ``password``
 
-    b. Security Server address “vmw-secursvr1a.demoisfun.net”
+#.  Double-click Agility icon to launch desktop
 
-3.  When prompted for credentials
+#.  Close the View client
 
-    a. Username: demo01
+#.  Access the application through your browser 
+    ``https://vmw-secursvr1a.demoisfun.net``
 
-    b. Password: password
+#.  Select VMware Horizon View HTML access
 
-4.  Select the View desktop (Right Click on Agility - Launch)
+    - Username: ``demo01``
 
-5.  Slide the blue RDP indicator to the left
+    - Password: ``password``
 
-6.  Close the View client. (press the X in Agility Toolbar-was under the
-    RD)
+#.  Double-click Agility icon to launch desktop
 
-    a. vmw-secursvr1a.demoisfun.net
+#.  Accept Cert at warning
 
-7.  Use a supported browser to access the VDI (IE on the RDP
-    workstation)
+#.  Select (Agility)
 
-    |image11|
+#.  Verify that the desktop functions
 
-8.  Access the application through your browser https://
-    vmw-secursvr1a.demoisfun.net
+#.  Close the browser window
 
-    a. vmw-secursvr1a.demoisfun.net
-
-    b. Username: demo01
-
-    c. Password: password
-
-9.  Select VMware Horizon View HTML access
-
-10. Log in
-
-    a. Username: demo01
-
-    b. Password: password
-
-11. Select (Agility)
-
-12. Accept Cert at warning
-
-13. Select (Agility)
-
-14. Verify that the desktop functions
-
-    a. Scroll down to taskbar
-
-15. Close the browser
-
-192.168.3.150
-
-TASK 4 – Load Balance VMware View security servers
----------------------------------------------------------------
+Task 4 – Load Balance Security Servers
+--------------------------------------
 
 Use the F5 iApp for VMware View to configure a load balancing
 environment for the Security Servers. This will increase the number of
 Security Servers available to internal users and load balance access to
 these resources (External use case with F5 load balancing)
 
-Note: This environment load balances 2 external facing Security Servers.
-These Security Servers are directly mapped to 2 existing connection
-servers in the environment (not the 2 Connections Servers that are load
-balances in the steps above)
+This environment load balances 2 external facing Security Servers. These
+Security Servers are directly mapped to 2 existing connection servers in
+the environment (not the 2 Connections Servers that are load balances in
+the steps above)
 
-|image12|
+|image10|
 
-Figure 4 - Load balance Security Servers
+Figure 5 - Load balance Security Servers
 
-\ **Deploy the iApp**
+**Deploy the iApp**
 
-1. Use the RDP function on your laptop to connect to the “corporate-pc”
-   RDP server/workstation
+#. From "corporate-pc"
 
-   i. Same process as Task 1 if you are not still connected
+#. Create a new Application Service by selecting
 
-2. Create a new Application Service by selecting
+   - iApps >> Application Services
 
-   a. iApps >> Application Services
+   - Press the **Create** button
 
-   b. Press the **Create** button
+   - Name the Application Service ``VM_LAB_1_LBSS``
 
-   c. Name the Application Service **VM\_LAB\_1\_LBSS**
+   - Select ``f5.vmware_view.v1.5.1`` for the template
 
-   d. Select **f5.vmware\_view.v1.5.1** for the template
+#. Review the **Welcome to the iAPP template for VMware Horizon View**
 
-+----+
-+----+
+#. Note the **Template Options** (leave these default)
 
-1. Review the **Welcome to the iAPP template for VMware Horizon View**
-
-2. Note the **Template Options** (leave these default)
-
-3. **Big-IP Access Policy Manager** (Set this to **No** for this
+#. **Big-IP Access Policy Manager** (Set this to **No** for this
    exercise)
 
-4. **SSL Encryption** (Certs are preloaded for this exercise)
+#. **SSL Encryption** (Certs are preloaded for this exercise)
 
-+----------------------------------------------------------+--------------------------------------------------------------+
-| How should the BIG-IP system handle encrypted traffic?   | Terminate SSL for clients, re-encrypt…\ **(SSL-Bridging)**   |
-+==========================================================+==============================================================+
-| Which SSL certificate do you want to use?                | wild.demoisfun.net.crt                                       |
-+----------------------------------------------------------+--------------------------------------------------------------+
-| Which SSL private key do you want to use?                | wild.demoisfun.net.key                                       |
-+----------------------------------------------------------+--------------------------------------------------------------+
+   +----------------------------------------------------------+--------------------------------------------------------------+
+   | How should the BIG-IP system handle encrypted traffic?   | Terminate SSL for clients, re-encrypt…\ **(SSL-Bridging)**   |
+   +==========================================================+==============================================================+
+   | Which SSL certificate do you want to use?                | wild.demoisfun.net.crt                                       |
+   +----------------------------------------------------------+--------------------------------------------------------------+
+   | Which SSL private key do you want to use?                | wild.demoisfun.net.key                                       |
+   +----------------------------------------------------------+--------------------------------------------------------------+
 
-1. **PC Over IP** (leave these default – No PCoIP connections…)
+#. **PC Over IP** (leave these default – No PCoIP connections…)
 
-2. **Virtual Servers and Pools **
+#. **Virtual Servers and Pools**
 
-+------------------------------------------------------------------------------------+---------------------------+
-| What virtual server IP address do you want to use for remote, untrusted clients?   | 192.168.3.150             |
-+====================================================================================+===========================+
-| What is the associated service port?                                               | 443                       |
-+------------------------------------------------------------------------------------+---------------------------+
-| What FQDN will clients use to access the View environment?                         | vmw-LB-SS.demoisfun.net   |
-+------------------------------------------------------------------------------------+---------------------------+
-| Which Servers should be included in this pool?                                     | 192.168.3.214             |
-|                                                                                    |                           |
-|                                                                                    | 192.168.3.215             |
-+------------------------------------------------------------------------------------+---------------------------+
+   +------------------------------------------------------------------------------------+---------------------------+
+   | What virtual server IP address do you want to use for remote, untrusted clients?   | 192.168.3.150             |
+   +====================================================================================+===========================+
+   | What FQDN will clients use to access the View environment?                         | vmw-LB-SS.demoisfun.net   |
+   +------------------------------------------------------------------------------------+---------------------------+
+   | Which Servers should be included in this pool?                                     | 192.168.3.214             |
+   |                                                                                    |                           |
+   |                                                                                    | 192.168.3.215             |
+   +------------------------------------------------------------------------------------+---------------------------+
 
-1. **Client Optimization** (leave these default—Do not compress…)
+#. **Application Health**
 
-2. **Application Health**
+   - Use the pulldown to select a standard https monitor
 
-   a. Use the pulldown to select a standard https monitor
-
-3. Press the **Finished** button
+#. Press the **Finished** button
 
 View the objects which were created by the iApp
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-1. Select the Components tab at the top of the page
+#. Select the Components tab at the top of the page
 
-2. Is the Virtual server available?
+#. Is the Virtual server available?
 
-3. Are the pool members available?
+#. Are the pool members available?
 
-4. Is the Node Available?
+#. Is the Node Available?
 
-5. Review the remaining parameters (any questions)
+#. Review the remaining parameters (any questions)
 
 Test the Security Server load balancing using both VMware View client and browser access methods
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-1.  Use the RDP function on your laptop to connect to the “home-pc” RDP
-    server/workstation
+#.  From "home-pc"
 
-2.  Open View client and connect to the Virtual Server just created with
+#.  Open View client and connect to the Virtual Server just created with
     iApp.
 
-    a. +New Server
+    - \+ New Server
 
-       i.  vmw-LB-SS.demoisfun.net (192.168.3.150)
+      - vmw-LB-SS.demoisfun.net (192.168.3.150)
 
-       ii. IP address will not work—Certificate contains demoisfun.net
+      - Press the Connect button
 
-3.  When prompted for credentials
+      - IP address will not work—Certificate contains demoisfun.net
 
-    a. Username: demo01
+#.  When prompted for credentials
 
-    b. Password: password
+    - Username: ``demo01``
 
-4.  Select the View desktop (Agility)
+    - Password: ``password``
 
-5.  Use connect button to access
+#.  Double-click Agility icon to launch desktop
 
-6.  Slide the blue RDP indicator to the left
+#.  Verify the desktop functions
 
-7.  Close the View client. (press the X in Agility Toolbar-was under the
-    RD)
+#.  Close the View client
 
-8.  Use a supported browser to access the VDI (IE on the RDP
-    workstation)
+#.  Open IE and browser to
 
-    |image13|
+    - ``https://vmw-LB-SS.demoisfun.net``
 
-9.  https://vmw-LB-SS.demoisfun.net
+#.  Select VMware Horizon View HTML access
 
-10. Select VMware Horizon View HTML access
+#.  Enter Credentials
 
-11. Enter Credentials
+    - Username: ``demo01``
 
-    a. Username: demo01
+    - Password: ``password``
 
-    b. Password: password
+#.  Select (Agility)
 
-12. Select (Agility)
+#.  Accept Cert warning
 
-13. Accept Cert warning
+#.  Select (Agility)
 
-14. Select (Agility)
+#.  Verify that the desktop functions
 
-15. Verify that the desktop functions
+#.  Close the browser window
 
-16. Close the browser
-
-TASK 5 – Replace Security Servers and leverage APM as a PCOIP proxy
+Task 5 – Replace Security Servers and leverage APM as a PCOIP proxy
 -------------------------------------------------------------------
 
-**Use the VMware View iApp to replace Security Server to proxy PCoIP
-traffic**
+This environment will utilize Big-IP as a PCOIP Proxy. This eliminates
+the requirement for all Security Servers. The Connection Servers will be
+load balanced. Authentication is handled by the F5 APM module
 
-Note: This environment will utilize Big-IP as a PCOIP Proxy. This
-eliminates the requirement for all Security Servers. The Connection
-Servers will be load balanced. Authentication is handled by the F5 APM
-module
+|image11|
 
-|image14|
-
-Figure 5 - Replace Security Servers
+Figure 6 - Replace Security Servers
 
 **Deploy the iApp**
 
-1. Use the RDP function on your laptop to connect to the “corporate-pc”
-   RDP server/workstation
+#. From "corporate-pc"
 
-   i. Same process as Task 1 if you are not still connected
-
-2. Create a new Application Service by selecting iApps -> Application
+#. Create a new Application Service by selecting iApps -> Application
    Services and selecting Create
 
-   a. iApps >> Application Services
+   - iApps >> Application Services
 
-   b. Press the **Create** button
+   - Press the **Create** button
 
-   c. Name the Application Service **VM\_LAB\_1\_PCOIP**
+   - Name the Application Service ``VM_LAB_1_PCOIP``
 
-   d. Select **f5.vmware\_view.v1.5.1** for the template
-
-+----+
-+----+
+   - Select ``f5.vmware_view.v1.5.1`` for the template
 
 iApp Configuration
 ~~~~~~~~~~~~~~~~~~
 
-1. Review the **Welcome to the iAPP template for VMware Horizon View**
+#. Review the **Welcome to the iAPP template for VMware Horizon View**
 
-2. Note the **Template Options** (leave these default)
+#. Note the **Template Options** (leave these default)
 
-3. **Big-IP Access Policy Manager**
+#. **BIG-IP Access Policy Manager**
 
-+--------------------------------------------------------------------------------------+-------------------------------------------------------------+
-| Do you want to deploy BIG-IP Access Policy Manager?                                  | Yes, deploy BIG-IP Access Policy Manager                    |
-+======================================================================================+=============================================================+
-|                                                                                      |                                                             |
-+--------------------------------------------------------------------------------------+-------------------------------------------------------------+
-| Do you want to support browser based connections, including the View HTML5 client?   | Yes, support HTML 5 view clientless browser connections     |
-+--------------------------------------------------------------------------------------+-------------------------------------------------------------+
-| Should the BIG-IP system support RSA SecureID two-factor authentication              | NO, do not support RSA SecureID two-factor authentication   |
-+--------------------------------------------------------------------------------------+-------------------------------------------------------------+
-| Should the BIG\_IP system show a message to View users during logon                  | No, do not add a message during logon                       |
-+--------------------------------------------------------------------------------------+-------------------------------------------------------------+
-| What is the NetBIOS domain name for your environment                                 | demoisfun                                                   |
-+--------------------------------------------------------------------------------------+-------------------------------------------------------------+
-| Create a new AAA Server object **or select an existing one **                        | AD1                                                         |
-+--------------------------------------------------------------------------------------+-------------------------------------------------------------+
+   +--------------------------------------------------------------------------------------+-------------------------------------------------------------+
+   | Do you want to deploy BIG-IP Access Policy Manager?                                  | Yes, deploy BIG-IP Access Policy Manager                    |
+   +======================================================================================+=============================================================+
+   |                                                                                      |                                                             |
+   +--------------------------------------------------------------------------------------+-------------------------------------------------------------+
+   | Do you want to support browser based connections, including the View HTML5 client?   | Yes, support HTML 5 view clientless browser connections     |
+   +--------------------------------------------------------------------------------------+-------------------------------------------------------------+
+   | Should the BIG-IP system support RSA SecureID two-factor authentication              | NO, do not support RSA SecureID two-factor authentication   |
+   +--------------------------------------------------------------------------------------+-------------------------------------------------------------+
+   | Should the BIG\_IP system show a message to View users during logon                  | No, do not add a message during logon                       |
+   +--------------------------------------------------------------------------------------+-------------------------------------------------------------+
+   | What is the NetBIOS domain name for your environment                                 | demoisfun                                                   |
+   +--------------------------------------------------------------------------------------+-------------------------------------------------------------+
+   | Create a new AAA Server object **or select an existing one**                         | AD1                                                         |
+   +--------------------------------------------------------------------------------------+-------------------------------------------------------------+
 
-1. SSL Encryption (Certs are preloaded for this exercise)
+#. **SSL Encryption (Certs are preloaded for this exercise)**
 
-+----------------------------------------------------------+--------------------------------------------------------------+
-| How should the BIG-IP system handle encrypted traffic?   | Terminate SSL for clients, re-encrypt…\ **(SSL-Bridging)**   |
-+==========================================================+==============================================================+
-| Which SSL certificate do you want to use?                | wild.demoisfun.net.crt                                       |
-+----------------------------------------------------------+--------------------------------------------------------------+
-| Which SSL private key do you want to use?                | wild.demoisfun.net.key                                       |
-+----------------------------------------------------------+--------------------------------------------------------------+
+   +----------------------------------------------------------+--------------------------------------------------------------+
+   | How should the BIG-IP system handle encrypted traffic?   | Terminate SSL for clients, re-encrypt…\ **(SSL-Bridging)**   |
+   +==========================================================+==============================================================+
+   | Which SSL certificate do you want to use?                | wild.demoisfun.net.crt                                       |
+   +----------------------------------------------------------+--------------------------------------------------------------+
+   | Which SSL private key do you want to use?                | wild.demoisfun.net.key                                       |
+   +----------------------------------------------------------+--------------------------------------------------------------+
 
-1. **PC Over IP** (leave these default)
+#. **PC Over IP** (leave these default)
 
-2. **Virtual Servers and Pools **
+#. **Virtual Servers and Pools**
 
-+------------------------------------------------------------------------------------+--------------------------------+
-| What virtual server IP address do you want to use for remote, untrusted clients?   | 192.168.3.152                  |
-+====================================================================================+================================+
-| What is the associated service port?                                               | 443                            |
-+------------------------------------------------------------------------------------+--------------------------------+
-| What FQDN will clients use to access the View environment?                         | vmw-PROXY-VIEW.demoisfun.net   |
-+------------------------------------------------------------------------------------+--------------------------------+
-| Which Servers should be included in this pool?                                     | 192.168.10.212                 |
-|                                                                                    |                                |
-|                                                                                    | 192.168.10.213                 |
-+------------------------------------------------------------------------------------+--------------------------------+
+   +------------------------------------------------------------------------------------+--------------------------------+
+   | What virtual server IP address do you want to use for remote, untrusted clients?   | 192.168.3.152                  |
+   +====================================================================================+================================+
+   | What FQDN will clients use to access the View environment?                         | vmw-PROXY-VIEW.demoisfun.net   |
+   +------------------------------------------------------------------------------------+--------------------------------+
+   | Which Servers should be included in this pool?                                     | 192.168.10.212                 |
+   |                                                                                    |                                |
+   |                                                                                    | 192.168.10.213                 |
+   +------------------------------------------------------------------------------------+--------------------------------+
 
-1. **Application Health**
+#. **Application Health**
 
-   a. Use the pull down to select a standard https monitor
+   - Use the pull down to select a standard https monitor
 
-2. Press the **Finished** button
+#. Press the **Finished** button
 
 View the objects which were created by the iApp
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-1. Select the Components tab at the top of the page
+#. Select the Components tab at the top of the page
 
-2. Note the increase in objects compared to Task 2 and Task 4
+#. Note the increase in objects compared to Task 2 and Task 4
 
-3. Are the pool members available?
+#. Are the pool members available?
 
-4. Note the APM objects which were not present in the prior exercises
+#. Note the APM objects which were not present in the prior exercises
 
-5. Review the remaining parameters (any questions)
+#. Review the remaining parameters (any questions)
 
 Test the APM (PCoIP) functionality using both VMware View client and browser access methods
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Use the RDP function on your laptop to connect to the “home-pc” or use
-the browser / local view client on your laptop to access
-vmw-PROXY-VIEW.demoisfun.net
+#.  From "home-pc"
 
-1.  Open View client and connect to the Virtual Server just created with
-    iApp.
+#.  Open IE and browse to ``https://vmw-PROXY-VIEW.demoisfun.net``
 
-    i.  vmw-PROXY-VIEW.demoisfun.net (192.168.3.152)
+    - Username: ``demo01``
 
-    ii. IP address will not work—Certificate contains demoisfun.net
+    - Password: ``password``
 
-2.  When prompted for credentials
+#.  Click Agility on APM webtop
 
-    a. Username: demo01
+#.  Select VMware View Client
 
-    b. Password: password
+#.  Note the error and inspect the certificate
 
-3.  If authentication fails
+#.  Close the error box and cert view boxes
 
-    a. Access Policy>>Manage Sessions
+#.  Close the View client
 
-    b. Look at the entire session log
+#.  Open IE and browse to
 
-       i. More detail can be captured by enabling debug
+    - ``https://vmw-PROXY-VIEW.demoisfun.net``
 
-    c. Note the clock skew error
+#.  Select VMware Horizon View HTML access
 
-    d. Use the “Corporate PC” to Connect to the F5 Big IP GUI
-       https://192.168.10.216
+#.  Enter Credentials
 
-    e. Set the time on the big IP to match the time on the corporate-pc
+    - Username: ``demo01``
 
-       i. date MMDDhhmm Keep in mind—the big IP uses military time 1:25
-          PM = 13:25
+    - Password: ``password``
 
-    f. Return to step 1
+#.  Click Agility
 
-4.  Select the View desktop (Agility)
+#.  Select HTML5 Client
 
-5.  Use connect button to access
+#.  Verify that the desktop functions
 
-6.  Close the View client. (press the X in the upper right corner of the
-    screen)
+#.  Close the browser
 
-7.  https://192.168.3.152
-
-    a. Username: demo01
-
-    b. Password: password
-
-8.  Select (Agility) from the webtop
-
-9.  Select VMware View Client on the desktop
-
-10. Note the error and inspect the certificate
-
-11. Close the error box and cert view boxes
-
-12. Open VMware View Client
-
-    a. `vmw-PROXY-VIEW.demoisfun.net <https://vmw-PROXY-VIEW.demoisfun.net>`__
-
-    b. Username:demo01
-
-    c. Password: password
-
-13. Select (Agility) from the webtop
-
-14. Select VMware View client
-
-15. When the desktop opens, open Notepad and enter some text (leave this
-    on the screen)
-
-16. Slide the blue RDP indicator to the left
-
-17. Close the View client. (press the X in Agility Toolbar-was under the
-    RD)
-
-18. Use a supported browser to access the VDI (IE on the RDP
-    workstation)
-
-19. https://vmw-PROXY-VIEW.demoisfun.net
-
-20. Select VMware Horizon View HTML access
-
-21. Enter Credentials
-
-    a. Username: demo01
-
-    b. Password: password
-
-22. Select (Agility)
-
-23. Select HTML5 Client
-
-24. Verify that the desktop functions
-
-25. Close the browser
-
-.. |image1| image:: /_static/image3.png
+.. |image3| image:: /_static/class1/image5.png
    :width: 5.40625in
    :height: 3.04167in
-.. |image2| image:: /_static/image4.png
-   :width: 2.04303in
-   :height: 1.41146in
-.. |image3| image:: /_static/image5.png
-   :width: 1.48020in
-   :height: 2.12500in
-.. |image4| image:: /_static/image6.png
+.. |image4| image:: /_static/class1/image6.png
+   :width: 2.47015in
+   :height: 1.73397in
+.. |image5| image:: /_static/class1/image7.png
    :width: 4.94792in
    :height: 3.20833in
-.. |image5| image:: /_static/image7.png
+.. |image6| image:: /_static/class1/image8.png
    :width: 3.32292in
    :height: 1.05208in
-.. |image6| image:: /_static/image8.png
+.. |image7| image:: /_static/class1/image9.png
    :width: 3.15625in
    :height: 1.29167in
-.. |image7| image:: /_static/image9.png
-   :width: 4.37500in
-   :height: 1.28125in
-.. |image8| image:: /_static/image10.png
+.. |image8| image:: /_static/class1/image10.png
    :width: 5.25000in
    :height: 3.18750in
-.. |image9| image:: /_static/image4.png
-   :width: 2.04236in
-   :height: 1.41111in
-.. |image10| image:: /_static/image11.png
-   :width: 1.32738in
-   :height: 2.22370in
-.. |image11| image:: /_static/image9.png
-   :width: 4.37500in
-   :height: 1.28125in
-.. |image12| image:: /_static/image12.png
+.. |image9| image:: /_static/class1/image11.png
+   :width: 1.29861in
+   :height: 1.88819in
+.. |image10| image:: /_static/class1/image12.png
    :width: 4.63542in
    :height: 3.06250in
-.. |image13| image:: /_static/image9.png
-   :width: 4.37500in
-   :height: 1.28125in
-.. |image14| image:: /_static/image13.png
+.. |image11| image:: /_static/class1/image13.png
    :width: 5.67708in
    :height: 3.35417in

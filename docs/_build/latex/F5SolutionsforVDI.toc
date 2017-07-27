@@ -1,34 +1,35 @@
 \select@language {english}
-\contentsline {chapter}{\numberline {1}Getting Started}{5}{chapter.1}
-\contentsline {section}{\numberline {1.1}Lab Topology}{5}{section.1.1}
-\contentsline {subsection}{\numberline {1.1.1}Lab Components}{6}{subsection.1.1.1}
-\contentsline {chapter}{\numberline {2}201 - VDI the F5 Way}{7}{chapter.2}
-\contentsline {section}{\numberline {2.1}Module 1 - Solutions for VMware View}{7}{section.2.1}
-\contentsline {subsection}{\numberline {2.1.1}Lab 1 \textendash {} Solutions for VMware View}{7}{subsection.2.1.1}
-\contentsline {subsubsection}{TASK 1 \textendash {} Access VMware View Desktop environment without F5}{7}{subsubsection*.3}
-\contentsline {subsubsection}{TASK 2 \textendash {} Load Balance VMware View connection servers}{9}{subsubsection*.4}
+\contentsline {chapter}{\numberline {1}201: VDI the F5 Way}{5}{chapter.1}
+\contentsline {section}{\numberline {1.1}Getting Started}{5}{section.1.1}
+\contentsline {subsection}{\numberline {1.1.1}Lab Network Setup}{5}{subsection.1.1.1}
+\contentsline {subsection}{\numberline {1.1.2}Connect to Lab Environment}{6}{subsection.1.1.2}
+\contentsline {section}{\numberline {1.2}Module 1: Solutions for VMware View}{7}{section.1.2}
+\contentsline {subsection}{\numberline {1.2.1}Lab 1.1: Solutions for VMware View}{8}{subsection.1.2.1}
+\contentsline {subsubsection}{Task 1 \textendash {} Access VMware View Desktop environment without F5}{8}{subsubsection*.3}
+\contentsline {subsubsection}{Task 2 \textendash {} Load Balance Connection Servers}{9}{subsubsection*.4}
 \contentsline {paragraph}{View the objects which were created by the iApp}{10}{paragraph*.5}
 \contentsline {paragraph}{View the properties of the iApp}{11}{paragraph*.6}
 \contentsline {paragraph}{Test the connection server load balancing using both VMware View client and browser access methods.}{11}{paragraph*.7}
-\contentsline {subsubsection}{TASK 3 \textendash {} Access View Desktop environment through Security Server}{12}{subsubsection*.8}
-\contentsline {subsubsection}{TASK 4 \textendash {} Load Balance VMware View security servers}{14}{subsubsection*.9}
-\contentsline {paragraph}{View the objects which were created by the iApp}{16}{paragraph*.10}
-\contentsline {paragraph}{Test the Security Server load balancing using both VMware View client and browser access methods}{16}{paragraph*.11}
-\contentsline {subsubsection}{TASK 5 \textendash {} Replace Security Servers and leverage APM as a PCOIP proxy}{17}{subsubsection*.12}
-\contentsline {paragraph}{iApp Configuration}{18}{paragraph*.13}
-\contentsline {paragraph}{View the objects which were created by the iApp}{19}{paragraph*.14}
-\contentsline {paragraph}{Test the APM (PCoIP) functionality using both VMware View client and browser access methods}{19}{paragraph*.15}
-\contentsline {section}{\numberline {2.2}Module 2 - Solutions for Citrix XenDesktop}{20}{section.2.2}
-\contentsline {subsection}{\numberline {2.2.1}Lab 2 \textendash {} Solutions for Citrix XenDesktop}{20}{subsection.2.2.1}
-\contentsline {subsubsection}{TASK 1 \textendash {} Access XenDesktop without F5}{21}{subsubsection*.16}
-\contentsline {subsubsection}{TASK 2 \textendash {} Load Balance StoreFront}{22}{subsubsection*.17}
-\contentsline {paragraph}{iApp Configuration}{22}{paragraph*.18}
-\contentsline {paragraph}{Test connectivity}{23}{paragraph*.19}
-\contentsline {subsubsection}{TASK 3 \textendash {} Reconfigure the iApp to Replace StoreFront}{24}{subsubsection*.20}
-\contentsline {paragraph}{iApp Configuration}{24}{paragraph*.21}
-\contentsline {paragraph}{Test connectivity}{25}{paragraph*.22}
-\contentsline {section}{\numberline {2.3}Module 3 - Microsoft RDS Proxy}{25}{section.2.3}
-\contentsline {subsection}{\numberline {2.3.1}Lab 3 \textendash {} Microsoft RDS proxy}{25}{subsection.2.3.1}
-\contentsline {subsubsection}{TASK 1 \textendash {} Access Terminal Server from external}{26}{subsubsection*.23}
-\contentsline {paragraph}{iApp Configuration}{27}{paragraph*.24}
-\contentsline {paragraph}{Test the RDS proxy functionality using RDS Client}{27}{paragraph*.25}
+\contentsline {subsubsection}{Task 3 \textendash {} Access View Desktop through Security Server}{12}{subsubsection*.8}
+\contentsline {subsubsection}{Task 4 \textendash {} Load Balance Security Servers}{13}{subsubsection*.9}
+\contentsline {paragraph}{View the objects which were created by the iApp}{14}{paragraph*.10}
+\contentsline {paragraph}{Test the Security Server load balancing using both VMware View client and browser access methods}{14}{paragraph*.11}
+\contentsline {subsubsection}{Task 5 \textendash {} Replace Security Servers and leverage APM as a PCOIP proxy}{15}{subsubsection*.12}
+\contentsline {paragraph}{iApp Configuration}{16}{paragraph*.13}
+\contentsline {paragraph}{View the objects which were created by the iApp}{17}{paragraph*.14}
+\contentsline {paragraph}{Test the APM (PCoIP) functionality using both VMware View client and browser access methods}{17}{paragraph*.15}
+\contentsline {section}{\numberline {1.3}Module 2: Solutions for Citrix XenDesktop}{18}{section.1.3}
+\contentsline {subsection}{\numberline {1.3.1}Lab 2.1: Solutions for Citrix XenDesktop}{18}{subsection.1.3.1}
+\contentsline {subsubsection}{Task 1 \textendash {} Access XenDesktop without F5}{18}{subsubsection*.16}
+\contentsline {subsubsection}{Task 2 \textendash {} Load Balance StoreFront}{19}{subsubsection*.17}
+\contentsline {paragraph}{iApp Configuration}{20}{paragraph*.18}
+\contentsline {paragraph}{Test connectivity}{21}{paragraph*.19}
+\contentsline {subsubsection}{Task 3 \textendash {} Replace StoreFront}{21}{subsubsection*.20}
+\contentsline {paragraph}{iApp Configuration}{22}{paragraph*.21}
+\contentsline {paragraph}{Test connectivity}{22}{paragraph*.22}
+\contentsline {section}{\numberline {1.4}Module 3: Microsoft RDS Proxy}{22}{section.1.4}
+\contentsline {subsection}{\numberline {1.4.1}Lab 3.1: Microsoft RDS proxy}{22}{subsection.1.4.1}
+\contentsline {subsubsection}{Task 1 \textendash {} Access Terminal Server from external network}{23}{subsubsection*.23}
+\contentsline {paragraph}{iApp Configuration}{24}{paragraph*.24}
+\contentsline {paragraph}{Test the RDS proxy functionality using RDS Client}{24}{paragraph*.25}
+\contentsline {paragraph}{FINAL GRADE}{26}{paragraph*.26}

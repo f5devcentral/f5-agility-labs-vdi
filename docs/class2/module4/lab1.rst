@@ -1,31 +1,25 @@
-Lab 1.1: Solutions for VMware View
+Lab 1.4: Build a webtop with VMware View and Citrix
 ==================================
+This lab will leverage the APM access policies created in prior labs to build a unified webtop with access to Vmware View and Citrix
 
-Task 1 – Access VMware View Desktop environment without F5 
+Task 1 – Build a VIP and Access Policy 
 -----------------------------------------------------------
 
-Test the functional VMware view environment using the internal
-Connection Servers (Internal use case without F5 integration)
-
-Access the VDI with a client on the internal network. The workstation
-will be preconfigured to initiate the connection through a specific
-connection server. Security servers are not used by internal VDI users
-
-|image3|
-
-Figure 2 - Accessing Internal View Desktop
 
 #. From the "corporate-pc".
 
-#. Use the VMware Horizon View client to access the connection server
+#. Connect to the F5 config GUI 
 
-   |image4|
+   - https://f5-bigip1a.demosifun.net
+   - Username: admin
+   - Password: password 
 
-   - VMware Horizon Client
+#. Copy the VM_LAB_1_PCOIP access profile to VDI_Combined_webtop
+   - Access>>Profiles/Policies>>Access Profiles
+   - Click the “Copy” hyperlink on the VM_LAB_1_PCOIP  line
+   - Name the profile VDI_Combined_webtop
+Press the Copy button (bottom left)
 
-   - \+ New server
-
-#. Connection Server address "vmw-connsvr1c.demoisfun.net"
 
 #. When prompted for credentials
 

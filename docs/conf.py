@@ -8,7 +8,7 @@
 classname = "F5 Solutions for VDI"
 
 # OPTIONAL: The URL to the GitHub Repository for this class
-github_repo = "https://github.com/f5devcentral/f5-agility-labs-vdi"
+github_repo = "https://github.com/dungfucious/f5-agility-labs-vdi-2018"
 
 # OPTIONAL: Google Analytics
 # googleanalytics_id = 'UA-85156643-4'

@@ -38,23 +38,124 @@ Task 1 – Build a VIP and Access Policy
    - Pres the “Save” button
 
 
-#. When prompted for credentials
+Browser Resource Assign Image
 
-   - Username: ``demo01``
 
-   - Password: ``password``
 
-#. Double-click the "Agility" icon to launch virtual desktop.
+#. o	Add a branch  for the Citrix Receiver to the Client type decision Box
+	Click on the “Client Type” object
+	Select the “Branch Rules” Tab
+	Click the “Add Branch Rule” button
+•	Name: Citrix Receiver
+•	Press the “change” link in the section
+	Click on the “Add Expression”
+•	Agent Sel: UI Mode
+•	Condition: UI Mode
+•	UI Mode is: Citrix Reciever
+•	Click on “Add Expression”
+•	Click the “Finished” button
+	Click on the “Save” button (this takes a while) 
+o	Add a Logon Page object to the Citrix Receiver branch
+	Click the “+” to the right of Citrix Reciever branch of the Client Type Object
+	Select the “Logon” tab
+	Select Logon Page
+	Click the “Add Item” button
+	Review the default settings
+	Click the “Save” button
+o	Add a Domain Variable Assign object to the Citrix Receiver branch
+	Click the “+” to the right of the Logon Page
+	Select the “Assignment” tab
+	Select “Variable Assign”
+	Click the “Add Item” button
+	Click the “Add new entry” button
+	Click the “change” link
+•	Custom Variable, Insecure, Enter session.logon.last.domain in the left panel
+•	Custom Expression, Enter expr {"demoisfun"} in the right panel
+•	Click the “Finished” Button
+	Click the “Save” button
 
-#. In the Agility virtual desktop, open Notepad and type in something.
+Custom Variable Image
 
-#. Disconnect from Agility desktop by closing View client. (RDP Toolbar
-   on top. May need to slide the blue RDP bar to the left in order to
-   click the X in Agility Toolbar)
+o	Add an AD Auth object to the Citrix Receiver branch
+	Click the “+” to the right of Variable Assign
+	Select the “Authentication” tab
+	Select “AD Auth”
+	Click the “Add Item” button
+	Use the pulldown to select Server:/Common/AD1
+	Click the “Save” button
+o	Add  an Advanced Resource Assign object to the Citrix Receiver branch
+	Click the “+” to the right of Ad Auth
+	Select the “Assignment” tab
+	Select “Advanced Resource  Assign”
+	Click the “Add Item” button
+	Click the “Add new entry” button
+	Click the “add/delete” link
+	Select the “Remote Desktop” tab
+	Select /Common/VM_LAB_2_LBSF.app/VM_LAB_2_LBSF_remote_desktop_1
+	Click the “Update” button
+	Select the “Webtop” tab
+	Select Common/VM_LAB_2_LBSF.app/VM_LAB_2_LBSF_webtop
+	Click on the “Deny” action on the fallback link out of the Advanced Resource Assign
+	Select “Allow”
+	Click the “Save” button
+	Click the “Update” button
+	Click the “Save” button
 
-#. Open View client and try to reconnect to "vmw-connsvr1c.
-   demoisfun.net"
 
-#. Notepad should still be on the desktop with the text you input.
+Advanced Resource Assign Image
 
-#. Close the View client. (press the X in Agility Toolbar)
+
+
+
+o	Apply the access policy
+	Click on the Apply Access policy in the upper left corner of the VPE GUI. Note the yellow vertical bar next to it indicating the policy has been modified
+	Close the VPE (Close button in the upper right corner)
+	Access>>Profiles/Policies>>Access Profiles
+	Verify that all Access policies status is Green (refresh browser if necessary) 
+•	Create a VIP for PCOIP UDP traffic 
+o	Navigate to Local Traffic>>Virtual Servers>>Virtual Server List
+o	View the configuration of the VM_LAB_1_PCOIP_pcoip_udp VIP. We will replicate this configuration using the IP of the new VIP we created for VDI access (Hint—Open an additional browser window connected to F5-bigip1a.demoisfun.net. This will allow you to display different VIPs in the same device)
+o	Navigate to Local Traffic>>Virtual Servers>>Virtual Server List
+o	Press the Create Button in the upper right section of the GUI
+o	Configure the VIP with the variables below
+
+
+
+UDP VIP Properties Image
+
+
+•	Click “Update” at the bottom of the screen
+
+•	Create a Combined VIP for the Citrix and VMware connectivity
+o	Navigate to Local Traffic>>Virtual Servers>>Virtual Server List
+o	Press the Create Button in the upper right section of the GUI
+o	Configure the VIP with the variables below
+
+
+
+
+Combined VIP Properties
+
+
+Task 2 – Test Connectivity 
+
+•	From “home-pc” 
+o	Launch IE and browse to
+	http://vdi.demoisfun.net (192.168.3.157)
+o	When prompted for credentials
+	Username: demo01
+	Password: password
+o	APM webtop is displayed with Agility - Vmware View Desktop and Agility - Agility VDI Class (Citrix) 
+o	Click on Agility - Agility VDI Class to launch XenDesktop
+o	Click Open to launch the Citrix ICA client (pop up box at bottom) 
+o	Verify that desktop is functional
+o	In Citrix Agility desktop, click on Start and Logoff
+o	This will return you to the webtop
+o	Click on Agility - Vmware View Desktop
+o	At the Cert Warning, click “Continue to this website”
+o	Verify that the Agility desktop functions
+o	Close the IE browser window (Scroll to the upper right corner of the window and hit the “X”
+•	Logout of APM Webtop using the Logout button in the upper right corner
+•	Close the browser window
+
+

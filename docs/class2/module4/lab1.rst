@@ -20,27 +20,21 @@ Task 1 – Build a VIP and Access Policy
    - Name the profile VDI_Combined_webtop
    - Press the Copy button (bottom left)
 
-#.	Edit the VDI_Combined_webtop policy. 
+#.	View the characteristics of the VDI_Combined_webtop  and VM_LAB_2_LBSS acces policies
    - View the VM_LAB_2_LB_SF Access profile. The subsequent steps will integrate the required components from that Citrix  policy with the copy of the VM_LAB_1_PCOIP we created (VDI_Combined_webtop- Access>>Profiles/Policies>>Access Profiles
    - Click the “Edit” hyperlink on the VM_LAB_2_LB_SF
- - Review the existing VPE configuration for the Citrix access created in Lab 2
 
-   - Open the VDI-Combined_webtop to add the required objects and parameters
+#. Open the VDI-Combined_webtop to add the required objects and parameters
    - Access>>Profiles/Policies>>Access Profiles
    - Click the “Edit” hyperlink on the VDI_Combined_webtop
    - Review the existing VPE configuration 
    
-   - Add Citrix to the Browser Resource assign on the Full or Mobile Browser branch
+ #. Add Citrix to the Browser Resource assign on the Full or Mobile Browser branch
    - Click on the “Add/Delete” link in the Browser Resource Assign pop up window
    - Select the Remote Desktop tab 
    - Add /Common/VM_LAB_2_LBSF.app/VM_LAB_2_LBSF_remote_desktop_1
    - Press the “Update” button
    - Pres the “Save” button
-
-
-#. Browser Resource Assign Image
-
-
 
 #. Add a branch  for the Citrix Receiver to the Client type decision Box
    - Click on the “Client Type” object - Select the “Branch Rules” Tab

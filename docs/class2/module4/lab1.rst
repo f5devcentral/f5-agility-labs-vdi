@@ -196,7 +196,7 @@ Task 2 – Test Connectivity
    - Click Open to launch the Citrix ICA client (pop up box at bottom) 
    - Verify that desktop is functional
    - In Citrix Agility desktop, click on Start and Logoff
-   -This will return you to the webtop
+   - This will return you to the webtop
    - Click on Agility - Vmware View Desktop
    - At the Cert Warning, click “Continue to this website”
    - Verify that the Agility desktop functions

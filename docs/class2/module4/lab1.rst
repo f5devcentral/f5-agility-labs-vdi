@@ -2,7 +2,7 @@
 ==================================
 This lab will leverage the APM access policies created in prior labs to build a unified webtop with access to Vmware View and Citrix
 
-Task 1 – Build a VIP and Access Policy 
+Task 1 – Build a VIP with an Access Policy allowing acces to VMware and Citrix
 -----------------------------------------------------------
 
 

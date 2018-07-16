@@ -19,7 +19,7 @@ Task 1 – Build a VIP with an Access Policy allowing acces to VMware and Citrix
    - Access>>Profiles/Policies>>Access Profiles
    - Click the “Copy” hyperlink on the VM_LAB_1_PCOIP  line
    - Name the profile VDI_Combined_webtop
-   - Press the Copy button (bottom left)
+   - Press the "Copy" button (bottom left)
 
 #. View the characteristics of the VDI_Combined_webtop  and VM_LAB_2_LBSS access policies
 
@@ -71,8 +71,8 @@ Task 1 – Build a VIP with an Access Policy allowing acces to VMware and Citrix
    - Click the “Add Item” button
    - Click the “Add new entry” button
    - Click the “change” link
-   - Custom Variable, Insecure, Enter session.logon.last.domain in the left panel
-   - Custom Expression, Enter expr {"demoisfun"} in the right panel
+   - Custom Variable, Insecure, Enter **session.logon.last.domain** in the left panel
+   - Custom Expression, Enter **expr {"demoisfun"}** in the right panel
    - Click the “Finished” Button
    - Click the “Save” button
 

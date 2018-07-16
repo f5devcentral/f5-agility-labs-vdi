@@ -32,7 +32,7 @@ Task 1 – Build a VIP and Access Policy
    - Click the “Edit” hyperlink on the VDI_Combined_webtop
    - Review the existing VPE configuration 
  
- #. Add Citrix to the Browser Resource assign on the Full or Mobile Browser branch
+#. Add Citrix to the Browser Resource assign on the Full or Mobile Browser branch
  
    - Click on the “Add/Delete” link in the Browser Resource Assign pop up window
    - Select the Remote Desktop tab 
@@ -54,7 +54,7 @@ Task 1 – Build a VIP and Access Policy
    - Click the “Finished” button
    - Click on the “Save” button (this takes a while) 
  
- #. Add a Logon Page object to the Citrix Receiver branch
+#. Add a Logon Page object to the Citrix Receiver branch
  
    - Click the “+” to the right of Citrix Reciever branch of the Client Type Object
    - Select the “Logon” tab
@@ -63,7 +63,7 @@ Task 1 – Build a VIP and Access Policy
    - Review the default settings
    - Click the “Save” button
  
- #. Add a Domain Variable Assign object to the Citrix Receiver branch
+#. Add a Domain Variable Assign object to the Citrix Receiver branch
  
    - Click the “+” to the right of the Logon Page
    - Select the “Assignment” tab
@@ -133,8 +133,8 @@ Task 1 – Build a VIP and Access Policy
 |Service Port                                | 4172                        +
 +--------------------------------------------+-----------------------------+
 |Configuration                               |                             |
-+------------------------------------------- +-----------------------------+
-|Protocol                                    | udp                         |
++--------------------------------------------+-----------------------------+
+|Prptocol                                    | UDP                         |
 +--------------------------------------------+-----------------------------+
 |Source Address Translation                  | Auto Map                    |
 +--------------------------------------------+-----------------------------+
@@ -147,7 +147,7 @@ Task 1 – Build a VIP and Access Policy
 
    - Click “Update” at the bottom of the screen
 
- #. Create a Combined VIP for the Citrix and VMware connectivity
+#. Create a Combined VIP for the Citrix and VMware connectivity
    - Navigate to Local Traffic>>Virtual Servers>>Virtual Server List
    - Press the Create Button in the upper right section of the GUI
    - Configure the VIP with the variables below

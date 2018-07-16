@@ -20,7 +20,7 @@ Task 1 – Build a VIP and Access Policy
    - Name the profile VDI_Combined_webtop
    - Press the Copy button (bottom left)
 
-#.	View the characteristics of the VDI_Combined_webtop  and VM_LAB_2_LBSS acces policies
+#.	View the characteristics of the VDI_Combined_webtop  and VM_LAB_2_LBSS access policies
    - View the VM_LAB_2_LB_SF Access profile. The subsequent steps will integrate the required components from that Citrix  policy with the copy of the VM_LAB_1_PCOIP we created (VDI_Combined_webtop- Access>>Profiles/Policies>>Access Profiles
    - Click the “Edit” hyperlink on the VM_LAB_2_LB_SF
 

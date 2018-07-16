@@ -88,8 +88,7 @@ Custom Variable Image
 - Click the “Save” button
    
    - Add  an Advanced Resource Assign object to the Citrix Receiver branch
-   - Click the “+” to the right of Ad Auth
-   - Select the “Assignment” tab
+   - Click the “+” to the right of Ad Authd   - Select the “Assignment” tab
    - Select “Advanced Resource  Assign”
    - Click the “Add Item” button
    - Click the “Add new entry” button
@@ -108,7 +107,7 @@ Custom Variable Image
 
 Advanced Resource Assign Image
 
-
+-
 
    - Apply the access policy
    -Click on the Apply Access policy in the upper left corner of the VPE GUI. Note the yellow vertical bar next to it indicating the policy has been modified
@@ -126,7 +125,7 @@ Advanced Resource Assign Image
    +--------------------------------------------+-----------------------------+
    |General Properties                          |                             |
    +--------------------------------------------+-----------------------------+
-   |Name                                        | CombinerVDI-PCOIP           |
+   |Name                                        | Combined-VDI-PCOIP          |
    +--------------------------------------------+-----------------------------+
    |Destination Address/Mask                    | 192.168.3.157               |
    +--------------------------------------------+-----------------------------+
@@ -156,7 +155,7 @@ Advanced Resource Assign Image
    +--------------------------------------------+----------------------------+
    |General Properties                          |                            |
    +--------------------------------------------+----------------------------+
-   |Name                                        | CombinerVDI-Desktop        |
+   |Name                                        | Combined-VDI-Desktop       |
    +--------------------------------------------+----------------------------+
    |Destination Address/Mask                    | 192.168.3.157              |
    +--------------------------------------------+----------------------------+

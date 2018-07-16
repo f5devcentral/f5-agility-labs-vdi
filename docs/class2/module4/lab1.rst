@@ -119,7 +119,9 @@ Task 1 – Build a VIP and Access Policy
    - Navigate to Local Traffic>>Virtual Servers>>Virtual Server List
    - Press the Create Button in the upper right section of the GUI
    - Configure the VIP with the variables below
-   
+
+#. VIP Config Parameters
+
 +--------------------------------------------+-----------------------------+
 |General Properties                          |                             |
 +--------------------------------------------+-----------------------------+
@@ -140,16 +142,17 @@ Task 1 – Build a VIP and Access Policy
 |Application Tunnels (Jave & Per-App VPN)    | Enabled - Check Box         |
 +--------------------------------------------+-----------------------------+
    
-
+#. Update the VIP 
    
    - Click “Update” at the bottom of the screen
 
-   - Create a Combined VIP for the Citrix and VMware connectivity
+ #. Create a Combined VIP for the Citrix and VMware connectivity
    - Navigate to Local Traffic>>Virtual Servers>>Virtual Server List
    - Press the Create Button in the upper right section of the GUI
    - Configure the VIP with the variables below
  
- 
+#. VIP Config Parameters 
+
    +--------------------------------------------+----------------------------+
    |General Properties                          |                            |
    +--------------------------------------------+----------------------------+
@@ -179,6 +182,8 @@ Task 1 – Build a VIP and Access Policy
    +--------------------------------------------+----------------------------+
    
 Task 2 – Test Connectivity 
+
+#. Test the connectovity to VMware ad Citrix
 
    - From “home-pc” 
    - Launch IE and browse to http://vdi.demoisfun.net (192.168.3.157)

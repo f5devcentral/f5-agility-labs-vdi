@@ -326,7 +326,7 @@ Figure 5 - Load balance Security Servers
    +------------------------------------------------------------------------------------+---------------------------+
    | What virtual server IP address do you want to use for remote, untrusted clients?   | 192.168.3.150             |
    +====================================================================================+===========================+
-   | What FQDN will clients use to access the View environment?                         | vmw-UAG.demoisfun.net   |
+   | What FQDN will clients use to access the View environment?                         | vmw-UAG.demoisfun.net     |
    +------------------------------------------------------------------------------------+---------------------------+
    | Which Servers should be included in this pool?                                     | 192.168.3.214             |
    |                                                                                    |                           |

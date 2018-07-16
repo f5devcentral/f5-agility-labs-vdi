@@ -83,7 +83,9 @@ Custom Variable Image
    - Select “AD Auth”
    - Click the “Add Item” button
    - Use the pulldown to select Server:/Common/AD1
-   - Click the “Save” button
+
+
+- Click the “Save” button
    
    - Add  an Advanced Resource Assign object to the Citrix Receiver branch
    - Click the “+” to the right of Ad Auth
@@ -141,6 +143,24 @@ Advanced Resource Assign Image
    +--------------------------------------------+-----------------------------+
    |Application Tunnels (Jave & Per-App VPN)    | Enabled - Check Box         |
    +--------------------------------------------+-----------------------------+
+   
+   
+   
+   
+   
+   
+   +------------------------------------------------------------------------------------+---------------------------+
+   | What DNS name will clients use to reach the Web Interface or StoreFront servers?   | ctx-LB-SF.demoisfun.net   |
+   +====================================================================================+===========================+
+   | Which port have you configured for Web Interface or StoreFront HTTP traffic?       | 80                        |
+   +------------------------------------------------------------------------------------+---------------------------+
+   | What are the IP addresses of your Web Interface or StoreFront servers?             | 192.168.10.220            |
+   |                                                                                    |                           |
+   |                                                                                    | 192.168.10.221            |
+   +------------------------------------------------------------------------------------+---------------------------+
+   | Which Monitor do you want to use                                                   | http                      |
+   +------------------------------------------------------------------------------------+---------------------------+
+   
    - Click “Update” at the bottom of the screen
 
    - Create a Combined VIP for the Citrix and VMware connectivity

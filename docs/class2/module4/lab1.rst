@@ -15,21 +15,25 @@ Task 1 – Build a VIP and Access Policy
    - Password: password 
 
 #. Copy the VM_LAB_1_PCOIP access profile to VDI_Combined_webtop
+
    - Access>>Profiles/Policies>>Access Profiles
    - Click the “Copy” hyperlink on the VM_LAB_1_PCOIP  line
    - Name the profile VDI_Combined_webtop
    - Press the Copy button (bottom left)
 
 #. View the characteristics of the VDI_Combined_webtop  and VM_LAB_2_LBSS access policies
+
    - View the VM_LAB_2_LB_SF Access profile. The subsequent steps will integrate the required components from that Citrix  policy with the copy of the VM_LAB_1_PCOIP we created (VDI_Combined_webtop- Access>>Profiles/Policies>>Access Profiles
    - Click the “Edit” hyperlink on the VM_LAB_2_LB_SF
 
 #. Open the VDI-Combined_webtop to add the required objects and parameters
+
    - Access>>Profiles/Policies>>Access Profiles
    - Click the “Edit” hyperlink on the VDI_Combined_webtop
    - Review the existing VPE configuration 
    
  #. Add Citrix to the Browser Resource assign on the Full or Mobile Browser branch
+ 
    - Click on the “Add/Delete” link in the Browser Resource Assign pop up window
    - Select the Remote Desktop tab 
    - Add /Common/VM_LAB_2_LBSF.app/VM_LAB_2_LBSF_remote_desktop_1
@@ -37,6 +41,7 @@ Task 1 – Build a VIP and Access Policy
    - Pres the “Save” button
 
 #. Add a branch  for the Citrix Receiver to the Client type decision Box
+
    - Click on the “Client Type” object - Select the “Branch Rules” Tab
    - Click the “Add Branch Rule” button
    - Name: Citrix Receiver
@@ -49,7 +54,8 @@ Task 1 – Build a VIP and Access Policy
    - Click the “Finished” button
    - Click on the “Save” button (this takes a while) 
    
-   - Add a Logon Page object to the Citrix Receiver branch
+ #. Add a Logon Page object to the Citrix Receiver branch
+ 
    - Click the “+” to the right of Citrix Reciever branch of the Client Type Object
    - Select the “Logon” tab
    - Select Logon Page
@@ -57,7 +63,8 @@ Task 1 – Build a VIP and Access Policy
    - Review the default settings
    - Click the “Save” button
    
-   - Add a Domain Variable Assign object to the Citrix Receiver branch
+ #. Add a Domain Variable Assign object to the Citrix Receiver branch
+ 
    - Click the “+” to the right of the Logon Page
    - Select the “Assignment” tab
    - Select “Variable Assign”
@@ -69,19 +76,17 @@ Task 1 – Build a VIP and Access Policy
    - Click the “Finished” Button
    - Click the “Save” button
 
-Custom Variable Image
+#. Add an AD Auth object to the Citrix Receiver branch
 
-   - Add an AD Auth object to the Citrix Receiver branch
    - Click the “+” to the right of Variable Assign
    - Select the “Authentication” tab
    - Select “AD Auth”
    - Click the “Add Item” button
    - Use the pulldown to select Server:/Common/AD1
-
-
-- Click the “Save” button
+   - Click the “Save” button
    
-   - Add  an Advanced Resource Assign object to the Citrix Receiver branch
+#. Add  an Advanced Resource Assign object to the Citrix Receiver branch
+
    - Click the “+” to the right of Ad Authd   - Select the “Assignment” tab
    - Select “Advanced Resource  Assign”
    - Click the “Add Item” button
@@ -96,20 +101,19 @@ Custom Variable Image
    - Select “Allow”
    - Click the “Save” button
    - Click the “Update” button
-	Click the “Save” button
+   - Click the “Save” button
 
 
-Advanced Resource Assign Image
 
--
 
-   - Apply the access policy
+#. Apply the access policy
    -Click on the Apply Access policy in the upper left corner of the VPE GUI. Note the yellow vertical bar next to it indicating the policy has been modified
    -Close the VPE (Close button in the upper right corner)
    - Access>>Profiles/Policies>>Access Profiles
    - Verify that all Access policies status is Green (refresh browser if necessary) 
    
-   - Create a VIP for PCOIP UDP traffic 
+#. Create a VIP for PCOIP UDP traffic 
+
    - Navigate to Local Traffic>>Virtual Servers>>Virtual Server List
    - View the configuration of the VM_LAB_1_PCOIP_pcoip_udp VIP. We will replicate this configuration using the IP of the new VIP we created for VDI access (Hint—Open an additional browser window connected to F5-bigip1a.demoisfun.net. This will allow you to display different VIPs in the same device)
    - Navigate to Local Traffic>>Virtual Servers>>Virtual Server List

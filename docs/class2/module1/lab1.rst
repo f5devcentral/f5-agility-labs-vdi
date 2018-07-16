@@ -25,7 +25,7 @@ Figure 2 - Accessing Internal View Desktop
 
    - \+ New server
 
-#. Connection Server address "vmw-connsvr1c.demoisfun.net"
+#. Connection Server address "vmw-connsvr1a.demoisfun.net"
 
 #. When prompted for credentials
 
@@ -41,7 +41,7 @@ Figure 2 - Accessing Internal View Desktop
    on top. May need to slide the blue RDP bar to the left in order to
    click the X in Agility Toolbar)
 
-#. Open View client and try to reconnect to "vmw-connsvr1c.
+#. Open View client and try to reconnect to "vmw-connsvr1a.
    demoisfun.net"
 
 #. Notepad should still be on the desktop with the text you input.
@@ -112,9 +112,9 @@ Figure 3 - Load balance Connection Servers
    +------------------------------------------------------------------------------------+---------------------------+
    | What FQDN will clients use to access the View environment                          | vmw-LB-CS.demoisfun.net   |
    +------------------------------------------------------------------------------------+---------------------------+
-   | Which Servers should be included in this pool                                      | 192.168.10.212            |
+   | Which Servers should be included in this pool                                      | 192.168.10.210            |
    |                                                                                    |                           |
-   |                                                                                    | 192.168.10.213            |
+   |                                                                                    | 192.168.10.211            |
    +------------------------------------------------------------------------------------+---------------------------+
 
 #. **Client Optimization** (leave these default—Do not compress…)
@@ -253,7 +253,7 @@ Figure 4 - Access external View Desktop
 #.  Close the View client
 
 #.  Access the application through your browser 
-    ``https://vmw-secursvr1a.demoisfun.net``
+    ``https://vmw-uag1a.demoisfun.net``
 
 #.  Select VMware Horizon View HTML access
 
@@ -326,7 +326,7 @@ Figure 5 - Load balance Security Servers
    +------------------------------------------------------------------------------------+---------------------------+
    | What virtual server IP address do you want to use for remote, untrusted clients?   | 192.168.3.150             |
    +====================================================================================+===========================+
-   | What FQDN will clients use to access the View environment?                         | vmw-LB-SS.demoisfun.net   |
+   | What FQDN will clients use to access the View environment?                         | vmw-UAG.demoisfun.net   |
    +------------------------------------------------------------------------------------+---------------------------+
    | Which Servers should be included in this pool?                                     | 192.168.3.214             |
    |                                                                                    |                           |
@@ -362,7 +362,7 @@ Test the Security Server load balancing using both VMware View client and browse
 
     - \+ New Server
 
-      - vmw-LB-SS.demoisfun.net (192.168.3.150)
+      - vmw-LB-UAG.demoisfun.net (192.168.3.150)
 
       - Press the Connect button
 
@@ -382,7 +382,7 @@ Test the Security Server load balancing using both VMware View client and browse
 
 #.  Open IE and browser to
 
-    - ``https://vmw-LB-SS.demoisfun.net``
+    - ``https://vmw-UAG.demoisfun.net``
 
 #.  Select VMware Horizon View HTML access
 

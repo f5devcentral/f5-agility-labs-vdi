@@ -110,7 +110,6 @@ Advanced Resource Assign Image
 
 
 
-
    - Apply the access policy
    -Click on the Apply Access policy in the upper left corner of the VPE GUI. Note the yellow vertical bar next to it indicating the policy has been modified
    -Close the VPE (Close button in the upper right corner)
@@ -167,7 +166,7 @@ Advanced Resource Assign Image
    +--------------------------------------------+----------------------------+
    |HTTP Profile                                | http                       |
    +--------------------------------------------+----------------------------+
-   |SSL Profile (Client)                        | VM_LAB_!_PCOIP_client_SSL  |
+   |SSL Profile (Client)                        | VM_LAB_1_PCOIP_client_SSL  |
    +--------------------------------------------+----------------------------+
    |SSL Profile (Server)                        | serverssl                  |
    +--------------------------------------------+----------------------------+

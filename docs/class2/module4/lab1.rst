@@ -38,7 +38,7 @@ Task 1 – Build a VIP and Access Policy
    - Pres the “Save” button
 
 
-Browser Resource Assign Image
+#. Browser Resource Assign Image
 
 
 

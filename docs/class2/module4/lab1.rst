@@ -1,4 +1,5 @@
 
+
 Lab 1.4: Build a webtop with VMware View and Citrix
 ==================================
 This lab will leverage the APM access policies created in prior labs to build a unified webtop with access to Vmware View and Citrix
@@ -40,7 +41,9 @@ Task 1 – Build a VIP with an Access Policy allowing acces to VMware and Citrix
    - Add /Common/VM_LAB_2_LBSF.app/VM_LAB_2_LBSF_remote_desktop_1
    - Press the “Update” button
    - Pres the “Save” button
+   
    |image41|
+   
 #. Add a branch  for the Citrix Receiver to the Client type decision Box
 
    - Click on the “Client Type” object - Select the “Branch Rules” Tab
@@ -103,9 +106,6 @@ Task 1 – Build a VIP with an Access Policy allowing acces to VMware and Citrix
    - Click the “Save” button
    - Click the “Update” button
    - Click the “Save” button
-
-
-
 
 #. Apply the access policy
 

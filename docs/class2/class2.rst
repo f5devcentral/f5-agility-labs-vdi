@@ -1,5 +1,6 @@
+###################
 201: VDI the F5 Way
-===================
+###################
 
 Welcome to “VDI the F5 Way” lab. This guide is intended to complement
 lecture material provided by “VDI the F5 Way” course. The purpose of

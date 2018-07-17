@@ -1,5 +1,6 @@
+###############
 Getting Started
----------------
+###############
 
 Please follow the instructions provided by the instructor to start your
 lab and access your jump host.
@@ -9,8 +10,9 @@ lab and access your jump host.
 	 jumphost. No installation or interaction with your local system is
 	 required.
 
+*****************
 Lab Network Setup
-~~~~~~~~~~~~~~~~~
+*****************
 
 In the interest of focusing as much time as possible on this solution,
 we have provided some resources and basic setup ahead of time. These
@@ -28,7 +30,10 @@ are:
 -  Windows desktops with Citrix and View clients will be accessed using
    RDP to demonstrate functionality
 
-|image0|
+.. figure:: image0
+   :scale: 50 %
+   :alt: Complete lab setup
+   
 
 Connect to Lab Environment 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~

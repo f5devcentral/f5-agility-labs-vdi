@@ -30,7 +30,7 @@ are:
 -  Windows desktops with Citrix and View clients will be accessed using
    RDP to demonstrate functionality
 
-.. figure:: image0
+.. figure:: |image0|
    :scale: 50 %
    :alt: Complete lab setup
    

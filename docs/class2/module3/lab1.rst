@@ -160,14 +160,6 @@ Test the RDS proxy functionality using RDS Client
 
 #. Log off using the windows start icon in the lower left corner
 
-FINAL GRADE
-~~~~~~~~~~~
-
-…for this "VDI the F5 Way" lab team. Please complete the **SURVEY** to
-let us know how we did. We value your feedbacks and continuously looking
-for ways to improve.
-
-**THANK YOU FOR CHOOSING F5 !!!**
 
 .. |image15| image:: /_static/class1/image17.png
    :width: 5.58333in

@@ -49,9 +49,9 @@ provide a URL and a unique student number to access the environment.
 Each attendee is expected to have a computer with a modern browser and a
 RDP client.
 
-1. Open browser and go to the URL provided by instructor.
+#. Open browser and go to the URL provided by instructor.
 
-2. Scroll down and find “corporate-pc”. Choose to connect with RDP.
+#. Scroll down and find “corporate-pc”. Choose to connect with RDP.
    Leave this connection for entire lab duration.
 
    +------------+---------------------------+
@@ -60,7 +60,7 @@ RDP client.
    |            | Password: ``F5Agility``   |
    +------------+---------------------------+
 
-1. Scroll down and find “home-pc”. Choose to connect with RDP. Leave
+#. Scroll down and find “home-pc”. Choose to connect with RDP. Leave
    this connection for entire lab duration.
 
    +------------+---------------------------+

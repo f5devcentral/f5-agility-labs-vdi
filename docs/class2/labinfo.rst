@@ -29,7 +29,8 @@ are:
    RDP to demonstrate functionality
 
 .. figure:: |image0|
-   align: center
+   :scale: 50 %
+   :align: center
    
    Figure 1 - Complete lab setup
    

@@ -14,8 +14,8 @@ connection server. Security servers are not used by internal VDI users
 .. figure:: /_static/class1/image5.png
    :scale: 50 %
    :align: center
-
-Figure 2 - Accessing Internal View Desktop
+   
+   Figure 2 - Accessing Internal View Desktop
 
 
 #. From the "corporate-pc".
@@ -157,7 +157,7 @@ View the objects which were created by the iApp
 #. Review the remaining parameters (any questions)
 
 View the properties of the iApp
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+*******************************
 
 #. Select the Properties tab at the top of the page
 
@@ -174,7 +174,7 @@ View the properties of the iApp
    - What are the pro’s and con’s of unchecking this parameter?
 
 Test the connection server load balancing using both VMware View client and browser access methods
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+**************************************************************************************************
 
 #.  From "corporate-pc"
 

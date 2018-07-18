@@ -1,11 +1,8 @@
 Final Grade
 ###########
 
-The purpose of this module is access an internal RDS server from an
-external client.
+…for this "VDI the F5 Way" lab team. Please complete the *SURVEY* to
+let us know how we did. We value your feedbacks and continuously looking
+for ways to improve.
 
-.. toctree::
-   :maxdepth: 2
-   :glob:
-
-   lab*
+**THANK YOU FOR CHOOSING F5 !!!**

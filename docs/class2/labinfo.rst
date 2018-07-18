@@ -32,7 +32,7 @@ are:
    :scale: 50 %
    :align: center
    
-  *Figure 1 - Complete lab setup*
+   Figure 1 - Complete lab setup
   
 
 Connect to Lab Environment 

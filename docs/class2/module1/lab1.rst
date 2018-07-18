@@ -1,8 +1,8 @@
-Lab 1.1: Solutions for VMware View
-==================================
+Lab 1: Solutions for VMware View
+################################
 
 Task 1 – Access VMware View Desktop environment without F5 
------------------------------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Test the functional VMware view environment using the internal
 Connection Servers (Internal use case without F5 integration)
@@ -11,9 +11,12 @@ Access the VDI with a client on the internal network. The workstation
 will be preconfigured to initiate the connection through a specific
 connection server. Security servers are not used by internal VDI users
 
-|image3|
+.. figure:: /_static/class1/image5.png
+   :scale: 50 %
+   :align: center
 
 Figure 2 - Accessing Internal View Desktop
+
 
 #. From the "corporate-pc".
 
@@ -50,8 +53,9 @@ Figure 2 - Accessing Internal View Desktop
 
 #. Keep the RDP session open for Task 2
 
+
 Task 2 – Load Balance Connection Servers
-----------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Use the F5 iApp for VMware View to configure a load balancing
 environment for the Connection Servers. This will increase the number of

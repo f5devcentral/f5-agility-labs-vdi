@@ -28,11 +28,12 @@ are:
 -  Windows desktops with Citrix and View clients will be accessed using
    RDP to demonstrate functionality
 
-..figure:: /_static/class1/image2.png
-  :scale: 50 %
-  :align: center
+.. figure:: /_static/class1/image2.png
+   :scale: 50 %
+   :align: center
+   :figclass: align-center
    
-  Figure 1 - Complete lab setup
+  *Figure 1 - Complete lab setup*
   
 
 Connect to Lab Environment 

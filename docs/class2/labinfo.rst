@@ -10,7 +10,7 @@ lab and access your jump host.
 	 required.
 
 Lab Network Setup
-#################
+^^^^^^^^^^^^^^^^^
 
 In the interest of focusing as much time as possible on this solution,
 we have provided some resources and basic setup ahead of time. These
@@ -28,14 +28,13 @@ are:
 -  Windows desktops with Citrix and View clients will be accessed using
    RDP to demonstrate functionality
 
-.. figure:: /_static/class1/image2.png
-   :scale: 50 %
+|image0|
    
    Complete lab setup
    
 
 Connect to Lab Environment 
-##########################
+^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Please refer to Figure 1. We are simulating internal and external access
 to VDI with 2 Windows desktops. When viewing the “corporate-pc” session,

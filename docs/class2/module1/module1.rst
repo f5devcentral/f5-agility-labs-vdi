@@ -13,7 +13,7 @@ functionality.
 Estimated completion time: 60 Minutes
 
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 2
    :glob:
 
    lab*

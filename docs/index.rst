@@ -10,11 +10,11 @@ Welcome to “VDI the F5 Way” lab. This guide is intended to complement lectur
 
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
    :glob:
 
    class*/class*
 
 
-:sub: |repoinfo|
+:sub:|repoinfo|
    

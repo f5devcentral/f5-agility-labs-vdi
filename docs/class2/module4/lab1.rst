@@ -182,8 +182,8 @@ Task 1 – Build a VIP with an Access Policy allowing access to VMware and Citri
    +--------------------------------------------+----------------------------+
 
 
-Task 2 – Test Connectivity
-^^^^^^^^^^^^^^^^^^^^^^^^^^
+Test Connectivity
+*****************
 
 #. Test the connectovity to VMware ad Citrix
 

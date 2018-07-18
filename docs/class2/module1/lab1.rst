@@ -14,7 +14,6 @@ connection server. Security servers are not used by internal VDI users
 .. figure:: /_static/class1/image5.png
    :scale: 50 %
    :align: center
-   :figclass: align-center
 
 *Figure 2 - Accessing Internal View Desktop*
 

@@ -1,11 +1,10 @@
-Module 4:Build a webtop with VMware View and Citrix
-=============================
+Lab 4: Consolidate VDI Access
+#############################
 
-The purpose of this module is access an internal RDS server from an
-external client.
+Update description
 
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 2
    :glob:
 
    lab*

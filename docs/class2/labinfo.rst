@@ -66,7 +66,7 @@ RDP client.
    |            | Password: ``F5Agility``   |
    +------------+---------------------------+
 
-.. |figure1| image:: /_static/class1/image2.png
+.. |figure1| figure:: /_static/class1/image2.png
    :scale: 50 %
    :align: center
    

@@ -28,9 +28,12 @@ are:
 -  Windows desktops with Citrix and View clients will be accessed using
    RDP to demonstrate functionality
 
-|figure1|
-
+..figure:: /_static/class1/image2.png
+  :scale: 50 %
+  :align: center
    
+  Figure 1 - Complete lab setup
+  
 
 Connect to Lab Environment 
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -66,12 +69,6 @@ RDP client.
    |            | Password: ``F5Agility``   |
    +------------+---------------------------+
 
-.. |figure1| figure:: /_static/class1/image2.png
-   :scale: 50 %
-   :align: center
-   
-   Figure 1 - Complete lab setup
-   
 .. |image1| image:: /_static/class1/image3.png
    :width: 1.86762in
    :height: 2.56604in

@@ -31,7 +31,6 @@ are:
 .. figure:: /_static/class1/image2.png
    :scale: 50 %
    :align: center
-   :figclass: align-center
    
   *Figure 1 - Complete lab setup*
   

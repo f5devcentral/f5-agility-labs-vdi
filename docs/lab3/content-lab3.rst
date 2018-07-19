@@ -1,8 +1,5 @@
-Lab 3 - Solutions for Citrix XenDesktop
-######################################
-
 Task 1 – Access XenDesktop without F5
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+=====================================
 
 .. figure:: /_static/class1/image14.png
    :scale: 50 %
@@ -39,7 +36,7 @@ Task 1 – Access XenDesktop without F5
 
 
 Task 2 – Load Balance StoreFront
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+================================
 
 .. figure:: /_static/class1/image15.png
    :scale: 50 %
@@ -49,7 +46,7 @@ Task 2 – Load Balance StoreFront
 
 
 Deploy the iApp
-***************
+---------------
 
 #. From "corporate-pc"
 
@@ -66,7 +63,7 @@ Deploy the iApp
 
 
 iApp Configuration
-******************
+------------------
 
 #. Review the **Welcome to the iApp template for XenDesktop and XenApp**
 
@@ -143,7 +140,7 @@ iApp Configuration
 
 
 Test connectivity
-*****************
+-----------------
 
 #. Use the RDP function on your laptop to connect to the "home-pc"
 
@@ -170,7 +167,7 @@ Test connectivity
 
 
 Task 3 – Replace StoreFront
-^^^^^^^^^^^^^^^^^^^^^^^^^^^
+===========================
 
 .. figure:: /_static/class1/image16.png
    :scale: 50 %
@@ -180,7 +177,7 @@ Task 3 – Replace StoreFront
 
 
 Deploy the iApp
-***************
+---------------
 
 #. From "corporate-pc"
 
@@ -195,7 +192,7 @@ Deploy the iApp
 
 
 iApp Configuration
-******************
+------------------
 
 #. **BIG-IP Access Policy Manager**
 
@@ -210,7 +207,7 @@ iApp Configuration
 
 
 Test connectivity
-*****************
+-----------------
 
 #.  From "home-pc"
 

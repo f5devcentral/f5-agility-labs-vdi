@@ -44,8 +44,8 @@ Task 1 – Build a VIP with an Access Policy allowing access to VMware and Citri
    
    |image41|
 .. |image41| image:: /_static/class1/image41.png
-:width: 5.58333in
-:height: 2.96875in
+   :width: 5.58333in
+   :height: 2.96875in
 
 #. Add a branch  for the Citrix Receiver to the Client type decision Box
 
@@ -86,8 +86,8 @@ Task 1 – Build a VIP with an Access Policy allowing access to VMware and Citri
 
    |image42|
 .. |image42| image:: /_static/class1/image42.png
-:width: 4.58333in
-:height: 2.96875in
+   :width: 4.58333in
+   :height: 2.96875in
 
 #. Add an AD Auth object to the Citrix Receiver branch
 
@@ -118,8 +118,8 @@ Task 1 – Build a VIP with an Access Policy allowing access to VMware and Citri
 
    |image43|
 .. |image43| image:: /_static/class1/image43.png
-:width: 5.58333in
-:height: 2.96875in
+   :width: 5.58333in
+   :height: 2.96875in
 
 
 
@@ -132,8 +132,8 @@ Task 1 – Build a VIP with an Access Policy allowing access to VMware and Citri
 
    |image45|
 .. |image45| image:: /_static/class1/image45.png
-:width: 7.58333in
-:height: 4.96875in
+   :width: 7.58333in
+   :height: 4.96875in
 
 #. Create a VIP for PCOIP UDP traffic 
 
@@ -229,5 +229,5 @@ Test Connectivity
 
    |image44|
 .. |image44| image:: /_static/class1/image44.png
-:width: 6.58333in
-:height: 2.96875in
+   :width: 6.58333in
+   :height: 2.96875in

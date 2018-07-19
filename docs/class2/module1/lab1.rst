@@ -1,8 +1,8 @@
-Lab 1: Solutions for VMware View
-################################
+Lab 1.1: Solutions for VMware View
+==================================
 
 Task 1 – Access VMware View Desktop environment without F5 
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-----------------------------------------------------------
 
 Test the functional VMware view environment using the internal
 Connection Servers (Internal use case without F5 integration)
@@ -11,12 +11,9 @@ Access the VDI with a client on the internal network. The workstation
 will be preconfigured to initiate the connection through a specific
 connection server. Security servers are not used by internal VDI users
 
-.. figure:: /_static/class1/image5.png
-   :scale: 50 %
-   :align: center
-   
-   Figure 2 - Accessing Internal View Desktop
+|image3|
 
+Figure 2 - Accessing Internal View Desktop
 
 #. From the "corporate-pc".
 
@@ -28,7 +25,7 @@ connection server. Security servers are not used by internal VDI users
 
    - \+ New server
 
-#. Connection Server address "vmw-connsvr1a.demoisfun.net"
+#. Connection Server address "vmw-connsvr1c.demoisfun.net"
 
 #. When prompted for credentials
 
@@ -44,7 +41,7 @@ connection server. Security servers are not used by internal VDI users
    on top. May need to slide the blue RDP bar to the left in order to
    click the X in Agility Toolbar)
 
-#. Open View client and try to reconnect to "vmw-connsvr1a.
+#. Open View client and try to reconnect to "vmw-connsvr1c.
    demoisfun.net"
 
 #. Notepad should still be on the desktop with the text you input.
@@ -53,23 +50,20 @@ connection server. Security servers are not used by internal VDI users
 
 #. Keep the RDP session open for Task 2
 
-
 Task 2 – Load Balance Connection Servers
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+----------------------------------------
 
 Use the F5 iApp for VMware View to configure a load balancing
 environment for the Connection Servers. This will increase the number of
 Connection Servers available to internal users and load balance access
 to these resources (Internal use case with F5 load balancing)
 
-.. figure:: /_static/class1/image7.png
-   :scale: 50 %
-   :align: center
+|image5|
 
 Figure 3 - Load balance Connection Servers
 
-Deploy the iApp
-***************
+**Deploy the iApp**
+
 #. From "corporate-pc".
 
 #. Use browser to access the F5 Admin GUI
@@ -118,9 +112,9 @@ Deploy the iApp
    +------------------------------------------------------------------------------------+---------------------------+
    | What FQDN will clients use to access the View environment                          | vmw-LB-CS.demoisfun.net   |
    +------------------------------------------------------------------------------------+---------------------------+
-   | Which Servers should be included in this pool                                      | 192.168.10.210            |
+   | Which Servers should be included in this pool                                      | 192.168.10.212            |
    |                                                                                    |                           |
-   |                                                                                    | 192.168.10.211            |
+   |                                                                                    | 192.168.10.213            |
    +------------------------------------------------------------------------------------+---------------------------+
 
 #. **Client Optimization** (leave these default—Do not compress…)
@@ -132,7 +126,7 @@ Deploy the iApp
 #. Press the **Finished** button
 
 View the objects which were created by the iApp
-***********************************************
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 #. Select the Components tab at the top of the page
 
@@ -157,7 +151,7 @@ View the objects which were created by the iApp
 #. Review the remaining parameters (any questions)
 
 View the properties of the iApp
-*******************************
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 #. Select the Properties tab at the top of the page
 
@@ -173,8 +167,8 @@ View the properties of the iApp
 
    - What are the pro’s and con’s of unchecking this parameter?
 
-Test the connection server load balancing using both VMware View client and browser access methods
-**************************************************************************************************
+Test the connection server load balancing using both VMware View client and browser access methods. 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 #.  From "corporate-pc"
 
@@ -223,7 +217,7 @@ Test the connection server load balancing using both VMware View client and brow
 #.  Close the IE browser window
 
 Task 3 – Access View Desktop through Security Server
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+----------------------------------------------------
 
 Test the functional VMware View environment using external Security
 Servers. (External use case without F5 integration)
@@ -232,11 +226,9 @@ This environment shows a user connecting to a native VMware security
 server which is statically mapped to a VMware connection server. This is
 a non-redundant external access model
 
-.. figure:: /_static/class1/image10.png
-   :scale: 50 %
-   :align: center
-   
-   Figure 4 - Access external View Desktop
+|image8|
+
+Figure 4 - Access external View Desktop
 
 #.  From the "home-pc"
 
@@ -261,7 +253,7 @@ a non-redundant external access model
 #.  Close the View client
 
 #.  Access the application through your browser 
-    ``https://vmw-uag1a.demoisfun.net``
+    ``https://vmw-secursvr1a.demoisfun.net``
 
 #.  Select VMware Horizon View HTML access
 
@@ -279,9 +271,8 @@ a non-redundant external access model
 
 #.  Close the browser window
 
-
 Task 4 – Load Balance Security Servers
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+--------------------------------------
 
 Use the F5 iApp for VMware View to configure a load balancing
 environment for the Security Servers. This will increase the number of
@@ -293,14 +284,11 @@ Security Servers are directly mapped to 2 existing connection servers in
 the environment (not the 2 Connections Servers that are load balances in
 the steps above)
 
-.. figure:: /_static/class1/image12.png
-   :scale: 50 %
-   :align: center
-   
-   Figure 5 - Load balance Security Servers
+|image10|
 
-Deploy the iApp
-***************
+Figure 5 - Load balance Security Servers
+
+**Deploy the iApp**
 
 #. From "corporate-pc"
 
@@ -338,7 +326,7 @@ Deploy the iApp
    +------------------------------------------------------------------------------------+---------------------------+
    | What virtual server IP address do you want to use for remote, untrusted clients?   | 192.168.3.150             |
    +====================================================================================+===========================+
-   | What FQDN will clients use to access the View environment?                         | vmw-UAG.demoisfun.net     |
+   | What FQDN will clients use to access the View environment?                         | vmw-LB-SS.demoisfun.net   |
    +------------------------------------------------------------------------------------+---------------------------+
    | Which Servers should be included in this pool?                                     | 192.168.3.214             |
    |                                                                                    |                           |
@@ -351,9 +339,9 @@ Deploy the iApp
 
 #. Press the **Finished** button
 
-
 View the objects which were created by the iApp
-***********************************************
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 #. Select the Components tab at the top of the page
 
 #. Is the Virtual server available?
@@ -364,9 +352,9 @@ View the objects which were created by the iApp
 
 #. Review the remaining parameters (any questions)
 
-
 Test the Security Server load balancing using both VMware View client and browser access methods
-************************************************************************************************
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 #.  From "home-pc"
 
 #.  Open View client and connect to the Virtual Server just created with
@@ -374,7 +362,7 @@ Test the Security Server load balancing using both VMware View client and browse
 
     - \+ New Server
 
-      - vmw-LB-UAG.demoisfun.net (192.168.3.150)
+      - vmw-LB-SS.demoisfun.net (192.168.3.150)
 
       - Press the Connect button
 
@@ -394,7 +382,7 @@ Test the Security Server load balancing using both VMware View client and browse
 
 #.  Open IE and browser to
 
-    - ``https://vmw-UAG.demoisfun.net``
+    - ``https://vmw-LB-SS.demoisfun.net``
 
 #.  Select VMware Horizon View HTML access
 
@@ -415,20 +403,18 @@ Test the Security Server load balancing using both VMware View client and browse
 #.  Close the browser window
 
 Task 5 – Replace Security Servers and leverage APM as a PCOIP proxy
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------------------------
 
 This environment will utilize Big-IP as a PCOIP Proxy. This eliminates
 the requirement for all Security Servers. The Connection Servers will be
 load balanced. Authentication is handled by the F5 APM module
 
-.. figure:: /_static/class1/image13.png
-   :scale: 50 %
-   :align: center
-   
-   Figure 6 - Replace Security Servers
+|image11|
 
-Deploy the iApp
-***************
+Figure 6 - Replace Security Servers
+
+**Deploy the iApp**
+
 #. From "corporate-pc"
 
 #. Create a new Application Service by selecting iApps -> Application
@@ -442,9 +428,8 @@ Deploy the iApp
 
    - Select ``f5.vmware_view.v1.5.1`` for the template
 
-
 iApp Configuration
-******************
+~~~~~~~~~~~~~~~~~~
 
 #. Review the **Welcome to the iAPP template for VMware Horizon View**
 
@@ -487,9 +472,9 @@ iApp Configuration
    +====================================================================================+================================+
    | What FQDN will clients use to access the View environment?                         | vmw-PROXY-VIEW.demoisfun.net   |
    +------------------------------------------------------------------------------------+--------------------------------+
-   | Which Servers should be included in this pool?                                     | 192.168.10.210                 |
+   | Which Servers should be included in this pool?                                     | 192.168.10.212                 |
    |                                                                                    |                                |
-   |                                                                                    | 192.168.10.211                 |
+   |                                                                                    | 192.168.10.213                 |
    +------------------------------------------------------------------------------------+--------------------------------+
 
 #. **Application Health**
@@ -498,9 +483,8 @@ iApp Configuration
 
 #. Press the **Finished** button
 
-
 View the objects which were created by the iApp
-***********************************************
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 #. Select the Components tab at the top of the page
 
@@ -512,9 +496,8 @@ View the objects which were created by the iApp
 
 #. Review the remaining parameters (any questions)
 
-
 Test the APM (PCoIP) functionality using both VMware View client and browser access methods
-*******************************************************************************************
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 #.  From "home-pc"
 

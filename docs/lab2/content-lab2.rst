@@ -6,7 +6,7 @@ Connection Servers (Internal use case without F5 integration)
 
 Access the VDI with a client on the internal network. The workstation
 will be preconfigured to initiate the connection through a specific
-connection server. Security servers are not used by internal VDI users
+connection server. UAG servers are not used by internal VDI users
 
 .. figure:: /_static/class1/image5.png
    :scale: 50 %
@@ -228,8 +228,7 @@ Test the connection server load balancing using both VMware View client and brow
 Task 3 – Access View Desktop through the UAG Server
 ====================================================
 
-Test the functional VMware View environment using external Security
-Servers. (External use case without F5 integration)
+Test the functional VMware View environment using external UAG. (External use case without F5 integration)
 
 This environment shows a user connecting to a native VMware security
 server which is statically mapped to a VMware connection server. This is

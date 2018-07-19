@@ -1,17 +1,22 @@
-Lab 3.1: Microsoft RDS proxy
-============================
+Lab 3: Microsoft RDS proxy
+##########################
 
 The purpose of this lab is access an internal RDS server from an
 external client.
 
+
 Task 1 – Access Terminal Server from external network
------------------------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-|image15|
+.. figure:: /_static/class1/image7.png
+   :scale: 50 %
+   :align: center
+   
+   Figure 10 - BIG-IP proxy RDP connection
 
-Figure 10 - BIG-IP proxy RDP connection
 
-**Deploy the iApp**
+Deploy the iApp
+***************
 
 #. From "corporate-pc"
 
@@ -55,8 +60,9 @@ Figure 10 - BIG-IP proxy RDP connection
    - Select ``f5.microsoft_rds_remote_access.v1.0.2`` for the
       template
 
+
 iApp Configuration
-~~~~~~~~~~~~~~~~~~
+******************
 
 #. Review the **Welcome to the iApp template for Remote Desktop
    Gateway**
@@ -93,8 +99,9 @@ iApp Configuration
 
 #. Press the **Finished** button
 
+
 Test the RDS proxy functionality using RDS Client
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+*************************************************
 
 #. From "home-pc"
 
@@ -153,14 +160,6 @@ Test the RDS proxy functionality using RDS Client
 
 #. Log off using the windows start icon in the lower left corner
 
-FINAL GRADE
-~~~~~~~~~~~
-
-…for this "VDI the F5 Way" lab team. Please complete the **SURVEY** to
-let us know how we did. We value your feedbacks and continuously looking
-for ways to improve.
-
-**THANK YOU FOR CHOOSING F5 !!!**
 
 .. |image15| image:: /_static/class1/image17.png
    :width: 5.58333in

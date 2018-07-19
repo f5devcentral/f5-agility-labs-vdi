@@ -424,7 +424,7 @@ Task 5 – Replace UAG Servers and leverage APM as a PCOIP proxy
 ===================================================================
 
 This environment will utilize Big-IP as a PCOIP Proxy. This eliminates
-the requirement for all Security Servers. The Connection Servers will be
+the requirement for all UAG Servers. The Connection Servers will be
 load balanced. Authentication is handled by the F5 APM module
 
 .. figure:: /_static/class1/image13.png

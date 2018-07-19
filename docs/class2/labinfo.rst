@@ -1,6 +1,6 @@
 
 Jump Host
-^^^^^^^^^
+=========
 
 Please follow the instructions provided by the instructor to start your
 lab and access your jump host.

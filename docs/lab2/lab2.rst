@@ -14,7 +14,7 @@ functionality.
 Estimated completion time: 60 Minutes
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
    :glob:
 
    content*

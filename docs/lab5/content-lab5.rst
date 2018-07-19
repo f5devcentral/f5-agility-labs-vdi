@@ -11,6 +11,13 @@ Task 1 – Build a VIP with an Access Policy allowing access to VMware and Citri
 
 #. Copy the VM_LAB_1_PCOIP access profile to VDI_Combined_webtop
 
+   - Turn off Strict Updayes on th VM_LAB_1_PCOIP iApp
+   - iApps>>Application Services
+   - Select VMW_LAB_1_PCOIP 
+   - Select the Properties Tab
+   - Use the pulldown to select Advanced from Application Service 
+   - Uncheck Strict Updates
+   - Click the “Update” button
    - Access>>Profiles/Policies>>Access Profiles
    - Click the “Copy” hyperlink on the VM_LAB_1_PCOIP  line
    - Name the profile VDI_Combined_webtop
@@ -35,9 +42,15 @@ Task 1 – Build a VIP with an Access Policy allowing access to VMware and Citri
    - Press the “Update” button
    - Pres the “Save” button
    
+   |image41|
+.. |image41| image:: /_static/class1/image41.png
+:width: 5.58333in
+:height: 2.96875in
+
 #. Add a branch  for the Citrix Receiver to the Client type decision Box
 
-   - Click on the “Client Type” object - Select the “Branch Rules” Tab
+   - Click on the “Client Type” object
+   - Select the “Branch Rules” Tab
    - Click the “Add Branch Rule” button
    - Name: Citrix Receiver
    - Press the “change” link in the section
@@ -82,21 +95,26 @@ Task 1 – Build a VIP with an Access Policy allowing access to VMware and Citri
 
 #. Add  an Advanced Resource Assign object to the Citrix Receiver branch
 
-   - Click the “+” to the right of Ad Authd   - Select the “Assignment” tab
+   - Click the “+” to the right of Ad Auth   - Select the “Assignment” tab
    - Select “Advanced Resource  Assign”
    - Click the “Add Item” button
    - Click the “Add new entry” button
    - Click the “add/delete” link
    - Select the “Remote Desktop” tab
    - Select /Common/VM_LAB_2_LBSF.app/VM_LAB_2_LBSF_remote_desktop_1
-   - Click the “Update” button
    - Select the “Webtop” tab
    - Select Common/VM_LAB_2_LBSF.app/VM_LAB_2_LBSF_webtop
+   - Click the “Update” button   
    - Click on the “Deny” action on the fallback link out of the Advanced Resource Assign
    - Select “Allow”
    - Click the “Save” button
    - Click the “Update” button
    - Click the “Save” button
+
+   |image45|
+.. |image45| image:: /_static/class1/image45.png
+:width: 7.58333in
+:height: 4.96875in
 
 #. Apply the access policy
 
@@ -110,7 +128,7 @@ Task 1 – Build a VIP with an Access Policy allowing access to VMware and Citri
    - Navigate to Local Traffic>>Virtual Servers>>Virtual Server List
    - View the configuration of the VM_LAB_1_PCOIP_pcoip_udp VIP. We will replicate this configuration using the IP of the new VIP we created for VDI access (Hint—Open an additional browser window connected to F5-bigip1a.demoisfun.net. This will allow you to display different VIPs in the same device)
    - Navigate to Local Traffic>>Virtual Servers>>Virtual Server List
-   - Press the Create Button in the upper right section of the GUI
+   - Press the "Create" Button in the upper right section of the GUI
    - Configure the VIP with the variables below
 
 #. VIP Config Parameters
@@ -118,7 +136,7 @@ Task 1 – Build a VIP with an Access Policy allowing access to VMware and Citri
 +--------------------------------------------+-----------------------------+
 |General Properties                          |                             |
 +--------------------------------------------+-----------------------------+
-|Name                                        | Combined-VDI-PCOIP          |
+|Name                                        | Combined_VDI_PCOIP          |
 +--------------------------------------------+-----------------------------+
 |Destination Address/Mask                    | 192.168.3.157               |
 +--------------------------------------------+-----------------------------+
@@ -149,7 +167,7 @@ Task 1 – Build a VIP with an Access Policy allowing access to VMware and Citri
    +--------------------------------------------+----------------------------+
    |General Properties                          |                            |
    +--------------------------------------------+----------------------------+
-   |Name                                        | Combined-VDI-Desktop       |
+   |Name                                        | Combined_VDI_Desktop       |
    +--------------------------------------------+----------------------------+
    |Destination Address/Mask                    | 192.168.3.157              |
    +--------------------------------------------+----------------------------+
@@ -181,7 +199,7 @@ Test Connectivity
 #. Test the connectovity to VMware ad Citrix
 
    - From “home-pc” 
-   - Launch IE and browse to http://vdi.demoisfun.net (192.168.3.157)
+   - Launch IE and browse to https://vdi.demoisfun.net (192.168.3.157)
    - When prompted for credentials
    - Username: demo01
    - Password: password

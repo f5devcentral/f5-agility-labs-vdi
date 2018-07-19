@@ -12,7 +12,7 @@ lab and access your jump host.
 
 
 Lab Network Setup
-^^^^^^^^^^^^^^^^^
+=================
 
 In the interest of focusing as much time as possible on this solution,
 we have provided some resources and basic setup ahead of time. These
@@ -38,7 +38,7 @@ are:
   
 
 Connect to Lab Environment 
-^^^^^^^^^^^^^^^^^^^^^^^^^^
+==========================
 
 Please refer to Figure 1. We are simulating internal and external access
 to VDI with 2 Windows desktops. When viewing the *“corporate-pc”* session,

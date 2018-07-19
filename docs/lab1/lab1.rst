@@ -17,4 +17,4 @@ Estimated completion time: 60 Minutes
    :maxdepth: 2
    :glob:
 
-   lab1*
+   lab1info

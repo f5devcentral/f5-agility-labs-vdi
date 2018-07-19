@@ -1,12 +1,5 @@
-Lab 4 - Microsoft RDS proxy
-##########################
-
-The purpose of this lab is access an internal RDS server from an
-external client.
-
-
 Task 1 – Access Terminal Server from external network
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+=====================================================
 
 .. figure:: /_static/class1/image7.png
    :scale: 50 %
@@ -16,7 +9,7 @@ Task 1 – Access Terminal Server from external network
 
 
 Deploy the iApp
-***************
+---------------
 
 #. From "corporate-pc"
 
@@ -62,7 +55,7 @@ Deploy the iApp
 
 
 iApp Configuration
-******************
+------------------
 
 #. Review the **Welcome to the iApp template for Remote Desktop
    Gateway**
@@ -101,7 +94,7 @@ iApp Configuration
 
 
 Test the RDS proxy functionality using RDS Client
-*************************************************
+-------------------------------------------------
 
 #. From "home-pc"
 

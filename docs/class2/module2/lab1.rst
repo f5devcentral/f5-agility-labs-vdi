@@ -1,14 +1,12 @@
-Lab 2: Solutions for Citrix XenDesktop
-######################################
+Lab 2.1: Solutions for Citrix XenDesktop
+========================================
 
-Task 1 – Access XenDesktop without F5
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Task 1 – Access XenDesktop without F5 
+--------------------------------------
 
-.. figure:: /_static/class1/image14.png
-   :scale: 50 %
-   :align: center
-   
-   Figure 7 - Access XenDesktop through StoreFront
+|image12|
+
+Figure 7 - Access XenDesktop through StoreFront
 
 #. From "corporate-pc"
 
@@ -37,19 +35,14 @@ Task 1 – Access XenDesktop without F5
 
 #. Close the browser Window
 
-
 Task 2 – Load Balance StoreFront
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+--------------------------------
 
-.. figure:: /_static/class1/image15.png
-   :scale: 50 %
-   :align: center
-   
-   Figure 8 - Load balance StoreFront
+|image13|
 
+Figure 8 - Load balance StoreFront
 
-Deploy the iApp
-***************
+**Deploy the iApp**
 
 #. From "corporate-pc"
 
@@ -64,9 +57,8 @@ Deploy the iApp
 
    - Select ``f5.citrix_vdi.v2.4.1rc1`` for the template
 
-
 iApp Configuration
-******************
+~~~~~~~~~~~~~~~~~~
 
 #. Review the **Welcome to the iApp template for XenDesktop and XenApp**
 
@@ -141,9 +133,8 @@ iApp Configuration
 
 #. Press the **Finished** button
 
-
 Test connectivity
-*****************
+~~~~~~~~~~~~~~~~~
 
 #. Use the RDP function on your laptop to connect to the "home-pc"
 
@@ -168,19 +159,14 @@ Test connectivity
 
 #. Close the browser Window
 
-
 Task 3 – Replace StoreFront
-^^^^^^^^^^^^^^^^^^^^^^^^^^^
+---------------------------
 
-.. figure:: /_static/class1/image16.png
-   :scale: 50 %
-   :align: center
-   
-   Figure 9 - BIG-IP replaces StoreFront
+|image14|
 
+Figure 9 - BIG-IP replaces StoreFront
 
-Deploy the iApp
-***************
+**Deploy the iApp**
 
 #. From "corporate-pc"
 
@@ -193,9 +179,8 @@ Deploy the iApp
 
    - Click the **Reconfigure** link near the top
 
-
 iApp Configuration
-******************
+~~~~~~~~~~~~~~~~~~
 
 #. **BIG-IP Access Policy Manager**
 
@@ -208,9 +193,8 @@ iApp Configuration
 
 #. Press the **Finished** button
 
-
 Test connectivity
-*****************
+~~~~~~~~~~~~~~~~~
 
 #.  From "home-pc"
 

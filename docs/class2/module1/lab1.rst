@@ -1,8 +1,5 @@
-Lab 1: Solutions for VMware View
-################################
-
 Task 1 – Access VMware View Desktop environment without F5 
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+==========================================================
 
 Test the functional VMware view environment using the internal
 Connection Servers (Internal use case without F5 integration)

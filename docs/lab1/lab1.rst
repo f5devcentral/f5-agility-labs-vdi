@@ -1,20 +1,12 @@
-********************************
-Lab 1: Solutions for VMware View
-********************************
+***************
+Lab1 - Getting Started
+***************
 
-The purpose of this lab is to build out 3 basic VMware View
-architectures leveraging F5 load balancing and authentication
-functionality.
-
--  Construct VMware View implementations with F5 LTM and APM software
-   modules
-
--  Familiarize student with F5 iApp templates
-
-Estimated completion time: 60 Minutes
+Welcome to “VDI the F5 Way” lab. This guide is intended to complement lecture material provided by “VDI the F5 Way” course. The purpose of this lab is to demonstrate how F5 technologies can integrate with industry leading virtual desktop infrastructure (VDI). In general, we will take you through the process of current deployment to a simplified and more secure topology with F5 BIG-IP.
 
 .. toctree::
    :maxdepth: 2
+   :caption: Contents:
    :glob:
 
    content*

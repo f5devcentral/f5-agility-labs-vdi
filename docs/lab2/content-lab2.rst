@@ -248,7 +248,7 @@ a non-redundant external access model
 
     - \+ New Server
 
-    - Security Server address ``vmw-secursvr1a.demoisfun.net``
+    - Security Server address ``vmw-uag1a.demoisfun.net``
 
     - Press Connect Button
 
@@ -286,14 +286,14 @@ Task 4 – Load Balance UAG Servers
 ======================================
 
 Use the F5 iApp for VMware View to configure a load balancing
-environment for the Security Servers. This will increase the number of
-Security Servers available to internal users and load balance access to
+environment for the UAG Servers. This will increase the number of
+UAG servers available to external  users and load balance access to
 these resources (External use case with F5 load balancing)
 
-This environment load balances 2 external facing Security Servers. These
-Security Servers are directly mapped to 2 existing connection servers in
-the environment (not the 2 Connections Servers that are load balances in
-the steps above)
+This environment load balances 2 external facing UAG Servers. UAG servers
+do not require a one-to-one mapping to connection servers. The connection
+server LB vip created in Task 2 enableshigher availability to the overall
+application 
 
 .. figure:: /_static/class1/image12.png
    :scale: 50 %

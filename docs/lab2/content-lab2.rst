@@ -87,7 +87,7 @@ Deploy the iApp
 
    - Name the Application Service ``VM_LAB_1_LBCS``
 
-   - Select ``f5.vmware_view.v1.5.1`` for the template
+   - Select ``f5.vmware_view.v1.5.4`` for the template
 
 #. Review the **Welcome to the iAPP template for VMware Horizon View**
 
@@ -314,9 +314,9 @@ Deploy the iApp
 
    - Press the **Create** button
 
-   - Name the Application Service ``VM_LAB_1_LBSS``
+   - Name the Application Service ``VM_LAB_1_LBUAG``
 
-   - Select ``f5.vmware_view.v1.5.1`` for the template
+   - Select ``f5.vmware_view.v1.5.4`` for the template
 
 #. Review the **Welcome to the iAPP template for VMware Horizon View**
 
@@ -400,7 +400,7 @@ Test the Security Server load balancing using both VMware View client and browse
 
 #.  Open IE and browser to
 
-    - ``https://vmw-UAG.demoisfun.net``
+    - ``https://vmw-LB-UAG.demoisfun.net``
 
 #.  Select VMware Horizon View HTML access
 
@@ -486,8 +486,6 @@ iApp Configuration
    +----------------------------------------------------------+--------------------------------------------------------------+
    | Which SSL private key do you want to use?                | wild.demoisfun.net.key                                       |
    +----------------------------------------------------------+--------------------------------------------------------------+
-
-#. **PC Over IP** (leave these default)
 
 #. **Virtual Servers and Pools**
 

@@ -12,7 +12,7 @@ Welcome to *“VDI the F5 Way”* lab. This guide is intended to complement lect
 
 
 .. toctree::
-   :maxdepth: 3
+   :maxdepth: 2
    :glob:
 
    lab*/lab*

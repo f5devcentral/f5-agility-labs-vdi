@@ -9,7 +9,7 @@ Note: The connectivity in this environment is slower than a typical
 production environment—please be patient
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
    :glob:
 
    content*

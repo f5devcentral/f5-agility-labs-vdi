@@ -1,7 +1,8 @@
-Lab 4: Consolidate VDI Access
-#############################
+******************************
+Lab 5 - Consolidate VDI Access
+******************************
 
-Update description
+This lab will leverage the APM access policies created in prior labs to build a unified webtop with access to Vmware View and Citrix
 
 .. toctree::
    :maxdepth: 2

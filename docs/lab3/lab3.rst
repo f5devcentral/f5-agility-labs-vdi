@@ -1,5 +1,6 @@
+***************************************
 Lab 3 - Solutions for Citrix XenDesktop
-=========================================
+***************************************
 
 The purpose of this module is to build out 2 common F5 deployment with
 XenDesktop.

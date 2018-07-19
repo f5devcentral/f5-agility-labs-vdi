@@ -52,7 +52,7 @@ connection server. Security servers are not used by internal VDI users
 
 
 Task 2 – Load Balance Connection Servers
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+========================================
 
 Use the F5 iApp for VMware View to configure a load balancing
 environment for the Connection Servers. This will increase the number of
@@ -65,8 +65,10 @@ to these resources (Internal use case with F5 load balancing)
 
 Figure 3 - Load balance Connection Servers
 
+
 Deploy the iApp
-***************
+---------------
+
 #. From "corporate-pc".
 
 #. Use browser to access the F5 Admin GUI
@@ -128,8 +130,9 @@ Deploy the iApp
 
 #. Press the **Finished** button
 
+
 View the objects which were created by the iApp
-***********************************************
+-----------------------------------------------
 
 #. Select the Components tab at the top of the page
 
@@ -153,8 +156,9 @@ View the objects which were created by the iApp
 
 #. Review the remaining parameters (any questions)
 
+
 View the properties of the iApp
-*******************************
+-------------------------------
 
 #. Select the Properties tab at the top of the page
 
@@ -169,9 +173,10 @@ View the properties of the iApp
    - Is this related to the screen when editing the persistence profile?
 
    - What are the pro’s and con’s of unchecking this parameter?
+   
 
 Test the connection server load balancing using both VMware View client and browser access methods
-**************************************************************************************************
+--------------------------------------------------------------------------------------------------
 
 #.  From "corporate-pc"
 
@@ -219,8 +224,9 @@ Test the connection server load balancing using both VMware View client and brow
 
 #.  Close the IE browser window
 
+
 Task 3 – Access View Desktop through Security Server
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+====================================================
 
 Test the functional VMware View environment using external Security
 Servers. (External use case without F5 integration)
@@ -278,7 +284,7 @@ a non-redundant external access model
 
 
 Task 4 – Load Balance Security Servers
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+======================================
 
 Use the F5 iApp for VMware View to configure a load balancing
 environment for the Security Servers. This will increase the number of
@@ -296,8 +302,9 @@ the steps above)
    
    Figure 5 - Load balance Security Servers
 
+
 Deploy the iApp
-***************
+---------------
 
 #. From "corporate-pc"
 
@@ -350,7 +357,8 @@ Deploy the iApp
 
 
 View the objects which were created by the iApp
-***********************************************
+-----------------------------------------------
+
 #. Select the Components tab at the top of the page
 
 #. Is the Virtual server available?
@@ -363,7 +371,8 @@ View the objects which were created by the iApp
 
 
 Test the Security Server load balancing using both VMware View client and browser access methods
-************************************************************************************************
+------------------------------------------------------------------------------------------------
+
 #.  From "home-pc"
 
 #.  Open View client and connect to the Virtual Server just created with
@@ -411,8 +420,9 @@ Test the Security Server load balancing using both VMware View client and browse
 
 #.  Close the browser window
 
+
 Task 5 – Replace Security Servers and leverage APM as a PCOIP proxy
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+===================================================================
 
 This environment will utilize Big-IP as a PCOIP Proxy. This eliminates
 the requirement for all Security Servers. The Connection Servers will be
@@ -424,8 +434,10 @@ load balanced. Authentication is handled by the F5 APM module
    
    Figure 6 - Replace Security Servers
 
+
 Deploy the iApp
-***************
+---------------
+
 #. From "corporate-pc"
 
 #. Create a new Application Service by selecting iApps -> Application
@@ -441,7 +453,7 @@ Deploy the iApp
 
 
 iApp Configuration
-******************
+------------------
 
 #. Review the **Welcome to the iAPP template for VMware Horizon View**
 
@@ -497,7 +509,7 @@ iApp Configuration
 
 
 View the objects which were created by the iApp
-***********************************************
+-----------------------------------------------
 
 #. Select the Components tab at the top of the page
 
@@ -511,7 +523,7 @@ View the objects which were created by the iApp
 
 
 Test the APM (PCoIP) functionality using both VMware View client and browser access methods
-*******************************************************************************************
+-------------------------------------------------------------------------------------------
 
 #.  From "home-pc"
 

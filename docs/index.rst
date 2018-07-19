@@ -15,4 +15,4 @@ Welcome to *“VDI the F5 Way”* lab. This guide is intended to complement lect
    :maxdepth: 4
    :glob:
 
-   class*/class*
+   lab*/lab*

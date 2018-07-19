@@ -50,7 +50,7 @@ Deploy the iApp
 
    - Name the Application Service ``VM_LAB_3_RDS``
 
-   - Select ``f5.microsoft_rds_remote_access.v1.0.2`` for the
+   - Select ``f5.microsoft_rds_remote_access.v1.0.3`` for the
       template
 
 

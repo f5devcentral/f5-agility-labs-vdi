@@ -1,11 +1,17 @@
-Lab 2: Solutions for Citrix XenDesktop
-=========================================
+********************************
+Lab 2 - Solutions for VMware View
+********************************
 
-The purpose of this module is to build out 2 common F5 deployment with
-XenDesktop.
+The purpose of this lab is to build out 3 basic VMware View
+architectures leveraging F5 load balancing and authentication
+functionality.
 
-Note: The connectivity in this environment is slower than a typical
-production environment—please be patient
+-  Construct VMware View implementations with F5 LTM and APM software
+   modules
+
+-  Familiarize student with F5 iApp templates
+
+Estimated completion time: 60 Minutes
 
 .. toctree::
    :maxdepth: 2

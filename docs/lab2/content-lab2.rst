@@ -225,7 +225,7 @@ Test the connection server load balancing using both VMware View client and brow
 #.  Close the IE browser window
 
 
-Task 3 – Access View Desktop through Security Server
+Task 3 – Access View Desktop through the UAG Server
 ====================================================
 
 Test the functional VMware View environment using external Security
@@ -283,7 +283,7 @@ a non-redundant external access model
 #.  Close the browser window
 
 
-Task 4 – Load Balance Security Servers
+Task 4 – Load Balance UAG Servers
 ======================================
 
 Use the F5 iApp for VMware View to configure a load balancing
@@ -421,7 +421,7 @@ Test the Security Server load balancing using both VMware View client and browse
 #.  Close the browser window
 
 
-Task 5 – Replace Security Servers and leverage APM as a PCOIP proxy
+Task 5 – Replace UAG Servers and leverage APM as a PCOIP proxy
 ===================================================================
 
 This environment will utilize Big-IP as a PCOIP Proxy. This eliminates
@@ -449,7 +449,7 @@ Deploy the iApp
 
    - Name the Application Service ``VM_LAB_1_PCOIP``
 
-   - Select ``f5.vmware_view.v1.5.1`` for the template
+   - Select ``f5.vmware_view.v1.5.4`` for the template
 
 
 iApp Configuration

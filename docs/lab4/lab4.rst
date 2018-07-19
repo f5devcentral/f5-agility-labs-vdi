@@ -1,5 +1,6 @@
+**************************
 Lab 3: Microsoft RDS Proxy
-##########################
+**************************
 
 The purpose of this module is access an internal RDS server from an
 external client.
@@ -8,4 +9,4 @@ external client.
    :maxdepth: 2
    :glob:
 
-   lab*
+   content*

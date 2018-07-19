@@ -370,7 +370,7 @@ View the objects which were created by the iApp
 #. Review the remaining parameters (any questions)
 
 
-Test the Security Server load balancing using both VMware View client and browser access methods
+Test the UAG Server load balancing using both VMware View client and browser access methods
 ------------------------------------------------------------------------------------------------
 
 #.  From "home-pc"

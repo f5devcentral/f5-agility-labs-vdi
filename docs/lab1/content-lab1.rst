@@ -30,7 +30,7 @@ are:
    RDP to demonstrate functionality
 
 .. figure:: /_static/class1/image2.png
-   :scale: 50 %
+   :scale: 100 %
    :align: center
    
    Figure 1 - Complete lab setup

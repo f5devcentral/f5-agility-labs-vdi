@@ -42,10 +42,9 @@ Task 1 – Build a VIP with an Access Policy allowing access to VMware and Citri
    - Press the “Update” button
    - Pres the “Save” button
    
-   |image41|
-.. |image41| image:: /_static/class1/image41.png
-   :width: 5.58333in
-   :height: 2.96875in
+.. image:: /_static/class1/image41.png
+   :scale: 75 %
+   :align: center
 
 #. Add a branch  for the Citrix Receiver to the Client type decision Box
 
@@ -84,11 +83,10 @@ Task 1 – Build a VIP with an Access Policy allowing access to VMware and Citri
    - Click the “Finished” Button
    - Click the “Save” button
 
-   |image42|
-.. |image42| image:: /_static/class1/image42.png
-   :width: 4.58333in
-   :height: 2.96875in
-
+.. image:: /_static/class1/image42.png
+   :scale: 75 %
+   :align: center
+   
 #. Add an AD Auth object to the Citrix Receiver branch
 
    - Click the “+” to the right of Variable Assign
@@ -116,12 +114,9 @@ Task 1 – Build a VIP with an Access Policy allowing access to VMware and Citri
    - Click the “Update” button
    - Click the “Save” button
 
-   |image43|
-.. |image43| image:: /_static/class1/image43.png
-   :width: 5.58333in
-   :height: 2.96875in
-
-
+.. image:: /_static/class1/image43.png
+   :scale: 75 %
+   :align: center
 
 #. Apply the access policy
 
@@ -130,10 +125,9 @@ Task 1 – Build a VIP with an Access Policy allowing access to VMware and Citri
    - Access>>Profiles/Policies>>Access Profiles
    - Verify that all Access policies status is Green (refresh browser if necessary) 
 
-   |image45|
-.. |image45| image:: /_static/class1/image45.png
-   :width: 7.58333in
-   :height: 4.96875in
+.. image:: /_static/class1/image45.png
+   :scale: 75 %
+   :align: center
 
 #. Create a VIP for PCOIP UDP traffic 
 
@@ -227,7 +221,6 @@ Test Connectivity
    - Close the IE browser window (Scroll to the upper right corner of the window and hit the “X”
    - Close the browser window
 
-   |image44|
-.. |image44| image:: /_static/class1/image44.png
-   :width: 6.58333in
-   :height: 2.96875in
+.. image:: /_static/class1/image44.png
+   :scale: 75 %
+   :align: center

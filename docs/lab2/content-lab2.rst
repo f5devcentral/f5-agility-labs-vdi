@@ -115,7 +115,7 @@ Deploy the iApp
    +------------------------------------------------------------------------------------+---------------------------+
    | What is the associated service port?                                               | 443                       |
    +------------------------------------------------------------------------------------+---------------------------+
-   | What FQDN will clients use to access the View environment                          | vmw-LB-CS.demoisfun.net   |
+   | What FQDN will clients use to access the View environment                          | ``vmw-LB-CS.demoisfun.net``   |
    +------------------------------------------------------------------------------------+---------------------------+
    | Which Servers should be included in this pool                                      | 192.168.10.210            |
    |                                                                                    | 192.168.10.211            |

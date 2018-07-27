@@ -8,11 +8,11 @@ Access the VDI with a client on the internal network. The workstation
 will be preconfigured to initiate the connection through a specific
 connection server. UAG servers are not used by internal VDI users
 
-.. figure:: /_static/class1/image5.png
-   :scale: 50 %
+.. figure:: /_static/class1/image_lab1task1
+   :scale: 100 %
    :align: center
    
-   Figure 2 - Accessing Internal View Desktop
+   *Accessing Internal View Desktop*
 
 
 #. From the "corporate-pc".
@@ -59,11 +59,11 @@ environment for the Connection Servers. This will increase the number of
 Connection Servers available to internal users and load balance access
 to these resources (Internal use case with F5 load balancing)
 
-.. figure:: /_static/class1/image7.png
-   :scale: 50 %
+.. figure:: /_static/class1/image_lab1task2.png
+   :scale: 100 %
    :align: center
 
-Figure 3 - Load balance Connection Servers
+   *Load balance Connection Servers*
 
 
 Deploy the iApp
@@ -233,11 +233,11 @@ This environment shows a user connecting to a native VMware security
 server which is statically mapped to a VMware connection server. This is
 a non-redundant external access model
 
-.. figure:: /_static/class1/image10.png
-   :scale: 50 %
+.. figure:: /_static/class1/image_lab1task3.png
+   :scale: 100 %
    :align: center
    
-   Figure 4 - Access external View Desktop
+   *Access external View Desktop*
 
 #.  From the "home-pc"
 
@@ -294,11 +294,11 @@ do not require a one-to-one mapping to connection servers. The connection
 server LB vip created in Task 2 enableshigher availability to the overall
 application 
 
-.. figure:: /_static/class1/image12.png
-   :scale: 50 %
+.. figure:: /_static/class1/image_lab1task4.png
+   :scale: 100 %
    :align: center
    
-   Figure 5 - Load balance Security Servers
+   *Load balance Security Servers*
 
 
 Deploy the iApp
@@ -425,11 +425,11 @@ This environment will utilize Big-IP as a PCOIP Proxy. This eliminates
 the requirement for all UAG Servers. The Connection Servers will be
 load balanced. Authentication is handled by the F5 APM module
 
-.. figure:: /_static/class1/image13.png
-   :scale: 50 %
+.. figure:: /_static/class1/image_lab1task5.png
+   :scale: 100 %
    :align: center
    
-   Figure 6 - Replace Security Servers
+   *Replace Security Servers*
 
 
 Deploy the iApp

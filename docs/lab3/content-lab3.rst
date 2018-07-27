@@ -1,11 +1,11 @@
 Task 1 – Access XenDesktop without F5
 =====================================
 
-.. figure:: /_static/class1/image14.png
-   :scale: 50 %
+.. figure:: /_static/class1/image_lab2task1.png
+   :scale: 100 %
    :align: center
    
-   Figure 7 - Access XenDesktop through StoreFront
+   *Access XenDesktop through StoreFront*
 
 #. From "corporate-pc"
 
@@ -38,11 +38,11 @@ Task 1 – Access XenDesktop without F5
 Task 2 – Load Balance StoreFront
 ================================
 
-.. figure:: /_static/class1/image15.png
-   :scale: 50 %
+.. figure:: /_static/class1/image_lab2task2.png
+   :scale: 100 %
    :align: center
    
-   Figure 8 - Load balance StoreFront
+   *Load balance StoreFront*
 
 
 Deploy the iApp
@@ -168,11 +168,11 @@ Test connectivity
 Task 3 – Replace StoreFront
 ===========================
 
-.. figure:: /_static/class1/image16.png
-   :scale: 50 %
+.. figure:: /_static/class1/image_lab2task3.png
+   :scale: 100 %
    :align: center
    
-   Figure 9 - BIG-IP replaces StoreFront
+   *BIG-IP replaces StoreFront*
 
 
 Deploy the iApp

@@ -29,7 +29,7 @@ are:
 -  Windows desktops with Citrix and View clients will be accessed using
    RDP to demonstrate functionality
 
-.._label: 
+.. _fig-overview: 
 .. figure:: /_static/class1/image_overview.png
    :scale: 100 %
    :align: center
@@ -40,7 +40,7 @@ are:
 Connect to Lab Environment 
 ==========================
 
-Please refer to :numref:`label`. We are simulating internal and external access
+Please refer to :numref:`fig-overview`. We are simulating internal and external access
 to VDI with 2 Windows desktops. When viewing the *“corporate-pc”* session,
 imagine you are sitting at your office desk. Likewise, viewing the
 *“home-pc”* session is like you are sitting at home, or anywhere outside

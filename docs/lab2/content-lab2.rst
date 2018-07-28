@@ -8,7 +8,7 @@ Access the VDI with a client on the internal network. The workstation
 will be preconfigured to initiate the connection through a specific
 connection server. UAG servers are not used by internal VDI users
 
-.. figure:: /_static/class1/image_lab1task1
+.. figure:: /_static/class1/image_lab1task1.png
    :scale: 100 %
    :align: center
    

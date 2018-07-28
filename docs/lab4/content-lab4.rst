@@ -1,11 +1,11 @@
 Task 1 – Access Terminal Server from external network
 =====================================================
 
-.. figure:: /_static/class1/image7.png
-   :scale: 50 %
+.. figure:: /_static/class1/image_lab4ask1.png
+   :scale: 100 %
    :align: center
    
-   Figure 10 - BIG-IP proxy RDP connection
+   *BIG-IP proxy RDP connection*
 
 
 Deploy the iApp

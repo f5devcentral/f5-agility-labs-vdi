@@ -1,7 +1,7 @@
 Task 1 – Access Terminal Server from external network
 =====================================================
 
-.. figure:: /_static/class1/image_lab4ask1.png
+.. figure:: /_static/class1/image_lab4task1.png
    :scale: 100 %
    :align: center
    

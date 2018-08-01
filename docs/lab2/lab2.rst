@@ -11,7 +11,7 @@ functionality.
 
 -  Familiarize student with F5 iApp templates
 
-Estimated completion time: 60 Minutes
+Estimated completion time: *60 Minutes*
 
 .. toctree::
    :maxdepth: 1

@@ -22,14 +22,15 @@ are:
 -  A Microsoft Active Directory environment has been configured for
    authentication
 
--  A working VMware Horizon View environment has already been configured
+-  A VMware Horizon View environment has already been configured
 
--  A working Citrix XenDesktop environment has already been configured
+-  A Citrix XenDesktop environment has already been configured
+
+-  A Microsoft RDS has already been configured
 
 -  Windows desktops with Citrix and View clients will be accessed using
    RDP to demonstrate functionality
 
-.. _fig-overview: 
 .. figure:: /_static/class1/image_overview.png
    :scale: 100 %
    :align: center
@@ -40,7 +41,7 @@ are:
 Connect to Lab Environment 
 ==========================
 
-Please refer to :numref:`fig-overview`. We are simulating internal and external access
+Please refer to *Fig 1.1*. We are simulating internal and external access
 to VDI with 2 Windows desktops. When viewing the *“corporate-pc”* session,
 imagine you are sitting at your office desk. Likewise, viewing the
 *“home-pc”* session is like you are sitting at home, or anywhere outside
@@ -51,9 +52,11 @@ provide a URL and a unique student number to access the environment.
 Each attendee is expected to have a computer with a modern browser and a
 RDP client.
 
+To connect to jump hosts,
+
 #. Open browser and go to the URL provided by instructor.
 
-#. Scroll down and find “corporate-pc”. Choose to connect with RDP.
+#. Scroll down and find *“corporate-pc”*. Choose to connect with RDP.
    Leave this connection for entire lab duration.
 
    +------------+---------------------------+
@@ -62,7 +65,7 @@ RDP client.
    |            | Password: ``F5Agility``   |
    +------------+---------------------------+
 
-#. Scroll down and find “home-pc”. Choose to connect with RDP. Leave
+#. Scroll down and find *“home-pc”*. Choose to connect with RDP. Leave
    this connection for entire lab duration.
 
    +------------+---------------------------+

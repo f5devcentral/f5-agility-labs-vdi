@@ -323,11 +323,15 @@ Configure UAG to use load balance address
 
 #. In *General Settings -> Edge Service Settings*, click the ``Show`` button.
 
+   |image_uaggear|
+
 #. Next to *Horizon Settings*, click the ``Gear``
 
 #. In the *Blast External URL* field, type in ``https://vmw-lb-uag.demoisfun.net:443``
 
 #. In the *Tunnel External URL* field, type in ``https://vmw-lb-uag.demoisfun.net:443``
+
+   |image_uagsettings|
 
 #. Click ``Save``
 
@@ -529,3 +533,7 @@ Test the APM (PCoIP) functionality using both VMware View client and browser acc
 .. |image11| image:: /_static/class1/image13.png
    :width: 5.67708in
    :height: 3.35417in
+.. |image_uaggear| image:: /_static/class1/image_uaggear.png
+   :scale: 100 %
+.. |image_uagsetting| image:: /_static/class1/image_uagsetting.png
+   :scale: 100 %

@@ -23,8 +23,8 @@ Access the View Desktop using the View Client on the internal network. View Clie
 
 #. When prompted for credentials
 
-     * Username: ``demo01``
-     * Password: ``password``
+   - Username: ``demo01``
+   - Password: ``password``
      
 
 #. After authenticated, double-click the *Agility* icon to launch View Desktop

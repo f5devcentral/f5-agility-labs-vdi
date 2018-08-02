@@ -81,16 +81,16 @@ Deploy the iApp
 
 #. In *Big-IP Access Policy Manager* section
 
-   +----------------------------------------------------------+-----------------------------------------------------------------------+
-   | Do you want to deploy BIG-IP Access Policy Manager?      | *No, do not deploy BIG-IP Access Policy Manager*                      |
-   +----------------------------------------------------------+-----------------------------------------------------------------------+
+   +----------------------------------------------------------+------------------------------------------------------------------------+
+   | Do you want to deploy BIG-IP Access Policy Manager?      | *No, do not deploy BIG-IP Access Policy Manager*                       |
+   +----------------------------------------------------------+------------------------------------------------------------------------+
 
 #. In *SSL Encryption* section
 
    +----------------------------------------------------------+-----------------------------------------------------------------------+
    | How should the BIG-IP system handle encrypted traffic?   | *Terminate SSL for clients, re-encrypt to View...   (SSL-bridging)*   |
    +----------------------------------------------------------+-----------------------------------------------------------------------+
-   | Which SSL certificate do you want to use?                | *wild.demoisfun.net.crt*   (cert preloaded)                           |
+   | Which SSL certificate do you want to use?                | *wild.demoisfun.net.crt*   (cert preloaded)                         |
    +----------------------------------------------------------+-----------------------------------------------------------------------+
    | Which SSL private key do you want to use                 | *wild.demoisfun.net.key*   (key preloaded)                            |
    +----------------------------------------------------------+-----------------------------------------------------------------------+
@@ -131,7 +131,7 @@ View the objects which were created by the iApp
 #. Note that a persistence profile was created
 
    - Check Match Across Services
-   - Press update
+   - Press **Update**
    - Note the error at the top of the page
 
 
@@ -147,11 +147,12 @@ View the properties of the iApp
 
    |image7|
 
-#. In the *Application Service* pulldown, select *Advanced*
+#. In the *Application Service* pulldown, select **Advanced**
 
 #. Note the *Strict Updates* checkbox is selected
-     - Is this related to the screen when editing the persistence profile?
-     - What are the pro’s and con’s of unchecking this parameter?
+   
+   - Is this related to the screen when editing the persistence profile?
+   - What are the pro’s and con’s of unchecking this parameter?
    
 
 Test the connection server load balancing using both VMware View client and browser access methods
@@ -163,12 +164,12 @@ Test the connection server load balancing using both VMware View client and brow
 
 #. Click **New Server**
 
-#. Type in the load balance address ``vmw-LB-CS.demoisfun.net``. (IP address will not work—Certificate contains demoisfun.net)
+#. Type in the load balanced address ``vmw-LB-CS.demoisfun.net``. (IP address will not work—Certificate contains demoisfun.net)
 
 #. When prompted for credentials
      
-     - Username: ``demo01``
-     - Password: ``password``
+   - Username: ``demo01``
+   - Password: ``password``
 
 
 #. After authenticated, double-click the **Agility** icon to launch View Desktop
@@ -183,8 +184,8 @@ Test the connection server load balancing using both VMware View client and brow
 
 #. Log in
 
-     - Username: ``demo01``
-     - Password: ``password``
+   - Username: ``demo01``
+   - Password: ``password``
 
 
 #.  Double-click **Agility** to launch desktop
@@ -219,25 +220,25 @@ Access View Desktop from external network through UAG. (External use case withou
 
 #.  When prompted for credentials
 
-      - Username: ``demo01``
-      - Password: ``password``
+    - Username: ``demo01``
+    - Password: ``password``
 
 
 #.  After authenticated, double-click the **Agility** icon to launch View Desktop
 
-#.  Close the View client
+#.  Close the *View* client
 
-#.  To access View desktop in IE, type in URL ``https://vmw-uag1a.demoisfun.net``
+#.  To access *View* desktop in IE, type in URL ``https://vmw-uag1a.demoisfun.net``
 
 #.  Select **VMware Horizon View HTML Access**
 
-      - Username: ``demo01``
-      - Password: ``password``
+    - Username: ``demo01``
+    - Password: ``password``
       
 
 #.  Double-click **Agility icon** to launch desktop
 
-#.  Accept Cert Warning
+#.  At the Cert Warning, click **Continue to this website**
 
 #.  Select **Agility**
 
@@ -266,33 +267,34 @@ Deploy the iApp
 
 #. Open IE to access the F5 Admin GUI at ``https://f5-bigip1a.demoisfun.net``
 
-     - Username: ``admin``
-     - Password: ``password``
+   - Username: ``admin``
+   - Password: ``password``
      
 
 #. Create a new Application Service. On the left side menu
 
-     - iApps -> Application Services
-     - Click the **Create** button
-     - In the *Name* field, type in ``VM_LAB_1_LBUAG``
-     - In the *Template* pulldown, select *f5.vmware_view.v1.5.4*
+   - iApps -> Application Services
+   - Click the **Create** button
+   - In the *Name* field, type in ``VM_LAB_1_LBUAG``
+   - In the *Template* pulldown, select *f5.vmware_view.v1.5.4*
      
 
 #. Review the *Welcome to the iAPP template for VMware Horizon View*
 
 #. In *Big-IP Access Policy Manager* section
 
-   +----------------------------------------------------------+------------------------------------------------------------------------+
-   | Do you want to deploy BIG-IP Access Policy Manager?      | **No, do not deploy BIG-IP Access Policy Manager**                     |    +----------------------------------------------------------+------------------------------------------------------------------------+
+   +----------------------------------------------------------+-----------------------------------------------------------------------+
+   | Do you want to deploy BIG-IP Access Policy Manager?      | **No, do not deploy BIG-IP Access Policy Manager**                    |
+   +----------------------------------------------------------+-----------------------------------------------------------------------+
 
 #. In *SSL Encryption* section
 
    +----------------------------------------------------------+------------------------------------------------------------------------+
-   | How should the BIG-IP system handle encrypted traffic?   | **Terminate SSL for clients, re-encrypt to View servers (SSL-bridging)** |
+   | How should the BIG-IP system handle encrypted traffic?   | *Terminate SSL for clients, re-encrypt to View servers (SSL-bridging)* |
    +----------------------------------------------------------+------------------------------------------------------------------------+
-   | Which SSL certificate do you want to use?                | **wild.demoisfun.net.crt** (cert preloaded)                            |
+   | Which SSL certificate do you want to use?                | *wild.demoisfun.net.crt* (cert preloaded)                              |
    +----------------------------------------------------------+------------------------------------------------------------------------+
-   | Which SSL private key do you want to use                 | **wild.demoisfun.net.key** (key preloaded)                             |
+   | Which SSL private key do you want to use                 | *wild.demoisfun.net.key* (key preloaded)                               |
    +----------------------------------------------------------+------------------------------------------------------------------------+
 
 #. In *Virtual Servers and Pools* section
@@ -309,7 +311,7 @@ Deploy the iApp
 #. In *Application Health* section
 
    +------------------------------------------------------------------------------------+----------------------------------------------+
-   | Create a new health monitor or use existing one?                                   | **https**                                    |
+   | Create a new health monitor or use existing one?                                   | *https*                                      |
    +------------------------------------------------------------------------------------+----------------------------------------------+
 
 #. Click the **Finished** button
@@ -338,8 +340,8 @@ Configure UAG to use load balance address
 
 #. Log in as
 
-     - Username: ``admin``
-     - Password: ``F5@gility``
+   - Username: ``admin``
+   - Password: ``F5@gility``
      
    
 #. On the right side, under *Configure Manually*, click **Select**
@@ -358,7 +360,7 @@ Configure UAG to use load balance address
 
 #. Click **Save**
 
-#. Repeat for *vmw-uag1b* at ``https://192.168.10.215:9443/admin``
+#. Repeat for the other UAG *vmw-uag1b* at ``https://192.168.10.215:9443/admin``
 
 
 Test the UAG Server load balancing using both VMware View client and browser access methods
@@ -443,10 +445,10 @@ Deploy the iApp
    | Do you want to deploy BIG-IP Access Policy Manager?                 | *Yes, deploy BIG-IP Access Policy Manager*                  |
    +---------------------------------------------------------------------+-------------------------------------------------------------+
    | Do you want to support browser based connections,                   |                                                             |
-   |including the View HTML5 client?                                     | *Yes, support HTML 5 view clientless browser connections*   |
+   | including the View HTML5 client?                                     | *Yes, support HTML 5 view clientless browser connections*  |
    +---------------------------------------------------------------------+-------------------------------------------------------------+
    | Should the BIG-IP system support RSA SecureID two-factor            |                                                             |
-   |authentication?                                                      | *NO, do not support RSA SecureID two-factor authentication* |
+   | authentication?                                                      | *NO, do not support RSA SecureID two-factor authentication*|
    +---------------------------------------------------------------------+-------------------------------------------------------------+
    | Should the BIG\_IP system show a message to View users during logon | *No, do not add a message during logon*                     |
    +---------------------------------------------------------------------+-------------------------------------------------------------+
@@ -512,13 +514,13 @@ Test the APM (PCoIP) functionality using both VMware View client and browser acc
 
 #.  In the APM Webtop, click **Agility**
 
-#.  Select VMware *View Client*
+#.  Select **VMware View Client**
 
 #.  Note the error and inspect the certificate
 
 #.  Close the error box and cert view boxes
 
-#.  Close the View client
+#.  Close the *View* client
 
 #.  Open IE and browse to ``https://vmw-PROXY-VIEW.demoisfun.net``
 

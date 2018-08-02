@@ -103,14 +103,14 @@ Task 1 – Build a VIP with an Access Policy allowing access to VMware and Citri
    - Click the “+” to the right of Ad Auth
    - Select the “Assignment” tab
    - Select “Advanced Resource  Assign”
-   - Click the “Add Item” button
    - Click the “Add new entry” button
    - Click the “add/delete” link
    - Select the “Remote Desktop” tab
    - Select /Common/VM_LAB_2_LBSF.app/VM_LAB_2_LBSF_remote_desktop_1
    - Select the “Webtop” tab
    - Select Common/VM_LAB_2_LBSF.app/VM_LAB_2_LBSF_webtop
-   - Click the “Update” button   
+   - Click the “Update” button
+   - Click the "Save" btton
    - Click on the “Deny” action on the fallback link out of the Advanced Resource Assign
    - Select “Allow”
    - Click the “Save” button

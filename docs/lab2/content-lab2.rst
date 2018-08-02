@@ -513,9 +513,9 @@ Test the APM (PCoIP) functionality using both VMware View client and browser acc
 #. Select **VMware View Client**
 
    - Click New Server
-   - vmw-PROXY-VIEW.demoisfun.net
-   - Username: demo01
-   - Password: password
+   - ``vmw-PROXY-VIEW.demoisfun.net``
+   - Username: ``demo01``
+   - Password: ``password``
    
 #. Click the Agility icon
 
@@ -528,7 +528,7 @@ Test the APM (PCoIP) functionality using both VMware View client and browser acc
 #. Enter credential
 
    - Username: ``demo01``
-   - Password: password
+   - Password: ``password``
 
 
 #. Click **Agility**

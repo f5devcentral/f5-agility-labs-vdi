@@ -144,6 +144,7 @@ Task 1 – Build a VIP with an Access Policy allowing access to VMware and Citri
 
    +--------------------------------------------+-----------------------------+
    |General Properties                          |                             |
+
    +--------------------------------------------+-----------------------------+
    |Name                                        | Combined_VDI_PROXY          |
    +--------------------------------------------+-----------------------------+
@@ -167,6 +168,7 @@ Task 1 – Build a VIP with an Access Policy allowing access to VMware and Citri
    - Click “Finished” at the bottom of the screen
 
 #. Create a Combined VIP for the Citrix and VMware connectivity
+
    - Navigate to Local Traffic>>Virtual Servers>>Virtual Server List
    - Press the Create Button in the upper right section of the GUI
    - Configure the VIP with the variables below

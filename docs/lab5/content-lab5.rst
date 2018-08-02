@@ -145,7 +145,7 @@ Task 1 – Build a VIP with an Access Policy allowing access to VMware and Citri
    +--------------------------------------------+-----------------------------+
    |General Properties                          |                             |
    +--------------------------------------------+-----------------------------+
-   |Name                                        | Combined_VDI_PCOIP          |
+   |Name                                        | Combined_VDI_PROXY          |
    +--------------------------------------------+-----------------------------+
    |Destination Address/Mask                    | 192.168.3.157               |
    +--------------------------------------------+-----------------------------+
@@ -186,7 +186,7 @@ Task 1 – Build a VIP with an Access Policy allowing access to VMware and Citri
    +--------------------------------------------+----------------------------+
    |HTTP Profile                                | http                       |
    +--------------------------------------------+----------------------------+
-   |SSL Profile (Client)                        | VM_LAB_1_PCOIP_client_SSL  |
+   |SSL Profile (Client)                        | VM_LAB_1_PROXY_client_SSL  |
    +--------------------------------------------+----------------------------+
    |SSL Profile (Server)                        | serverssl                  |
    +--------------------------------------------+----------------------------+
@@ -196,11 +196,14 @@ Task 1 – Build a VIP with an Access Policy allowing access to VMware and Citri
    +--------------------------------------------+----------------------------+
    |Access Profile                              | VDI_Combined_webtop        |
    +--------------------------------------------+----------------------------+
-   |Connectivity Profile                        | VM_LAB_1_PCOIP_connect     |
+   |Connectivity Profile                        | VM_LAB_1_PROXY_connect     |
    +--------------------------------------------+----------------------------+
    |VDI Profile                                 | vdi                        |
    +--------------------------------------------+----------------------------+
 
+#. Update the VIP 
+
+   - Click “Finished” at the bottom of the screen
 
 Test Connectivity
 -----------------

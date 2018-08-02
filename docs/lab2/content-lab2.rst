@@ -514,28 +514,30 @@ Test the APM (PCoIP) functionality using both VMware View client and browser acc
 
    - C lick New Server
    - vmw-PROXY-VIEW.demoisfun.net
-   - Username: ``demo01``
-   - Password: ``password`
+   - Username: demo01
+   - Password: password
+   
+#. Click the Agility icon
 
-#.  Close the *View* client
+#. Close the session by clicking the Xin theupper  toolbar
 
-#.  Open IE and browse to ``https://vmw-PROXY-VIEW.demoisfun.net``
+#. Open IE and browse to ``https://vmw-PROXY-VIEW.demoisfun.net``
 
-#.  Select **VMware Horizon View HTML Access**
+#. Select **VMware Horizon View HTML Access**
 
-#.  Enter credential
+#. Enter credential
 
-    - Username: ``demo01``
-    - Password: ``password``
+    - Username: demo01
+    - Password: password
 
 
-#.  Click **Agility**
+#. Click **Agility**
 
-#.  Select **HTML5 Client**
+#. Select **HTML5 Client**
 
-#.  Verify that the desktop functions
+#. Verify that the desktop functions
 
-#.  Close IE
+#. Close IE
 
 .. |image3| image:: /_static/class1/image5.png
    :width: 5.40625in

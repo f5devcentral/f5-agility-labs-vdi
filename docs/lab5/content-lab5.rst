@@ -11,7 +11,7 @@ Task 1 – Build a VIP with an Access Policy allowing access to VMware and Citri
 
 #. Copy the VM_LAB_1_PCOIP access profile to VDI_Combined_webtop
 
-   - Turn off Strict Updayes on th VM_LAB_1_PCOIP iApp
+   - Turn off Strict Updayes on th VM_LAB_1_PROXY iApp
    - iApps>>Application Services
    - Select VMW_LAB_1_PCOIP 
    - Select the Properties Tab

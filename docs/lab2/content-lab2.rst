@@ -21,11 +21,11 @@ Access the View Desktop using the View Client on the internal network. View Clie
 
 #. Type in the Connection Server address ``vmw-connsvr1a.demoisfun.net``
 
-#. When prompted for credentials,
+#. When prompted for credentials
    - Username: ``demo01``
    - Password: ``password``
 
-#. After authenticated, double-click the "Agility" icon to launch View Desktop.
+#. After authenticated, double-click the ``Agility`` icon to launch View Desktop.
 
 #. In the Agility desktop, open Notepad and type in something.
 
@@ -33,8 +33,7 @@ Access the View Desktop using the View Client on the internal network. View Clie
    on top. May need to slide the blue RDP bar to the left in order to
    click the ``X`` in Agility Toolbar)
 
-#. Open View client and try to reconnect to ``vmw-connsvr1a.
-   demoisfun.net``
+#. Open View client and try to reconnect to ``vmw-connsvr1a.demoisfun.net``
 
 #. Notepad should still be on the desktop with the text you input.
 
@@ -66,7 +65,7 @@ Deploy the iApp
      - Username: ``admin``
      - Password: ``password``
 
-#. Create a new Application Service. On the left side menu,
+#. Create a new Application Service. On the left side menu
    - iApps -> Application Services
    - Click the ``Create`` button
    - In the *Name* field, type in ``VM_LAB_1_LBCS``
@@ -74,13 +73,13 @@ Deploy the iApp
 
 #. Review the *Welcome to the iAPP template for VMware Horizon View*
 
-#. In *Big-IP Access Policy Manager* section
+#. In *Big-IP Access Policy Manager* section,
 
    +----------------------------------------------------------+-----------------------------------------------------------------------+
    | Do you want to deploy BIG-IP Access Policy Manager?      | ``No, do not deploy BIG-IP Access Policy Manager``                    |
    +----------------------------------------------------------+-----------------------------------------------------------------------+
 
-#. In *SSL Encryption* section,
+#. In *SSL Encryption* section
 
    +----------------------------------------------------------+-----------------------------------------------------------------------+
    | How should the BIG-IP system handle encrypted traffic?   | ``Terminate SSL for clients, re-encrypt to View...   (SSL-bridging)`` |
@@ -90,7 +89,7 @@ Deploy the iApp
    | Which SSL private key do you want to use                 | ``wild.demoisfun.net.key`` (key preloaded)                            |
    +----------------------------------------------------------+-----------------------------------------------------------------------+
 
-#. In *Virtual Servers and Pools* section,
+#. In *Virtual Servers and Pools* section
    +------------------------------------------------------------------------------------+----------------------------------------------+
    | What virtual server IP address do you want to use for remote, untrusted clients?   | ``192.168.10.150``                           |
    +------------------------------------------------------------------------------------+----------------------------------------------+
@@ -100,7 +99,7 @@ Deploy the iApp
    |                                                                                    | ``192.168.10.211``                           |
    +------------------------------------------------------------------------------------+----------------------------------------------+
 
-#. In *Application Health* section,
+#. In *Application Health* section
    +------------------------------------------------------------------------------------+----------------------------------------------+
    | Create a new health monitor or use existing one                                ?   | ``https``                                    |
    +------------------------------------------------------------------------------------+----------------------------------------------+
@@ -143,12 +142,9 @@ View the properties of the iApp
 
 #. In the *Application Service* pulldown, select ``Advanced``.
 
-#. Select Advanced
-
 #. Note the check in *Strict Updates* checkbox,
 
    - Is this related to the screen when editing the persistence profile?
-
    - What are the pro’s and con’s of unchecking this parameter?
    
 
@@ -209,19 +205,19 @@ Access View Desktop from external network through UAG. (External use case withou
 
 #.  Click ``New Server``
 
-#.  Type in the UAG address ``vmw-uag1a.demoisfun.net``.
+#.  Type in the UAG address ``vmw-uag1a.demoisfun.net``
 
 #.  When prompted for credentials,
       - Username: ``demo01``
       - Password: ``password``
 
-#.  After authenticated, double-click the "Agility" icon to launch View Desktop.
+#.  After authenticated, double-click the "Agility" icon to launch View Desktop
 
 #.  Close the View client
 
 #.  To access View desktop in browser, type in URL ``https://vmw-uag1a.demoisfun.net``
 
-#.  Select ``VMware Horizon View HTML Access``
+#.  Select ``VMware Horizon View HTML Access``,
     - Username: ``demo01``
     - Password: ``password``
 
@@ -252,25 +248,27 @@ This environment load balances 2 external facing UAG Servers. UAG's do not requi
 
 Deploy the iApp
 ---------------
-#. From *"corporate-pc"*.
+#. From *"corporate-pc"*
 
 #. Use browser to access the F5 Admin GUI at ``https://f5-bigip1a.demoisfun.net``
      - Username: ``admin``
      - Password: ``password``
 
 #. Create a new Application Service. On the left side menu,
-   - iApps -> Application Services
-   - Click the ``Create`` button
-   - In the *Name* field, type in ``VM_LAB_1_LBUAG``
-   - In the *Template* pulldown, select ``f5.vmware_view.v1.5.4``
+     - iApps -> Application Services
+     - Click the ``Create`` button
+     - In the *Name* field, type in ``VM_LAB_1_LBUAG``
+     - In the *Template* pulldown, select ``f5.vmware_view.v1.5.4``
 
 #. Review the *Welcome to the iAPP template for VMware Horizon View*
 
 #. In *Big-IP Access Policy Manager* section,
+
    +----------------------------------------------------------+------------------------------------------------------------------------+
    | Do you want to deploy BIG-IP Access Policy Manager?      | ``No, do not deploy BIG-IP Access Policy Manager``                     |    +----------------------------------------------------------+------------------------------------------------------------------------+
 
 #. In *SSL Encryption* section,
+
    +----------------------------------------------------------+------------------------------------------------------------------------+
    | How should the BIG-IP system handle encrypted traffic?   | ``Terminate SSL for clients, re-encrypt to View servers (SSL-bridging)`` |
    +----------------------------------------------------------+------------------------------------------------------------------------+
@@ -280,6 +278,7 @@ Deploy the iApp
    +----------------------------------------------------------+------------------------------------------------------------------------+
 
 #. In *Virtual Servers and Pools* section,
+
    +------------------------------------------------------------------------------------+----------------------------------------------+
    | What virtual server IP address do you want to use for remote, untrusted clients?   | ``192.168.3.150``                            |
    +------------------------------------------------------------------------------------+----------------------------------------------+
@@ -290,11 +289,12 @@ Deploy the iApp
    +------------------------------------------------------------------------------------+----------------------------------------------+
 
 #. In *Application Health* section,
+
    +------------------------------------------------------------------------------------+----------------------------------------------+
    | Create a new health monitor or use existing one?                                   | ``https``                                    |
    +------------------------------------------------------------------------------------+----------------------------------------------+
 
-#. Click the **Finished** button.
+#. Click the **Finished** button
 
 
 View the objects which were created by the iApp
@@ -319,12 +319,12 @@ Configure UAG to use load balance address
 #. Open browser and go to *vmw-uag1a* administrative interface at ``https://192.168.10.214:9443/admin``
 
 #. Log in as,
-   - Username: ``admin``
-   - Password: ``F5@gility``
+     - Username: ``admin``
+     - Password: ``F5@gility``
    
 #. On the right side, under *Configure Manually*, click ``Select``
 
-#. In *General Settings -> Edge Service Settings*, click the ``Show`` button.
+#. In *General Settings -> Edge Service Settings*, click the ``Show`` button
 
    |image_uaggear|
 
@@ -334,7 +334,7 @@ Configure UAG to use load balance address
 
 #. In the *Tunnel External URL* field, type in ``https://vmw-lb-uag.demoisfun.net:443``
 
-   |image_uagsettings|
+   |image_uagsetting|
 
 #. Click ``Save``
 
@@ -348,25 +348,25 @@ Test the UAG Server load balancing using both VMware View client and browser acc
 
 #. Click ``New Server``
 
-#. Type in the load balance address ``vmw-LB-UAG.demoisfun.net``. (IP address will not work—Certificate contains demoisfun.net)
+#. Type in the load balance address ``vmw-LB-UAG.demoisfun.net``
 
 #. When prompted for credentials,
-   - Username: ``demo01``
-   - Password: ``password``
+     - Username: ``demo01``
+     - Password: ``password``
 
 #. After authenticated, double-click the "Agility" icon to launch View Desktop.
 
-#.  Verify that the Agility desktop functions
+#. Verify that the Agility desktop functions
 
-#.  Close the View client. (May need to slide the RDP Toolbar out of the way)
+#. Close the View client. (May need to slide the RDP Toolbar out of the way)
 
-#.  Open IE and browse to ``https://vmw-LB-UAG.demoisfun.net``
+#. Open IE and browse to ``https://vmw-LB-UAG.demoisfun.net``
 
-#.  Select ``VMware Horizon View HTML access``
+#. Select ``VMware Horizon View HTML access``
 
-#.  Log in
-    - Username: ``demo01``
-    - Password: ``password``
+#. Log in
+     - Username: ``demo01``
+     - Password: ``password``
 
 #.  Double click to launch Agility desktop
 
@@ -393,21 +393,21 @@ In this configuration, we will consolidate authentication, load balance and prox
 Deploy the iApp
 ---------------
 
-#. From *"corporate-pc"*.
+#. From *"corporate-pc"*
 
 #. Use browser to access the F5 Admin GUI at ``https://f5-bigip1a.demoisfun.net``
      - Username: ``admin``
      - Password: ``password``
 
 #. Create a new Application Service. On the left side menu,
-   - iApps -> Application Services
-   - Click the ``Create`` button
-   - In the *Name* field, type in ``VM_LAB_1_PROXY``
-   - In the *Template* pulldown, select ``f5.vmware_view.v1.5.4``
+     - iApps -> Application Services
+     - Click the ``Create`` button
+     - In the *Name* field, type in ``VM_LAB_1_PROXY``
+     - In the *Template* pulldown, select ``f5.vmware_view.v1.5.4``
 
 #. Review the *Welcome to the iAPP template for VMware Horizon View*
 
-#. In *BIG-IP Access Policy Manager* section,
+#. In *BIG-IP Access Policy Manager* section
 
    +---------------------------------------------------------------------+-------------------------------------------------------------+
    | Do you want to deploy BIG-IP Access Policy Manager?                 | ``Yes, deploy BIG-IP Access Policy Manager``                |
@@ -425,7 +425,7 @@ Deploy the iApp
    | Create a new AAA Server object **or select an existing one**        | ``AD1``                                                     |
    +---------------------------------------------------------------------+-------------------------------------------------------------+
 
-#. **SSL Encryption (Certs are preloaded for this exercise)**
+#. In *SSL Encryption* section
 
    +----------------------------------------------------------+--------------------------------------------------------------+
    | How should the BIG-IP system handle encrypted traffic?   | ``Terminate SSL for clients, re-encrypt…\ *(SSL-Bridging)*`` |
@@ -435,7 +435,7 @@ Deploy the iApp
    | Which SSL private key do you want to use?                | ``wild.demoisfun.net.key``                                   |
    +----------------------------------------------------------+--------------------------------------------------------------+
 
-#. **Virtual Servers and Pools**
+#. In *Virtual Servers and Pools* section
 
    +------------------------------------------------------------------------------------+------------------------------------+
    | What virtual server IP address do you want to use for remote, untrusted clients?   | ``192.168.3.152``                  |
@@ -446,7 +446,8 @@ Deploy the iApp
    |                                                                                    | ``192.168.10.211``                 |
    +------------------------------------------------------------------------------------+------------------------------------+
 
-#. In *Application Health* section,
+#. In *Application Health* section
+
    +------------------------------------------------------------------------------------+----------------------------------------------+
    | Create a new health monitor or use existing one?                                   | ``https``                                    |
    +------------------------------------------------------------------------------------+----------------------------------------------+
@@ -471,7 +472,7 @@ View the objects which were created by the iApp
 Test the APM (PCoIP) functionality using both VMware View client and browser access methods
 -------------------------------------------------------------------------------------------
 
-#.  From "home-pc"
+#.  From *"home-pc"*
 
 #.  Open IE and browse to ``https://vmw-PROXY-VIEW.demoisfun.net``
 
@@ -479,7 +480,7 @@ Test the APM (PCoIP) functionality using both VMware View client and browser acc
 
     - Password: ``password``
 
-#.  Click Agility on APM webtop
+#.  In the APM Webtop, click ``Agility``
 
 #.  Select VMware View Client
 
@@ -489,25 +490,21 @@ Test the APM (PCoIP) functionality using both VMware View client and browser acc
 
 #.  Close the View client
 
-#.  Open IE and browse to
-
-    - ``https://vmw-PROXY-VIEW.demoisfun.net``
+#.  Open IE and browse to ``https://vmw-PROXY-VIEW.demoisfun.net``
 
 #.  Select VMware Horizon View HTML access
 
 #.  Enter Credentials
+      - Username: ``demo01``
+      - Password: ``password``
 
-    - Username: ``demo01``
+#.  Click *Agility*
 
-    - Password: ``password``
-
-#.  Click Agility
-
-#.  Select HTML5 Client
+#.  Select *HTML5 Client*
 
 #.  Verify that the desktop functions
 
-#.  Close the browser
+#.  Close IE
 
 .. |image3| image:: /_static/class1/image5.png
    :width: 5.40625in

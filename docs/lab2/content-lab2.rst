@@ -65,15 +65,17 @@ Deploy the iApp
 
 #. Open IE to access the F5 Admin GUI at ``https://f5-bigip1a.demoisfun.net``
    
-   - Username: ``admin``
-   - Password: ``password``
+     - Username: ``admin``
+     - Password: ``password``
+   
 
 #. Create a new Application Service. On the left side menu
 
-   - iApps -> Application Services
-   - Click the ``Create`` button
-   - In the *Name* field, type in ``VM_LAB_1_LBCS``
-   - In the *Template* pulldown, select ``f5.vmware_view.v1.5.4``
+     - iApps -> Application Services
+     - Click the ``Create`` button
+     - In the *Name* field, type in ``VM_LAB_1_LBCS``
+     - In the *Template* pulldown, select ``f5.vmware_view.v1.5.4``
+
 
 #. Review the *Welcome to the iAPP template for VMware Horizon View*
 
@@ -128,9 +130,10 @@ View the objects which were created by the iApp
 
 #. Note that a persistence profile was created
 
-   - Check Match Across Services
-   - Press update
-   - Note the error at the top of the page
+     - Check Match Across Services
+     - Press update
+    - Note the error at the top of the page
+
 
 #. Return to iApp -> Application Services
 
@@ -163,8 +166,10 @@ Test the connection server load balancing using both VMware View client and brow
 #. Type in the load balance address ``vmw-LB-CS.demoisfun.net``. (IP address will not work—Certificate contains demoisfun.net)
 
 #. When prompted for credentials
-   - Username: ``demo01``
+     
+     - Username: ``demo01``
      - Password: ``password``
+
 
 #. After authenticated, double-click the **Agility** icon to launch View Desktop
 
@@ -177,8 +182,10 @@ Test the connection server load balancing using both VMware View client and brow
 #. Select *VMware Horizon View HTML access*
 
 #. Log in
+
      - Username: ``demo01``
      - Password: ``password``
+
 
 #.  Double-click **Agility** to launch desktop
 
@@ -211,8 +218,10 @@ Access View Desktop from external network through UAG. (External use case withou
 #.  Type in the UAG address ``vmw-uag1a.demoisfun.net``
 
 #.  When prompted for credentials
+
       - Username: ``demo01``
       - Password: ``password``
+
 
 #.  After authenticated, double-click the **Agility** icon to launch View Desktop
 
@@ -220,9 +229,11 @@ Access View Desktop from external network through UAG. (External use case withou
 
 #.  To access View desktop in IE, type in URL ``https://vmw-uag1a.demoisfun.net``
 
-#.  Select **VMware Horizon View HTML Access**,
-    - Username: ``demo01``
-    - Password: ``password``
+#.  Select **VMware Horizon View HTML Access**
+
+      - Username: ``demo01``
+      - Password: ``password``
+      
 
 #.  Double-click **Agility icon** to launch desktop
 
@@ -254,14 +265,18 @@ Deploy the iApp
 #. From *"corporate-pc"*
 
 #. Open IE to access the F5 Admin GUI at ``https://f5-bigip1a.demoisfun.net``
+
      - Username: ``admin``
      - Password: ``password``
+     
 
-#. Create a new Application Service. On the left side menu,
+#. Create a new Application Service. On the left side menu
+
      - iApps -> Application Services
      - Click the **Create** button
      - In the *Name* field, type in ``VM_LAB_1_LBUAG``
      - In the *Template* pulldown, select *f5.vmware_view.v1.5.4*
+     
 
 #. Review the *Welcome to the iAPP template for VMware Horizon View*
 
@@ -322,8 +337,10 @@ Configure UAG to use load balance address
 #. Open IE and go to *vmw-uag1a* administrative interface at ``https://192.168.10.214:9443/admin``
 
 #. Log in as
+
      - Username: ``admin``
      - Password: ``F5@gility``
+     
    
 #. On the right side, under *Configure Manually*, click **Select**
 
@@ -354,8 +371,10 @@ Test the UAG Server load balancing using both VMware View client and browser acc
 #. Type in the load balance address ``vmw-LB-UAG.demoisfun.net``
 
 #. When prompted for credentials
+
      - Username: ``demo01``
      - Password: ``password``
+     
 
 #. After authenticated, double-click the **Agility** icon to launch View Desktop
 
@@ -368,8 +387,10 @@ Test the UAG Server load balancing using both VMware View client and browser acc
 #. Select **VMware Horizon View HTML access**
 
 #. Log in
+
      - Username: ``demo01``
      - Password: ``password``
+     
 
 #.  Double click **Agility** to launch desktop
 
@@ -400,15 +421,17 @@ Deploy the iApp
 
 #. Open IE to access the F5 Admin GUI at ``https://f5-bigip1a.demoisfun.net``
 
-   - Username: ``admin``
-   - Password: ``password``
+     - Username: ``admin``
+     - Password: ``password``
+
 
 #. Create a new Application Service. On the left side menu
 
-   - iApps -> Application Services
-   - Click the ``Create`` button
-   - In the *Name* field, type in ``VM_LAB_1_PROXY``
-   - In the *Template* pulldown, select ``f5.vmware_view.v1.5.4``
+     - iApps -> Application Services
+     - Click the ``Create`` button
+     - In the *Name* field, type in ``VM_LAB_1_PROXY``
+     - In the *Template* pulldown, select ``f5.vmware_view.v1.5.4``
+   
 
 #. Review the *Welcome to the iAPP template for VMware Horizon View*
 
@@ -481,8 +504,9 @@ Test the APM (PCoIP) functionality using both VMware View client and browser acc
 
 #.  Open IE and browse to ``https://vmw-PROXY-VIEW.demoisfun.net``
     
-    - Username: ``demo01``
-    - Password: ``password``
+      - Username: ``demo01``
+      - Password: ``password``
+
 
 #.  In the APM Webtop, click *Agility*
 
@@ -500,8 +524,9 @@ Test the APM (PCoIP) functionality using both VMware View client and browser acc
 
 #.  Enter Credentials
 
-    - Username: ``demo01``
-    - Password: ``password``
+      - Username: ``demo01``
+      - Password: ``password``
+
 
 #.  Click *Agility*
 

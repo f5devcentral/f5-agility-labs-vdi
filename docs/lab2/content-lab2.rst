@@ -475,7 +475,7 @@ Deploy the iApp
    +------------------------------------------------------------------------------------+------------------------------------+
    | What virtual server IP address do you want to use for remote, untrusted clients?   | ``192.168.3.152``                  |
    +------------------------------------------------------------------------------------+------------------------------------+
-   | What FQDN will clients use to access the View environment?                         | ``vmw-PROXY-VIEW.demoisfun.net``   |
+   | What FQDN will clients use to access the View environment?                         | ``vmw-PROXY-VIEW.demoisfun.net``   |    
    +------------------------------------------------------------------------------------+------------------------------------+
    | Which Servers should be included in this pool?                                     | ``192.168.10.210``                 |
    |                                                                                    |                                    |
@@ -512,7 +512,7 @@ Test the APM (PCoIP) functionality using both VMware View client and browser acc
 
 #. Select **VMware View Client**
 
-   - C lick New Server
+   - Click New Server
    - vmw-PROXY-VIEW.demoisfun.net
    - Username: demo01
    - Password: password
@@ -527,8 +527,8 @@ Test the APM (PCoIP) functionality using both VMware View client and browser acc
 
 #. Enter credential
 
-    - Username: demo01
-    - Password: password
+   - Username: ``demo01``
+   - Password: password
 
 
 #. Click **Agility**

@@ -22,6 +22,7 @@ Access the View Desktop using the View Client on the internal network. View Clie
 #. Type in the Connection Server address ``vmw-connsvr1a.demoisfun.net``
 
 #. When prompted for credentials
+
    - Username: ``demo01``
    - Password: ``password``
 
@@ -62,14 +63,16 @@ Deploy the iApp
 #. From *"corporate-pc"*
 
 #. Open IE to access the F5 Admin GUI at ``https://f5-bigip1a.demoisfun.net``
-     - Username: ``admin``
-     - Password: ``password``
+   
+   - Username: ``admin``
+   - Password: ``password``
 
 #. Create a new Application Service. On the left side menu
-    - iApps -> Application Services
-    - Click the ``Create`` button
-    - In the *Name* field, type in ``VM_LAB_1_LBCS``
-    - In the *Template* pulldown, select ``f5.vmware_view.v1.5.4``
+
+   - iApps -> Application Services
+   - Click the ``Create`` button
+   - In the *Name* field, type in ``VM_LAB_1_LBCS``
+   - In the *Template* pulldown, select ``f5.vmware_view.v1.5.4``
 
 #. Review the *Welcome to the iAPP template for VMware Horizon View*
 
@@ -125,9 +128,7 @@ View the objects which were created by the iApp
 #. Note that a persistence profile was created
 
    - Check Match Across Services
-
    - Press update
-
    - Note the error at the top of the page
 
 #. Return to iApp -> Application Services
@@ -476,8 +477,9 @@ Test the APM (PCoIP) functionality using both VMware View client and browser acc
 #.  From *"home-pc"*
 
 #.  Open IE and browse to ``https://vmw-PROXY-VIEW.demoisfun.net``
-      - Username: ``demo01``
-      - Password: ``password``
+    
+    - Username: ``demo01``
+    - Password: ``password``
 
 #.  In the APM Webtop, click *Agility*
 

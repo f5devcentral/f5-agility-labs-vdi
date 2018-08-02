@@ -508,21 +508,14 @@ View the objects which were created by the iApp
 Test the APM (PCoIP) functionality using both VMware View client and browser access methods
 -------------------------------------------------------------------------------------------
 
-#.  From *"home-pc"*
+#. From *"home-pc"*
 
-#.  Open IE and browse to ``https://vmw-PROXY-VIEW.demoisfun.net``
-    
-    - Username: ``demo01``
-    - Password: ``password``
+#. Select **VMware View Client**
 
-
-#.  In the APM Webtop, click **Agility**
-
-#.  Select **VMware View Client**
-
-#.  Note the error and inspect the certificate
-
-#.  Close the error box and cert view boxes
+   - C lick New Server
+   - vmw-PROXY-VIEW.demoisfun.net
+   - Username: ``demo01``
+   - Password: ``password`
 
 #.  Close the *View* client
 

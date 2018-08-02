@@ -22,8 +22,10 @@ Access the View Desktop using the View Client on the internal network. View Clie
 #. Type in the Connection Server address ``vmw-connsvr1a.demoisfun.net``
 
 #. When prompted for credentials
-    - Username: ``demo01``
-    - Password: ``password``
+
+     - Username: ``demo01``
+     - Password: ``password``
+     
 
 #. After authenticated, double-click the *Agility* icon to launch View Desktop
 

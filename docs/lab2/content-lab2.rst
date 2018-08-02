@@ -448,10 +448,10 @@ Deploy the iApp
    | Do you want to deploy BIG-IP Access Policy Manager?                 | *Yes, deploy BIG-IP Access Policy Manager*                  |
    +---------------------------------------------------------------------+-------------------------------------------------------------+
    | Do you want to support browser based connections,                   |                                                             |
-   | including the View HTML5 client?                                    | *Yes, support HTML 5 view clientless browser connections*  |
+   | including the View HTML5 client?                                    | *Yes, support HTML 5 view clientless browser connections*   |
    +---------------------------------------------------------------------+-------------------------------------------------------------+
    | Should the BIG-IP system support RSA SecureID two-factor            |                                                             |
-   | authentication?                                                     | *NO, do not support RSA SecureID two-factor authentication*|
+   | authentication?                                                     | *NO, do not support RSA SecureID two-factor authentication* |
    +---------------------------------------------------------------------+-------------------------------------------------------------+
    | Should the BIG-IP system show a message to View users during logon  | *No, do not add a message during logon*                     |
    +---------------------------------------------------------------------+-------------------------------------------------------------+

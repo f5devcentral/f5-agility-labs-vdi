@@ -100,7 +100,8 @@ Task 1 – Build a VIP with an Access Policy allowing access to VMware and Citri
 
 #. Add  an Advanced Resource Assign object to the Citrix Receiver branch
 
-   - Click the “+” to the right of Ad Auth   - Select the “Assignment” tab
+   - Click the “+” to the right of Ad Auth
+   - Select the “Assignment” tab
    - Select “Advanced Resource  Assign”
    - Click the “Add Item” button
    - Click the “Add new entry” button

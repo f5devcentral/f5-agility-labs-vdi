@@ -519,7 +519,7 @@ Test the APM (PCoIP) functionality using both VMware View client and browser acc
    
 #. Click the Agility icon
 
-#. Close the session by clicking the Xin theupper  toolbar
+#. Close the session by clicking the X in the upper  toolbar
 
 #. Open IE and browse to ``https://vmw-PROXY-VIEW.demoisfun.net``
 

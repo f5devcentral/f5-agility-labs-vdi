@@ -82,15 +82,15 @@ Deploy the iApp
 #. In *Big-IP Access Policy Manager* section
 
    +----------------------------------------------------------+------------------------------------------------------------------------+
-   | Do you want to deploy BIG-IP Access Policy Manager?      | *No, do not deploy BIG-IP Access Policy Manager*                       |
+   | Do you want to deploy BIG-IP Access Policy Manager?      | *No, do not deploy BIG-IP Access...*                                   |
    +----------------------------------------------------------+------------------------------------------------------------------------+
 
 #. In *SSL Encryption* section
 
    +----------------------------------------------------------+-----------------------------------------------------------------------+
-   | How should the BIG-IP system handle encrypted traffic?   | *Terminate SSL for clients, re-encrypt to View...   (SSL-bridging)*   |
+   | How should the BIG-IP system handle encrypted traffic?   | *Terminate SSL for clients, re-encrypt to View...(SSL-bridging)*      |
    +----------------------------------------------------------+-----------------------------------------------------------------------+
-   | Which SSL certificate do you want to use?                | *wild.demoisfun.net.crt*   (cert preloaded)                         |
+   | Which SSL certificate do you want to use?                | *wild.demoisfun.net.crt*   (cert preloaded)                           |
    +----------------------------------------------------------+-----------------------------------------------------------------------+
    | Which SSL private key do you want to use                 | *wild.demoisfun.net.key*   (key preloaded)                            |
    +----------------------------------------------------------+-----------------------------------------------------------------------+
@@ -98,18 +98,20 @@ Deploy the iApp
 #. In *Virtual Servers and Pools* section
 
    +------------------------------------------------------------------------------------+----------------------------------------------+
-   | What virtual server IP address do you want to use for remote, untrusted clients?   | ``192.168.10.150``                           |
+   | What virtual server IP address do you want to use for remote,                      |``192.168.10.150``                            |
+   | untrusted clients?                                                                 |                                              |
    +------------------------------------------------------------------------------------+----------------------------------------------+
    | What FQDN will clients use to access the View environment                          | ``vmw-LB-CS.demoisfun.net``                  |
    +------------------------------------------------------------------------------------+----------------------------------------------+
    | Which Servers should be included in this pool                                      | ``192.168.10.210``                           |
+   |                                                                                    |                                              |
    |                                                                                    | ``192.168.10.211``                           |
    +------------------------------------------------------------------------------------+----------------------------------------------+
 
 #. In *Application Health* section
 
    +------------------------------------------------------------------------------------+----------------------------------------------+
-   | Create a new health monitor or use existing one                                ?   | ``https``                                    |
+   | Create a new health monitor or use existing one?                                   | ``https``                                    |
    +------------------------------------------------------------------------------------+----------------------------------------------+
 
 #. Click the **Finished** button
@@ -284,13 +286,13 @@ Deploy the iApp
 #. In *Big-IP Access Policy Manager* section
 
    +----------------------------------------------------------+-----------------------------------------------------------------------+
-   | Do you want to deploy BIG-IP Access Policy Manager?      | **No, do not deploy BIG-IP Access Policy Manager**                    |
+   | Do you want to deploy BIG-IP Access Policy Manager?      | *No, do not deploy BIG-IP Access Policy Manager*                      |
    +----------------------------------------------------------+-----------------------------------------------------------------------+
 
 #. In *SSL Encryption* section
 
    +----------------------------------------------------------+------------------------------------------------------------------------+
-   | How should the BIG-IP system handle encrypted traffic?   | *Terminate SSL for clients, re-encrypt to View servers (SSL-bridging)* |
+   | How should the BIG-IP system handle encrypted traffic?   | *Terminate SSL for clients, re-encrypt...servers (SSL-bridging)*       |
    +----------------------------------------------------------+------------------------------------------------------------------------+
    | Which SSL certificate do you want to use?                | *wild.demoisfun.net.crt* (cert preloaded)                              |
    +----------------------------------------------------------+------------------------------------------------------------------------+
@@ -305,6 +307,7 @@ Deploy the iApp
    | What FQDN will clients use to access the View environment                          | ``vmw-LB-UAG.demoisfun.net``                 |
    +------------------------------------------------------------------------------------+----------------------------------------------+
    | Which Servers should be included in this pool                                      | ``192.168.3.214``                            |
+   |                                                                                    |                                              |
    |                                                                                    | ``192.168.3.215``                            |
    +------------------------------------------------------------------------------------+----------------------------------------------+
 
@@ -475,6 +478,7 @@ Deploy the iApp
    | What FQDN will clients use to access the View environment?                         | ``vmw-PROXY-VIEW.demoisfun.net``   |
    +------------------------------------------------------------------------------------+------------------------------------+
    | Which Servers should be included in this pool?                                     | ``192.168.10.210``                 |
+   |                                                                                    |                                    |
    |                                                                                    | ``192.168.10.211``                 |
    +------------------------------------------------------------------------------------+------------------------------------+
 

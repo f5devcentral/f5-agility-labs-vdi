@@ -1,3 +1,4 @@
+
 Task 1 – Build a VIP with an Access Policy allowing access to VMware and Citrix
 ===============================================================================
 
@@ -36,6 +37,7 @@ Task 1 – Build a VIP with an Access Policy allowing access to VMware and Citri
  
 #. Add Citrix to the Browser Resource assign on the Full or Mobile Browser branch
  
+   - Click on the Browser Resource Assign object on the right end or the branch
    - Click on the “Add/Delete” link in the Browser Resource Assign pop up window
    - Select the Remote Desktop tab 
    - Add /Common/VM_LAB_2_LBSF.app/VM_LAB_2_LBSF_remote_desktop_1

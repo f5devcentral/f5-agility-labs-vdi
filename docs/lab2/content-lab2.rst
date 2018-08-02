@@ -11,23 +11,23 @@ Access the View Desktop using the View Client on the internal network. View Clie
    *Accessing Internal View Desktop*
 
 
-#. From the *"corporate-pc"*.
+#. From the *"corporate-pc"*
 
-#. On the desktop, launch the View Client.
+#. On the desktop, launch the View Client
 
    |image4|
 
-#. Click ``New Server``
+#. Click *New Server*
 
 #. Type in the Connection Server address ``vmw-connsvr1a.demoisfun.net``
 
 #. When prompted for credentials
-   - Username: ``demo01``
-   - Password: ``password``
+     - Username: ``demo01``
+     - Password: ``password``
 
-#. After authenticated, double-click the ``Agility`` icon to launch View Desktop.
+#. After authenticated, double-click the ``Agility`` icon to launch View Desktop
 
-#. In the Agility desktop, open Notepad and type in something.
+#. In the Agility desktop, open Notepad and type in something
 
 #. Disconnect from Agility desktop by closing View client. (RDP Toolbar
    on top. May need to slide the blue RDP bar to the left in order to
@@ -35,11 +35,11 @@ Access the View Desktop using the View Client on the internal network. View Clie
 
 #. Open View client and try to reconnect to ``vmw-connsvr1a.demoisfun.net``
 
-#. Notepad should still be on the desktop with the text you input.
+#. Notepad should still be on the desktop with the text you input
 
 #. Close the View client. (press the ``X`` in Agility Toolbar)
 
-#. Keep the RDP session open for Task 2.
+#. Keep the RDP session open for Task 2
 
 
 Task 2 – Load Balance Connection Servers
@@ -61,7 +61,7 @@ Deploy the iApp
 
 #. From *"corporate-pc"*.
 
-#. Use browser to access the F5 Admin GUI at ``https://f5-bigip1a.demoisfun.net``
+#. Open IE to access the F5 Admin GUI at ``https://f5-bigip1a.demoisfun.net``
      - Username: ``admin``
      - Password: ``password``
 

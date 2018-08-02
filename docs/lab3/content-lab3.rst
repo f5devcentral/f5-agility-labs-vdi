@@ -55,7 +55,7 @@ Deploy the iApp
    - *iApps >> Application Services*
    - Press the **Create** button
    - Name the Application Service ``VM_LAB_2_LBSF``
-   - Select **f5.citrix_vdi.v2.4.1rc1** for the template
+   - Select **f5.citrix_vdi.v2.4.4** for the template
 
 
 iApp Configuration
@@ -90,7 +90,7 @@ iApp Configuration
    +------------------------------------------------------------------------+----------------------------------------------+
    | What IP address will clients use to access...or the F5 Webtop?         | ``192.168.3.160``                            |
    +------------------------------------------------------------------------+----------------------------------------------+
-   | Did you deploy Citrix StoreFront?                                      | *Yes, ...StoreFront 3.0 or 3.6*              |
+   | Did you deploy Citrix StoreFront?                                      | *Yes, ...StoreFront 3.0 or and higher        |
    +------------------------------------------------------------------------+----------------------------------------------+
    | What is the URI used on StoreFront...for XenApp or XenDesktop?         | ``/Citrix/AgilityStoreWeb/``                 |
    +------------------------------------------------------------------------+----------------------------------------------+

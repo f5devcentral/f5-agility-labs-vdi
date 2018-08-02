@@ -73,35 +73,36 @@ iApp Configuration
 #.  In *BIG-IP Access Policy Manager* section
 
    +---------------------------------------------------------------------------------------+-------------------------+
-   | Do you want to replace Citrix Web Interface or StoreFront...with the BIG-IP system?   | *No, do not replace…*   |
+   | Do you want to replace Citrix Web Interface...with the BIG-IP system?                 | *No, do not replace…*   |
    +---------------------------------------------------------------------------------------+-------------------------+
    | Create a new AAA object or select an existing one?                                    | *AD1*                   |
    +---------------------------------------------------------------------------------------+-------------------------+
 
 #. In *Virtual Server for Web Interface or StoreFront servers* section
 
-   +-----------------------------------------------------------------------------------------------------------------------------------+
-   | How should the BIG-IP system handle encrypted traffic to...StoreFront servers? | *Terminate SSL for Clients...*(SSL offload)*     |
-   +--------------------------------------------------------------------------------+--------------------------------------------------+
-   | Which SSL certificate do you want to use?                                      | *wild.demoisfun.net.crt*                         |
-   +--------------------------------------------------------------------------------+--------------------------------------------------+
-   | Which SSL private key do you want to use?                                      | *wild.demoisfun.net.key*                         |
-   +--------------------------------------------------------------------------------+--------------------------------------------------+
-   | What IP address will clients use to access...or the F5 Webtop?                 | ``192.168.3.160``                                |
-   +--------------------------------------------------------------------------------+--------------------------------------------------+
-   | Did you deploy Citrix StoreFront?                                              | *Yes, ...StoreFront 3.0 or 3.6*                  |
-   +--------------------------------------------------------------------------------+--------------------------------------------------+
-   | What is the URI used on StoreFront...for XenApp or XenDesktop?                 | ``/Citrix/AgilityStoreWeb/``                     |
-   +--------------------------------------------------------------------------------+--------------------------------------------------+
+   +---------------------------------------------------------------------------+--------------------------------------------------+
+   | How should the BIG-IP system handle encrypted traffic to...servers?       | *Terminate SSL for Clients...*(SSL offload)*     |
+   +---------------------------------------------------------------------------+--------------------------------------------------+
+   | Which SSL certificate do you want to use?                                 | *wild.demoisfun.net.crt*                         |
+   +---------------------------------------------------------------------------+--------------------------------------------------+
+   | Which SSL private key do you want to use?                                 | *wild.demoisfun.net.key*                         |
+   +---------------------------------------------------------------------------+--------------------------------------------------+
+   | What IP address will clients use to access...or the F5 Webtop?            | ``192.168.3.160``                                |
+   +---------------------------------------------------------------------------+--------------------------------------------------+
+   | Did you deploy Citrix StoreFront?                                         | *Yes, ...StoreFront 3.0 or 3.6*                  |
+   +---------------------------------------------------------------------------+--------------------------------------------------+
+   | What is the URI used on StoreFront...for XenApp or XenDesktop?            | ``/Citrix/AgilityStoreWeb/``                     |
+   +---------------------------------------------------------------------------+--------------------------------------------------+
 
 #. In *Web Interface or StoreFront servers* section
 
    +------------------------------------------------------------------------------------+-------------------------------+
-   | What DNS name will clients use to reach the Web Interface or StoreFront servers?   | ``ctx-LB-SF.demoisfun.net``   |
+   | What DNS name will clients use to reach the...StoreFront servers?                  | ``ctx-LB-SF.demoisfun.net``   |
    +------------------------------------------------------------------------------------+-------------------------------+
    | Which port have you configured for Web Interface or StoreFront HTTP traffic?       | ``80``                        |
    +------------------------------------------------------------------------------------+-------------------------------+
    | What are the IP addresses of your Web Interface or StoreFront servers?             | ``192.168.10.220``            |
+   |                                                                                    |                               |
    |                                                                                    | ``192.168.10.221``            |
    +------------------------------------------------------------------------------------+-------------------------------+
    | Which Monitor do you want to use                                                   | *http*                        |
@@ -119,6 +120,7 @@ iApp Configuration
 
    +----------------------------------------------------------------+----------------------+
    | What are the IP addresses of your XML Broker or DDC servers?   | ``192.168.10.222``   |
+   |                                                                |                      |
    |                                                                | ``192.168.10.223``   |
    +----------------------------------------------------------------+----------------------+
    | Which monitor do you want to use?                              | *http*               |
@@ -176,9 +178,9 @@ iApp Configuration
 
 #. In *BIG-IP Access Policy Manager* section
 
-   +---------------------------------------------------------------------------------------------+--------------------------+
-   | Do you want to replace Citrix Web Interface or StoreFront servers with the BIG-IP system?   | "Yes, replace Citrix…"   |
-   +---------------------------------------------------------------------------------------------+--------------------------+
+   +-------------------------------------------------------------------------+--------------------------+
+   | Do you want to replace Citrix Web Interface...with the BIG-IP system?   | "Yes, replace Citrix…"   |
+   +-------------------------------------------------------------------------+--------------------------+
 
 #. Scroll through the template and note that the storefront pool members
    are no longer present

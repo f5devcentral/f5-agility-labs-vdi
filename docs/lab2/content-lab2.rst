@@ -25,21 +25,21 @@ Access the View Desktop using the View Client on the internal network. View Clie
 
    - Username: ``demo01``
    - Password: ``password``
-     
+   
 
-#. After authenticated, double-click the *Agility* icon to launch View Desktop
+#. After authenticated, double-click the **Agility** icon to launch View Desktop
 
-#. In the Agility desktop, open Notepad and type in something
+#. In the *Agility* desktop, open Notepad and type in something
 
-#. Disconnect from Agility desktop by closing View client. (RDP Toolbar
+#. Disconnect from *Agility* desktop by closing View client. (RDP Toolbar
    on top. May need to slide the blue RDP bar to the left in order to
    click the **X** in Agility Toolbar)
 
-#. Open View client and try to reconnect to ``vmw-connsvr1a.demoisfun.net``
+#. Open *View* client and try to reconnect to ``vmw-connsvr1a.demoisfun.net``
 
-#. Notepad should still be on the desktop with the text you input
+#. *Notepad* should still be on the desktop with the text you input
 
-#. Close the View client. (press the **X** in Agility Toolbar)
+#. Close the *View* client. (press the **X** in Agility Toolbar)
 
 #. Keep the RDP session open for Task 2
 
@@ -65,16 +65,16 @@ Deploy the iApp
 
 #. Open IE to access the F5 Admin GUI at ``https://f5-bigip1a.demoisfun.net``
    
-     - Username: ``admin``
-     - Password: ``password``
+   - Username: ``admin``
+   - Password: ``password``
    
-
+   
 #. Create a new Application Service. On the left side menu
 
-     - iApps -> Application Services
-     - Click the ``Create`` button
-     - In the *Name* field, type in ``VM_LAB_1_LBCS``
-     - In the *Template* pulldown, select ``f5.vmware_view.v1.5.4``
+   - *iApps -> Application Services*
+   - Click the **Create** button
+   - In the *Name* field, type in ``VM_LAB_1_LBCS``
+   - In the *Template* pulldown, select ``f5.vmware_view.v1.5.4``
 
 
 #. Review the *Welcome to the iAPP template for VMware Horizon View*
@@ -82,17 +82,17 @@ Deploy the iApp
 #. In *Big-IP Access Policy Manager* section
 
    +----------------------------------------------------------+-----------------------------------------------------------------------+
-   | Do you want to deploy BIG-IP Access Policy Manager?      | ``No, do not deploy BIG-IP Access Policy Manager``                    |
+   | Do you want to deploy BIG-IP Access Policy Manager?      | *No, do not deploy BIG-IP Access Policy Manager*                      |
    +----------------------------------------------------------+-----------------------------------------------------------------------+
 
 #. In *SSL Encryption* section
 
    +----------------------------------------------------------+-----------------------------------------------------------------------+
-   | How should the BIG-IP system handle encrypted traffic?   | ``Terminate SSL for clients, re-encrypt to View...   (SSL-bridging)`` |
+   | How should the BIG-IP system handle encrypted traffic?   | *Terminate SSL for clients, re-encrypt to View...   (SSL-bridging)*   |
    +----------------------------------------------------------+-----------------------------------------------------------------------+
-   | Which SSL certificate do you want to use?                | ``wild.demoisfun.net.crt`` (cert preloaded)                           |
+   | Which SSL certificate do you want to use?                | *wild.demoisfun.net.crt*   (cert preloaded)                           |
    +----------------------------------------------------------+-----------------------------------------------------------------------+
-   | Which SSL private key do you want to use                 | ``wild.demoisfun.net.key`` (key preloaded)                            |
+   | Which SSL private key do you want to use                 | *wild.demoisfun.net.key*   (key preloaded)                            |
    +----------------------------------------------------------+-----------------------------------------------------------------------+
 
 #. In *Virtual Servers and Pools* section
@@ -112,7 +112,7 @@ Deploy the iApp
    | Create a new health monitor or use existing one                                ?   | ``https``                                    |
    +------------------------------------------------------------------------------------+----------------------------------------------+
 
-#. Click the **Finished** button.
+#. Click the **Finished** button
 
 
 View the objects which were created by the iApp
@@ -130,12 +130,12 @@ View the objects which were created by the iApp
 
 #. Note that a persistence profile was created
 
-     - Check Match Across Services
-     - Press update
-    - Note the error at the top of the page
+   - Check Match Across Services
+   - Press update
+   - Note the error at the top of the page
 
 
-#. Return to iApp -> Application Services
+#. Return to *iApp -> Application Services*
 
 #. Review the remaining parameters (any questions)
 
@@ -358,6 +358,8 @@ Configure UAG to use load balance address
 
 #. Click **Save**
 
+#. Repeat for *vmw-uag1b* at ``https://192.168.10.215:9443/admin``
+
 
 Test the UAG Server load balancing using both VMware View client and browser access methods
 -------------------------------------------------------------------------------------------
@@ -372,8 +374,8 @@ Test the UAG Server load balancing using both VMware View client and browser acc
 
 #. When prompted for credentials
 
-     - Username: ``demo01``
-     - Password: ``password``
+   - Username: ``demo01``
+   - Password: ``password``
      
 
 #. After authenticated, double-click the **Agility** icon to launch View Desktop
@@ -388,8 +390,8 @@ Test the UAG Server load balancing using both VMware View client and browser acc
 
 #. Log in
 
-     - Username: ``demo01``
-     - Password: ``password``
+   - Username: ``demo01``
+   - Password: ``password``
      
 
 #.  Double click **Agility** to launch desktop
@@ -421,16 +423,16 @@ Deploy the iApp
 
 #. Open IE to access the F5 Admin GUI at ``https://f5-bigip1a.demoisfun.net``
 
-     - Username: ``admin``
-     - Password: ``password``
+   - Username: ``admin``
+   - Password: ``password``
 
 
 #. Create a new Application Service. On the left side menu
 
-     - iApps -> Application Services
-     - Click the ``Create`` button
-     - In the *Name* field, type in ``VM_LAB_1_PROXY``
-     - In the *Template* pulldown, select ``f5.vmware_view.v1.5.4``
+   - *iApps -> Application Services*
+   - Click the **Create** button
+   - In the *Name* field, type in ``VM_LAB_1_PROXY``
+   - In the *Template* pulldown, select ``f5.vmware_view.v1.5.4``
    
 
 #. Review the *Welcome to the iAPP template for VMware Horizon View*
@@ -438,25 +440,25 @@ Deploy the iApp
 #. In *BIG-IP Access Policy Manager* section
 
    +---------------------------------------------------------------------+-------------------------------------------------------------+
-   | Do you want to deploy BIG-IP Access Policy Manager?                 | ``Yes, deploy BIG-IP Access Policy Manager``                |
+   | Do you want to deploy BIG-IP Access Policy Manager?                 | *Yes, deploy BIG-IP Access Policy Manager*                  |
    +---------------------------------------------------------------------+-------------------------------------------------------------+
    | Do you want to support browser based connections,                   |                                                             |
-   |including the View HTML5 client?                                     | ``Yes, support HTML 5 view clientless browser connections``    |
+   |including the View HTML5 client?                                     | *Yes, support HTML 5 view clientless browser connections*   |
    +---------------------------------------------------------------------+-------------------------------------------------------------+
    | Should the BIG-IP system support RSA SecureID two-factor            |                                                             |
-   |authentication                                                       | ``NO, do not support RSA SecureID two-factor authentication``   |
+   |authentication?                                                      | *NO, do not support RSA SecureID two-factor authentication* |
    +---------------------------------------------------------------------+-------------------------------------------------------------+
-   | Should the BIG\_IP system show a message to View users during logon | ``No, do not add a message during logon``                   |
+   | Should the BIG\_IP system show a message to View users during logon | *No, do not add a message during logon*                     |
    +---------------------------------------------------------------------+-------------------------------------------------------------+
-   | What is the NetBIOS domain name for your environment                | ``demoisfun``                                               |
+   | What is the NetBIOS domain name for your environment?               | ``demoisfun``                                               |
    +---------------------------------------------------------------------+-------------------------------------------------------------+
-   | Create a new AAA Server object **or select an existing one**        | ``AD1``                                                     |
+   | Create a new AAA Server object **or select an existing one**        | *AD1*                                                       |
    +---------------------------------------------------------------------+-------------------------------------------------------------+
 
 #. In *SSL Encryption* section
 
    +----------------------------------------------------------+--------------------------------------------------------------+
-   | How should the BIG-IP system handle encrypted traffic?   | ``Terminate SSL for clients, re-encrypt…\ *(SSL-Bridging)*`` |
+   | How should the BIG-IP system handle encrypted traffic?   | *Terminate SSL for clients, re-encrypt… (SSL-Bridging)*      |
    +----------------------------------------------------------+--------------------------------------------------------------+
    | Which SSL certificate do you want to use?                | ``wild.demoisfun.net.crt``                                   |
    +----------------------------------------------------------+--------------------------------------------------------------+
@@ -477,7 +479,7 @@ Deploy the iApp
 #. In *Application Health* section
 
    +------------------------------------------------------------------------------------+----------------------------------------------+
-   | Create a new health monitor or use existing one?                                   | ``https``                                    |
+   | Create a new health monitor or use existing one?                                   | *https*                                      |
    +------------------------------------------------------------------------------------+----------------------------------------------+
 
 #. Click the **Finished** button.
@@ -486,7 +488,7 @@ Deploy the iApp
 View the objects which were created by the iApp
 -----------------------------------------------
 
-#. Select the Components tab at the top of the page
+#. Select the **Components** tab at the top of the page
 
 #. Note the increase in objects compared to Task 2 and Task 4
 
@@ -504,13 +506,13 @@ Test the APM (PCoIP) functionality using both VMware View client and browser acc
 
 #.  Open IE and browse to ``https://vmw-PROXY-VIEW.demoisfun.net``
     
-      - Username: ``demo01``
-      - Password: ``password``
+    - Username: ``demo01``
+    - Password: ``password``
 
 
-#.  In the APM Webtop, click *Agility*
+#.  In the APM Webtop, click **Agility**
 
-#.  Select VMware View Client
+#.  Select VMware *View Client*
 
 #.  Note the error and inspect the certificate
 
@@ -520,17 +522,17 @@ Test the APM (PCoIP) functionality using both VMware View client and browser acc
 
 #.  Open IE and browse to ``https://vmw-PROXY-VIEW.demoisfun.net``
 
-#.  Select VMware Horizon View HTML access
+#.  Select **VMware Horizon View HTML Access**
 
-#.  Enter Credentials
+#.  Enter credential
 
-      - Username: ``demo01``
-      - Password: ``password``
+    - Username: ``demo01``
+    - Password: ``password``
 
 
-#.  Click *Agility*
+#.  Click **Agility**
 
-#.  Select *HTML5 Client*
+#.  Select **HTML5 Client**
 
 #.  Verify that the desktop functions
 

@@ -74,7 +74,7 @@ Deploy the iApp
 
 #. Review the *Welcome to the iAPP template for VMware Horizon View*
 
-#. In *Big-IP Access Policy Manager* section,
+#. In *Big-IP Access Policy Manager* section
 
    +----------------------------------------------------------+------------------------------------------------------------------------+
    | Do you want to deploy BIG-IP Access Policy Manager?      | No, do not deploy BIG-IP Access Policy Manager                         |    +----------------------------------------------------------+------------------------------------------------------------------------+

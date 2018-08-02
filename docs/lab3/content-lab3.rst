@@ -48,116 +48,102 @@ Task 2 – Load Balance StoreFront
 Deploy the iApp
 ---------------
 
-#. From "corporate-pc"
+#. From *"corporate-pc"*
 
-#. Create a new Application Service by selecting iApps -> Application
-   Services and selecting Create
+#. Create a new Application Service
 
-   - iApps >> Application Services
-
+   - *iApps >> Application Services*
    - Press the **Create** button
-
    - Name the Application Service ``VM_LAB_2_LBSF``
-
-   - Select ``f5.citrix_vdi.v2.4.1rc1`` for the template
+   - Select **f5.citrix_vdi.v2.4.1rc1** for the template
 
 
 iApp Configuration
 ------------------
 
-#. Review the **Welcome to the iApp template for XenDesktop and XenApp**
+#. Review the *Welcome to the iApp template for XenDesktop and XenApp*
 
 #. **General**
 
-   +------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------+
-   | Use APM to securely proxy application (ICA) traffic and authenticate users into your Citrix environment?   | Yes, Proxy ICA traffic and authenticate users with BIG\_IP   |
-   +----------------------------------------------------------------------------------------------------------+-------------------------------------------------------------+
-   | What is the Active Directory NetBIOS Domain Name used for your Citrix servers?                             | demoisfun                                                    |
-   +------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------+
+   +------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------+
+   | Use APM to securely proxy application (ICA) traffic and authenticate users into your Citrix environment?   | *Yes, Proxy ICA traffic and authenticate users with BIG-IP* |
+   +------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------+
+   | What is the Active Directory NetBIOS Domain Name used for your Citrix servers?                             | ``demoisfun``                                                     |
+   +------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------+
 
 #. **BIG-IP Access Policy Manager**
 
    +---------------------------------------------------------------------------------------------+-------------------------+
-   | Do you want to replace Citrix Web Interface or StoreFront servers with the BIG-IP system?   | "No, do not replace…"   |
+   | Do you want to replace Citrix Web Interface or StoreFront servers with the BIG-IP system?   | *No, do not replace…*   |
    +---------------------------------------------------------------------------------------------+-------------------------+
-   | Create a new AAA object or select an existing one?                                          | AD1                     |
+   | Create a new AAA object or select an existing one?                                          | *AD1*                   |
    +---------------------------------------------------------------------------------------------+-------------------------+
 
 #. **Virtual Server for Web Interface or StoreFront servers**
 
+   +---------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------+
+   | How should the BIG-IP system handle encrypted traffic to Web Interface or StoreFront servers?           | *Terminate SSL for Clients, Plaintext to Citrix servers *(SSL offload)* |
+   +---------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------+
+   | Which SSL certificate do you want to use?                                                               | *wild.demoisfun.net.crt*                                                      |
    +---------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------+
-   | How should the BIG-IP system handle encrypted traffic to Web Interface or StoreFront servers?           | Terminate SSL for Clients, Plaintext to Citrix servers **(SSL offload)**    |
-   +---------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------+
-   | Which SSL certificate do you want to use?                                                               | wild.demoisfun.net.crt                                                      |
+   | Which SSL private key do you want to use?                                                               | *wild.demoisfun.net.key*                                                      |
    +---------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------+
-   | Which SSL private key do you want to use?                                                               | wild.demoisfun.net.key                                                      |
+   | What IP address will clients use to access the Web Interface or StoreFront servers, or the F5 Webtop?   | ``192.168.3.160``                                                            |
    +---------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------+
-   | What IP address will clients use to access the Web Interface or StoreFront servers, or the F5 Webtop?   | 192.168.3.160                                                               |
+   | Did you deploy Citrix StoreFront?                                                                       | *Yes, ...StoreFront 3.0 or 3.6*                                            |
    +---------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------+
-   | Did you deploy Citrix StoreFront?                                                                       | Yes, ...StoreFront 3.0 or 3.6                                               |
-   |                                                                                                         |                                                                             |
-   |                                                                                                         | **Note:** we are running SF 3.9                                             |
-   +---------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------+
-   | What is the URI used on StoreFront or Web Interface servers for XenApp or XenDesktop?                   | /Citrix/AgilityStoreWeb/                                                    |
-   |                                                                                                         |                                                                             |
-   |                                                                                                         | *Note that this is the same URL used to access citrix directly in Task 1*   |
+   | What is the URI used on StoreFront or Web Interface servers for XenApp or XenDesktop?                   | ``/Citrix/AgilityStoreWeb/``                       |
    +---------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------+
 
 #. **Web Interface or StoreFront servers**
 
-   +------------------------------------------------------------------------------------+---------------------------+
-   | What DNS name will clients use to reach the Web Interface or StoreFront servers?   | ctx-LB-SF.demoisfun.net   |
-   +------------------------------------------------------------------------------------+---------------------------+
-   | Which port have you configured for Web Interface or StoreFront HTTP traffic?       | 80                        |
-   +------------------------------------------------------------------------------------+---------------------------+
-   | What are the IP addresses of your Web Interface or StoreFront servers?             | 192.168.10.220            |
-   |                                                                                    |                           |
-   |                                                                                    | 192.168.10.221            |
-   +------------------------------------------------------------------------------------+---------------------------+
-   | Which Monitor do you want to use                                                   | http                      |
-   +------------------------------------------------------------------------------------+---------------------------+
+   +------------------------------------------------------------------------------------+-------------------------------+
+   | What DNS name will clients use to reach the Web Interface or StoreFront servers?   | ``ctx-LB-SF.demoisfun.net``   |
+   +------------------------------------------------------------------------------------+-------------------------------+
+   | Which port have you configured for Web Interface or StoreFront HTTP traffic?       | ``80``                        |
+   +------------------------------------------------------------------------------------+-------------------------------+
+   | What are the IP addresses of your Web Interface or StoreFront servers?             | ``192.168.10.220``            |
+   |                                                                                    | ``192.168.10.221``            |
+   +------------------------------------------------------------------------------------+-------------------------------+
+   | Which Monitor do you want to use                                                   | *http*                        |
+   +------------------------------------------------------------------------------------+-------------------------------+
 
 #. **Virtual Server for XML Broker or Desktop Delivery Controller (DDC)
    Servers**
 
-   +-------------------------------------------------------------------------------------+-------------------------------------------------------------+
-   | What IP address do you want to use for the XML Broker or DDC farm virtual server?   | 192.168.10.161                                              |
-   +-------------------------------------------------------------------------------------+----------------------------------------------------------+
-   | How will requests from the Web Interface or StoreFront servers arrive?              | XML Broker or DCC requests will arrive unencrypted (HTTP)   |
-   +-------------------------------------------------------------------------------------+-------------------------------------------------------------+
+   +-------------------------------------------------------------------------------------+--------------------------------------------------------------------+
+   | What IP address do you want to use for the XML Broker or DDC farm virtual server?   | ``192.168.10.161``                                                 |
+   +-------------------------------------------------------------------------------------+--------------------------------------------------------------------+
+   | How will requests from the Web Interface or StoreFront servers arrive?              | *XML Broker or DCC requests will arrive unencrypted (HTTP)*   |
+   +-------------------------------------------------------------------------------------+--------------------------------------------------------------------+
 
 #. **XML Broker or DDC Servers**
 
-   +----------------------------------------------------------------+------------------+
-   | What are the IP addresses of your XML Broker or DDC servers?   | 192.168.10.222   |
-   |                                                                | 192.168.10.223   |
-   +----------------------------------------------------------------+------------------+
-   | Which monitor do you want to use?                              | http             |
-   +----------------------------------------------------------------+------------------+
+   +----------------------------------------------------------------+----------------------+
+   | What are the IP addresses of your XML Broker or DDC servers?   | ``192.168.10.222``   |
+   |                                                                | ``192.168.10.223``   |
+   +----------------------------------------------------------------+----------------------+
+   | Which monitor do you want to use?                              | *http*               |
+   +----------------------------------------------------------------+----------------------+
 
 #. Press the **Finished** button
 
 
-Test connectivity
+Test Connectivity
 -----------------
 
-#. Use the RDP function on your laptop to connect to the "home-pc"
+#. Use the RDP client on your laptop to connect to the *"home-pc"*
 
-#. Launch IE and browse to,
-
-   - ``http://ctx-lb-sf.demoisfun.net``
+#. Launch IE and browse to ``http://ctx-lb-sf.demoisfun.net``
 
 #. When prompted for credentials
 
    - Username: ``demo01``
-
    - Password: ``password``
 
-#. Storefront is displayed with Agility icon
+#. Storefront is displayed with Agility icon. Click **Agility** to launch XenDesktop
 
-   - Click "Agility" to launch XenDesktop
-
-#. In the Citrix Agility desktop, click Start and Logoff
+#. In the *Citrix Agility* desktop, click Start and Logoff
 
 #. Log off the Citrix receiver client using the 01 Demo pulldown in the
    upper right corner
@@ -178,22 +164,19 @@ Task 3 – Replace StoreFront
 Deploy the iApp
 ---------------
 
-#. From "corporate-pc"
+#. From *"corporate-pc"*
 
-#. Create a new Application Service by selecting iApps -> Application
-   Services and selecting Create
+#. Create a new Application Service by selecting *iApps -> Application Services* and click **Create**
 
    - iApps >> Application Services
-
    - Click on ``VM_LAB_2_LBSF``
-
    - Click the **Reconfigure** link near the top
 
 
 iApp Configuration
 ------------------
 
-#. **BIG-IP Access Policy Manager**
+#. In *BIG-IP Access Policy Manager* section
 
    +---------------------------------------------------------------------------------------------+--------------------------+
    | Do you want to replace Citrix Web Interface or StoreFront servers with the BIG-IP system?   | "Yes, replace Citrix…"   |
@@ -205,24 +188,21 @@ iApp Configuration
 #. Press the **Finished** button
 
 
-Test connectivity
+Test Connectivity
 -----------------
 
-#.  From "home-pc"
+#.  From *"home-pc"*
 
-#.  Launch IE and browse to
-
-    - ``http://ctx-lb-sf.demoisfun.net``
+#.  Open IE and browse to ``http://ctx-lb-sf.demoisfun.net``
 
 #.  When prompted for credentials
 
     - Username: ``demo01``
-
     - Password: ``password``
 
-#.  APM webtop is displayed with Agility icon
+#.  APM webtop is displayed with *Agility* icon
 
-#.  Click on Agility to launch XenDesktop
+#.  Click on **Agility** to launch XenDesktop
 
 #.  Click Open to launch the Citrix ICA client *(pop up box at bottom)*
 

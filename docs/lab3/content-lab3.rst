@@ -71,7 +71,7 @@ iApp Configuration
    | What is the Active Directory NetBIOS Domain Name...Citrix servers?       | demoisfun                               |
    +--------------------------------------------------------------------------+-----------------------------------------+
 
-#.  In *BIG-IP Access Policy Manager* section
+#. In *BIG-IP Access Policy Manager* section
 
    +---------------------------------------------------------------------------------------+-------------------------+
    | Do you want to replace Citrix Web Interface...with the BIG-IP system?                 | *No, do not replace…*   |

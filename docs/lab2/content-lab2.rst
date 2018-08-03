@@ -111,7 +111,7 @@ Deploy the iApp
 #. In *Application Health* section
 
 .. table::
-   :width: 100%
+   :widths: 60 40
    
    +------------------------------------------------------------------------------------+----------------------------------------------+
    | Create a new health monitor or use existing one?                                   | ``https``                                    |

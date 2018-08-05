@@ -17,7 +17,7 @@ Access the View Desktop using the View Client on the internal network. View Clie
 
    |image4|
 
-#. Click *New Server*
+#. Click **New Server**
 
 #. Type in the Connection Server address ``vmw-connsvr1a.demoisfun.net``
 
@@ -35,7 +35,7 @@ Access the View Desktop using the View Client on the internal network. View Clie
    on top. May need to slide the blue RDP bar to the left in order to
    click the **X** in Agility Toolbar)
 
-#. Open *View* client and try to reconnect to ``vmw-connsvr1a.demoisfun.net``
+#. Open *View* client again, reconnect to ``vmw-connsvr1a.demoisfun.net`` and open *Agility* desktop
 
 #. *Notepad* should still be on the desktop with the text you input
 
@@ -71,13 +71,13 @@ Deploy the iApp
    
 #. Create a new Application Service. On the left side menu
 
-   - *iApps -> Application Services*
-   - Click the **Create** button
+   - Go to **iApps -> Application Services -> Applications**
+   - On the right side of the GUI, click the **Create** button
    - In the *Name* field, type in ``VM_LAB_1_LBCS``
    - In the *Template* pulldown, select ``f5.vmware_view.v1.5.4``
 
 
-#. Review the *Welcome to the iAPP template for VMware Horizon View*
+#. Review the *Welcome to the iAPP template for VMware Horizon View* section
 
 #. In *Big-IP Access Policy Manager* section
 
@@ -90,10 +90,12 @@ Deploy the iApp
    +----------------------------------------------------------+-----------------------------------------------------------------------+
    | How should the BIG-IP system handle encrypted traffic?   | *Terminate SSL for clients, re-encrypt to View...(SSL-bridging)*      |
    +----------------------------------------------------------+-----------------------------------------------------------------------+
-   | Which SSL certificate do you want to use?                | *wild.demoisfun.net.crt*   (cert preloaded)                           |
+   | Which SSL certificate do you want to use?                | *wild.demoisfun.net.crt*                                              |
    +----------------------------------------------------------+-----------------------------------------------------------------------+
-   | Which SSL private key do you want to use                 | *wild.demoisfun.net.key*   (key preloaded)                            |
+   | Which SSL private key do you want to use                 | *wild.demoisfun.net.key*                                              |
    +----------------------------------------------------------+-----------------------------------------------------------------------+
+
+.. NOTE:: Cert and Key have been preloaded
 
 #. In *Virtual Servers and Pools* section
 
@@ -174,15 +176,15 @@ Test the connection server load balancing using both VMware View client and brow
    - Password: ``password``
 
 
-#. After authenticated, double-click the **Agility** icon to launch View Desktop
+#. Open the **Agility** desktop
 
 #. Verify that the *Agility* desktop functions
 
-#. Close the View client. (May need to slide the RDP Toolbar out of the way)
+#. Close the View client
 
-#. Open IE and browse to ``https://vmw-LB-CS.demoisfun.net``
+#. Open a new Tab IE and browse to ``https://vmw-LB-CS.demoisfun.net``
 
-#. Select *VMware Horizon View HTML access*
+#. Click on **VMware Horizon HTML Access**
 
 #. Log in
 
@@ -190,13 +192,13 @@ Test the connection server load balancing using both VMware View client and brow
    - Password: ``password``
 
 
-#.  Double-click **Agility** to launch desktop
+#.  Open **Agility** desktop
 
-#.  At the Cert Warning, click "Continue to this website"
+#.  At the Cert Warning, click "Continue to this website..."
 
 #.  Verify that the Agility desktop functions
 
-#.  Close the IE browser window
+#.  Close the IE *VMWare Horizon* tab
 
 
 Task 3 – Access View Desktop through the UAG Server
@@ -214,7 +216,7 @@ Access View Desktop from external network through UAG. (External use case withou
 
     |image9|
 
-#.  Launch View client and connect to the UAG
+#.  On the desktop, Launch View client and connect to the UAG
 
 #.  Click **New Server**
 
@@ -226,27 +228,23 @@ Access View Desktop from external network through UAG. (External use case withou
     - Password: ``password``
 
 
-#.  After authenticated, double-click the **Agility** icon to launch View Desktop
+#.  Open the **Agility** desktop
 
 #.  Close the *View* client
 
 #.  To access *View* desktop in IE, type in URL ``https://vmw-uag1a.demoisfun.net``
 
-#.  Select **VMware Horizon View HTML Access**
+#.  Select **VMware Horizon HTML Access**
 
     - Username: ``demo01``
     - Password: ``password``
       
 
-#.  Double-click **Agility icon** to launch desktop
-
-#.  At the Cert Warning, click **Continue to this website**
-
-#.  Select **Agility**
+#.  Open **Agility** desktop
 
 #.  Verify that the desktop functions
 
-#.  Close the IE window
+#.  Close the IE *VMware Horizon* tab
 
 
 Task 4 – Load Balance UAG Servers
@@ -271,17 +269,14 @@ Deploy the iApp
 
    - Username: ``admin``
    - Password: ``password``
-     
 
 #. Create a new Application Service. On the left side menu
 
-   - iApps -> Application Services
-   - Click the **Create** button
+   - Go to **iApps -> Application Services -> Applications**
+   - On the right side of the GUI, click the **Create** button
    - In the *Name* field, type in ``VM_LAB_1_LBUAG``
-   - In the *Template* pulldown, select *f5.vmware_view.v1.5.4*
+   - In the *Template* pulldown, select ``f5.vmware_view.v1.5.4``
      
-
-#. Review the *Welcome to the iAPP template for VMware Horizon View*
 
 #. In *Big-IP Access Policy Manager* section
 
@@ -294,9 +289,9 @@ Deploy the iApp
    +----------------------------------------------------------+------------------------------------------------------------------------+
    | How should the BIG-IP system handle encrypted traffic?   | *Terminate SSL for clients, re-encrypt...servers (SSL-bridging)*       |
    +----------------------------------------------------------+------------------------------------------------------------------------+
-   | Which SSL certificate do you want to use?                | *wild.demoisfun.net.crt* (cert preloaded)                              |
+   | Which SSL certificate do you want to use?                | *wild.demoisfun.net.crt*                                               |
    +----------------------------------------------------------+------------------------------------------------------------------------+
-   | Which SSL private key do you want to use                 | *wild.demoisfun.net.key* (key preloaded)                               |
+   | Which SSL private key do you want to use                 | *wild.demoisfun.net.key*                                               |
    +----------------------------------------------------------+------------------------------------------------------------------------+
 
 #. In *Virtual Servers and Pools* section
@@ -339,7 +334,8 @@ Configure UAG to use load balance address
 
 #. From *"corporate-pc"*
 
-#. Open IE and go to *vmw-uag1a* administrative interface at ``https://192.168.10.214:9443/admin``
+#. Open new tab in IE and go to *vmw-uag1a* administrative interface at
+   ``https://192.168.10.214:9443/admin``
 
 #. Log in as
 
@@ -366,7 +362,7 @@ Configure UAG to use load balance address
 #. Repeat for the other UAG *vmw-uag1b* at ``https://192.168.10.215:9443/admin``
 
 
-Test the UAG Server load balancing using both VMware View client and browser access methods
+Test the UAG Server load balancing using both View and HTML5 client access methods
 -------------------------------------------------------------------------------------------
 
 #. From *"home-pc"*
@@ -383,15 +379,15 @@ Test the UAG Server load balancing using both VMware View client and browser acc
    - Password: ``password``
      
 
-#. After authenticated, double-click the **Agility** icon to launch View Desktop
+#. Open the **Agility** desktop
 
 #. Verify that the *Agility* desktop functions
 
-#. Close the View client. (May need to slide the RDP Toolbar out of the way)
+#. Close the View client
 
 #. Open IE and browse to ``https://vmw-LB-UAG.demoisfun.net``
 
-#. Select **VMware Horizon View HTML access**
+#. Select **VMware Horizon HTML Access**
 
 #. Log in
 
@@ -399,13 +395,11 @@ Test the UAG Server load balancing using both VMware View client and browser acc
    - Password: ``password``
      
 
-#.  Double click **Agility** to launch desktop
-
-#.  At the Cert Warning, click **Continue to this website**
+#.  Open the **Agility** desktop
 
 #.  Verify that the *Agility* desktop functions
 
-#.  Close the IE browser window
+#.  Close the IE *VMware Horizon* tab
 
 
 
@@ -434,13 +428,11 @@ Deploy the iApp
 
 #. Create a new Application Service. On the left side menu
 
-   - *iApps -> Application Services*
-   - Click the **Create** button
+   - Go to **iApps -> Application Services -> Applications**
+   - On the right side of the GUI, click the **Create** button
    - In the *Name* field, type in ``VM_LAB_1_PROXY``
    - In the *Template* pulldown, select ``f5.vmware_view.v1.5.4``
    
-
-#. Review the *Welcome to the iAPP template for VMware Horizon View*
 
 #. In *BIG-IP Access Policy Manager* section
 
@@ -451,13 +443,13 @@ Deploy the iApp
    | including the View HTML5 client?                                    | *Yes, support HTML 5 view clientless browser connections*   |
    +---------------------------------------------------------------------+-------------------------------------------------------------+
    | Should the BIG-IP system support RSA SecureID two-factor            |                                                             |
-   | authentication?                                                     | *NO, do not support RSA SecureID two-factor authentication* |
+   | authentication?                                                     | *No, do not support RSA SecureID two-factor authentication* |
    +---------------------------------------------------------------------+-------------------------------------------------------------+
    | Should the BIG-IP system show a message to View users during logon  | *No, do not add a message during logon*                     |
    +---------------------------------------------------------------------+-------------------------------------------------------------+
    | What is the NetBIOS domain name for your environment?               | ``demoisfun``                                               |
    +---------------------------------------------------------------------+-------------------------------------------------------------+
-   | Create a new AAA Server object **or select an existing one**        | *AD1*                                                       |
+   | Create a new AAA Server object or select an existing one            | *AD1*                                                       |
    +---------------------------------------------------------------------+-------------------------------------------------------------+
 
 #. In *SSL Encryption* section
@@ -510,12 +502,16 @@ Test the APM (PCoIP) functionality using both VMware View client and browser acc
 
 #. From *"home-pc"*
 
-#. Select **VMware View Client**
+#. Launch **View Client**
 
-   - Click New Server
-   - ``vmw-PROXY-VIEW.demoisfun.net``
+   - Click **New Server** 
+   - Type in proxy address ``vmw-PROXY-VIEW.demoisfun.net``
+   
+#. When prompted for credentials
+
    - Username: ``demo01``
    - Password: ``password``
+   
    
 #. Click the Agility icon
 
@@ -531,9 +527,9 @@ Test the APM (PCoIP) functionality using both VMware View client and browser acc
    - Password: ``password``
 
 
-#. Click **Agility**
+#. Click **Agility** to launch desktop
 
-#. Select **HTML5 Client**
+#. With APM Webtop, user has the option to choose client at launch time. Select **HTML5 Client**
 
 #. Verify that the desktop functions
 

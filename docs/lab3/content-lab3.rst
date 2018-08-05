@@ -7,32 +7,29 @@ Task 1 – Access XenDesktop without F5
    
    *Access XenDesktop through StoreFront*
 
-#. From "corporate-pc"
+#. From *corporate-pc*
 
-#. Use IE and browse to Citrix Storefront
-
-   - ``http://ctx-sf1a.demoisfun.net/Citrix/AgilityStoreWeb/``
+#. Open Use IE and browse to Citrix Storefront at,
+   ``http://ctx-sf1a.demoisfun.net/Citrix/AgilityStoreWeb/``
+   .. NOTE:: Storefront first launch takes a bit of time
 
 #. When prompted for credentials
 
    - Username: ``demoisfun\demo01``
-
    - Password: ``password``
 
-#. Click "Agility" to launch XenDesktop. 
-
-   .. NOTE:: This takes a long time due to the Ravello implementation*
+#. Click **Agility** to launch XenDesktop. 
 
 #. Citrix "Desktop Viewer" launches and connects to XenDesktop
 
 #. Verify virtual desktop function
 
-#. In Citrix Agility desktop, click Start and Logoff
+#. In *Citrix Agility* desktop, click Start and Logoff
 
-#. Log off the Citrix receiver client using the ``01 Demo`` pulldown in the
+#. Log off the Citrix receiver client using the **01 Demo** pulldown in the
    upper right corner
 
-#. Close the browser Window
+#. Close IE
 
 
 Task 2 – Load Balance StoreFront
@@ -50,18 +47,14 @@ Deploy the iApp
 
 #. From *"corporate-pc"*
 
-#. Create a new Application Service
+#. Create a new Application Service.
 
-   - *iApps >> Application Services*
-   - Press the **Create** button
-   - Name the Application Service ``VM_LAB_2_LBSF``
-   - Select **f5.citrix_vdi.v2.4.4** for the template
+   - **iApps -> Application Services -> Applications**
+   - Click the **Create** button
+   - In the *Name* field, type in ``lab3-lb-sf``
+   - In the *Template* pulldown, select **f5.citrix_vdi.v2.4.4**
 
-
-iApp Configuration
-------------------
-
-#. Review the *Welcome to the iApp template for XenDesktop and XenApp*
+#. Review the *Welcome to the iApp template for XenDesktop and XenApp* section
 
 #. In *General* section
 
@@ -90,7 +83,7 @@ iApp Configuration
    +------------------------------------------------------------------------+----------------------------------------------+
    | What IP address will clients use to access...or the F5 Webtop?         | ``192.168.3.160``                            |
    +------------------------------------------------------------------------+----------------------------------------------+
-   | Did you deploy Citrix StoreFront?                                      | *Yes, ...StoreFront 3.0 or and higher        |
+   | Did you deploy Citrix StoreFront?                                      | *Yes, ...StoreFront 3.0 or above             |
    +------------------------------------------------------------------------+----------------------------------------------+
    | What is the URI used on StoreFront...for XenApp or XenDesktop?         | ``/Citrix/AgilityStoreWeb/``                 |
    +------------------------------------------------------------------------+----------------------------------------------+
@@ -127,33 +120,31 @@ iApp Configuration
    | Which monitor do you want to use?                              | *http*               |
    +----------------------------------------------------------------+----------------------+
 
-#. Press the **Finished** button
+#. Click the **Finished** button
 
 
 Test Connectivity
 -----------------
 
-#. Use the RDP client on your laptop to connect to the *"home-pc"*
+#. From *"home-pc"*
 
-#. Launch IE and browse to ``http://ctx-lb-sf.demoisfun.net``
+#. OpenIE and go to the StoreFront load balanced address,
+   ``http://ctx-lb-sf.demoisfun.net``
 
 #. When prompted for credentials
 
    - Username: ``demo01``
    - Password: ``password``
 
-#. Storefront is displayed with Agility icon. Click **Agility** to launch XenDesktop
+#. Click **Agility** to launch XenDesktop
 
 #. In the *Citrix Agility* desktop, click Start and Logoff
 
-#. Log off the Citrix receiver client using the 01 Demo pulldown in the
-   upper right corner
-
-#. Close the browser Window
+#. Log off StoreFront using the **01 Demo** pulldown in the upper right corner
 
 
-Task 3 – Replace StoreFront
-===========================
+Task 3 – BIG-IP Replaces StoreFront
+===================================
 
 .. figure:: /_static/class1/image_lab2task3.png
    :scale: 100 %
@@ -167,15 +158,12 @@ Deploy the iApp
 
 #. From *"corporate-pc"*
 
-#. Create a new Application Service by selecting *iApps -> Application Services* and click **Create**
+#. Create a new Application Service.
 
-   - iApps >> Application Services
-   - Click on ``VM_LAB_2_LBSF``
+   - **iApps -> Application Services -> Applications**
+   - Click the **Create** button
+   - In the *Name* field, type in ``lab3-lb-sf``
    - Click the **Reconfigure** link near the top
-
-
-iApp Configuration
-------------------
 
 #. In *BIG-IP Access Policy Manager* section
 
@@ -183,8 +171,7 @@ iApp Configuration
    | Do you want to replace Citrix Web Interface...with the BIG-IP system?   | "Yes, replace Citrix…"   |
    +-------------------------------------------------------------------------+--------------------------+
 
-#. Scroll through the template and note that the storefront pool members
-   are no longer present
+#. Scroll through the template and note that the storefront pool members are no longer present (not needed)
 
 #. Press the **Finished** button
 
@@ -193,6 +180,8 @@ Test Connectivity
 -----------------
 
 #.  From *"home-pc"*
+
+#.  If IE is still open, close to clear cache.
 
 #.  Open IE and browse to ``http://ctx-lb-sf.demoisfun.net``
 
@@ -205,14 +194,13 @@ Test Connectivity
 
 #.  Click on **Agility** to launch XenDesktop
 
-#.  Click Open to launch the Citrix ICA client *(pop up box at bottom)*
+#.  On the bottome pop-up, click Open to launch the Citrix ICA client
 
 #.  Verify that desktop is functional
 
-#.  In Citrix Agility desktop, click on Start and Logoff
+#.  In Citrix Agility desktop, click on Start and Disconnect
 
-#.  Logout of APM Webtop using the Logout button in the upper right
-    corner
+#.  Logout of APM Webtop using the *Logout* button in the upper right corner
 
 #.  Close the browser window
 

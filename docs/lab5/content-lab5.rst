@@ -2,29 +2,28 @@
 Task 1 – Build a VIP with an Access Policy allowing access to VMware and Citrix
 ===============================================================================
 
-#. From the "corporate-pc".
+#. From *"corporate-pc"*
 
-#. Connect to the F5 config GUI 
+#. Connect to the F5 config GUI
 
-   - https://f5-bigip1a.demosifun.net
-   - Username: admin
-   - Password: password 
+#. Disable *Stict Updates* for the *lab1-proxy* Application
 
-#. Copy the VM_LAB_1_PCOIP access profile to VDI_Combined_webtop
-
-   - Turn off Strict Updates on th VM_LAB_1_PROXY iApp
    - iApps>>Application Services
    - Select VMW_LAB_1_PROXY 
    - Select the Properties Tab
    - Use the pulldown to select Advanced from Application Service 
    - Uncheck Strict Updates
    - Click the “Update” button
-   - Access>>Profiles/Policies>>Access Profiles
-   - Click the “Copy” hyperlink on the VM_LAB_1_PCOIP  line
+
+
+#. Copy the VM_LAB_1_PCOIP access profile to VDI_Combined_webtop
+
+   - **Access -> Profiles/Policies -> "Access Profiles..."**
+   - Click the “Copy” hyperlink on the *lab1-proxy* line
    - Name the profile VDI_Combined_webtop
    - Press the "Copy" button (bottom left)
 
-#. View the characteristics of the VDI_Combined_webtop  and VM_LAB_2_LBSS access policies
+#. View the characteristics of the *VDI_Combined_webtop* and *lab3-lb-sf* access policies
 
    - View the VM_LAB_2_LB_SF Access profile. The subsequent steps will integrate the required components from that Citrix  policy with the copy of the VM_LAB_1_PCOIP we created (VDI_Combined_webtop- Access>>Profiles/Policies>>Access Profiles
    - Click the “Edit” hyperlink on the VM_LAB_2_LB_SF
@@ -80,7 +79,7 @@ Task 1 – Build a VIP with an Access Policy allowing access to VMware and Citri
    - Click the “Add Item” button
    - Click the “Add new entry” button
    - Click the “change” link
-   - Custom Variable, Insecure, Enter **session.logon.last.domain** in the left panel
+   - Custom Variable, Unsecure, Enter **session.logon.last.domain** in the left panel
    - Custom Expression, Enter **expr {"demoisfun"}** in the right panel
    - Click the “Finished” Button
    - Click the “Save” button
@@ -89,33 +88,33 @@ Task 1 – Build a VIP with an Access Policy allowing access to VMware and Citri
    :scale: 75 %
    :align: center
    
-#. Add an AD Auth object to the Citrix Receiver branch
+#. Add an *AD Auth* object to the Citrix Receiver branch
 
-   - Click the “+” to the right of Variable Assign
-   - Select the “Authentication” tab
-   - Select “AD Auth”
-   - Click the “Add Item” button
-   - Use the pulldown to select Server:/Common/AD1
-   - Click the “Save” button
+   - Click the **“+”** to the right of Variable Assign
+   - Click the **Authentication** tab
+   - Select **AD Auth**
+   - Click the **Add Item** button
+   - In the *Server* pulldown, select **/Common/AD1**
+   - Click the **Save** button
 
-#. Add  an Advanced Resource Assign object to the Citrix Receiver branch
+#. Add an *Advanced Resource Assign* object to the Citrix Receiver branch
 
-   - Click the “+” to the right of Ad Auth
-   - Select the “Assignment” tab
-   - Select “Advanced Resource  Assign”
-   - Click the “Add new entry” button
-   - Click the “add/delete” link
-   - Select the “Remote Desktop” tab
-   - Select /Common/VM_LAB_2_LBSF.app/VM_LAB_2_LBSF_remote_desktop_1
-   - Select the “Webtop” tab
-   - Select Common/VM_LAB_2_LBSF.app/VM_LAB_2_LBSF_webtop
-   - Click the “Update” button
-   - Click the "Save" btton
-   - Click on the “Deny” action on the fallback link out of the Advanced Resource Assign
-   - Select “Allow”
-   - Click the “Save” button
-   - Click the “Update” button
-   - Click the “Save” button
+   - To the right of *AD Auth, Successfull* branch, click the **“+”**
+   - Click **Assignment** tab
+   - Select **Advanced Resource  Assign** radio button
+   - Click **Add Item** button
+   - Click **Add new entry** button
+   - Click **Add/Delete** link
+   - Click **Remote Desktop...** tab
+   - Select **/Common/lab2-lb-sf.app/lab2-lb-sf_remote_desktop_1** check box
+   - Click **Webtop...** tab
+   - Select **Common/lab2-lb-sf.app/lap2-lb-sf_webtop** radio button
+   - Click **Update** button
+   - Click **Save** button
+   - To the right of *Advanced Resource Assign, fallback* branch, click **Deny**
+   - Select **Allow** radio button
+   - Click **Save** button
+   - On the upper right corner, click **Close** the VPE. Click **YES** on the IE pop-up
 
 .. image:: /_static/class1/image43.png
    :scale: 75 %
@@ -123,9 +122,8 @@ Task 1 – Build a VIP with an Access Policy allowing access to VMware and Citri
 
 #. Apply the access policy
 
-   -Click on the Apply Access policy in the upper left corner of the VPE GUI. Note the yellow vertical bar next to it indicating the policy has been modified
-   -Close the VPE (Close button in the upper right corner)
-   - Access>>Profiles/Policies>>Access Profiles
+   - On the upper left corner of the main F5 GUI, click **Apply Access Policy** 
+   - **Access -> Profiles/Policies -> "Access Profiles..."**
    - Verify that all Access policies status is Green (refresh browser if necessary) 
 
 .. image:: /_static/class1/image45.png
@@ -134,17 +132,14 @@ Task 1 – Build a VIP with an Access Policy allowing access to VMware and Citri
 
 #. Create a VIP for PCOIP UDP traffic 
 
-   - Navigate to Local Traffic>>Virtual Servers>>Virtual Server List
-   - View the configuration of the VM_LAB_1_PCOIP_pcoip_udp VIP. We will replicate this configuration using the IP of the new VIP we created for VDI access (Hint—Open an additional browser window connected to F5-bigip1a.demoisfun.net. This will allow you to display different VIPs in the same device)
-   - Navigate to Local Traffic>>Virtual Servers>>Virtual Server List
-   - Press the "Create" Button in the upper right section of the GUI
+   - Go to **Local Traffic -> Virtual Servers -> Virtual Server List**
+   - View the configuration of the *lab2-proxy_pcoip_udp* VS. We will replicate this configuration using the IP of the new VIP we created for VDI access (Hint—Open an additional browser window connected to F5-bigip1a.demoisfun.net. This will allow you to display different VIPs in the same device)
+   - Go to **Local Traffic -> Virtual Servers -> Virtual Server List**
+   - Click **Create** button in the upper right section of the GUI
    - Configure the VIP with the variables below
 
-#. VIP Config Parameters
-
    +--------------------------------------------+-----------------------------+
-   |General Properties                          |                             |
-
+   |General Properties                                                        |
    +--------------------------------------------+-----------------------------+
    |Name                                        | Combined_VDI_PROXY          |
    +--------------------------------------------+-----------------------------+
@@ -152,31 +147,29 @@ Task 1 – Build a VIP with an Access Policy allowing access to VMware and Citri
    +--------------------------------------------+-----------------------------+
    |Service Port                                | 4172                        +
    +--------------------------------------------+-----------------------------+
-   |Configuration                               |                             |
+   |Configuration                                                             |
    +--------------------------------------------+-----------------------------+
-   |Prptocol                                    | UDP                         |
+   |Protocol                                    | UDP                         |
    +--------------------------------------------+-----------------------------+
    |Source Address Translation                  | Auto Map                    |
    +--------------------------------------------+-----------------------------+
-   |Access Policy                               |                             |
+   |Access Policy                                                             |
    +--------------------------------------------+-----------------------------+
-   |Application Tunnels (Jave & Per-App VPN)    | Enabled - Check Box         |
+   |Application Tunnels (Jave & Per-App VPN)    | Enabled - Checked           |
    +--------------------------------------------+-----------------------------+
-  
-#. Update the VIP 
 
    - Click “Finished” at the bottom of the screen
 
 #. Create a Combined VIP for the Citrix and VMware connectivity
 
-   - Navigate to Local Traffic>>Virtual Servers>>Virtual Server List
-   - Press the Create Button in the upper right section of the GUI
+   - Go to **Local Traffic -> Virtual Servers -> Virtual Server List**
+   - Click **Create** button in the upper right section of the GUI
    - Configure the VIP with the variables below
-
+   
 #. VIP Config Parameters 
 
    +--------------------------------------------+----------------------------+
-   |General Properties                          |                            |
+   |General Properties                                                       |
    +--------------------------------------------+----------------------------+
    |Name                                        | Combined_VDI_Desktop       |
    +--------------------------------------------+----------------------------+
@@ -184,7 +177,7 @@ Task 1 – Build a VIP with an Access Policy allowing access to VMware and Citri
    +--------------------------------------------+----------------------------+
    |Service Port                                | 443                        +
    +--------------------------------------------+----------------------------+
-   |Configuration                               |                            |
+   |Configuration                                                            |
    +--------------------------------------------+----------------------------+
    |HTTP Profile                                | http                       |
    +--------------------------------------------+----------------------------+
@@ -194,7 +187,7 @@ Task 1 – Build a VIP with an Access Policy allowing access to VMware and Citri
    +--------------------------------------------+----------------------------+
    |Source Address Translatio                   | Auto Map                   |
    +--------------------------------------------+----------------------------+
-   |Access Policy                               |                            |
+   |Access Policy                                                            |
    +--------------------------------------------+----------------------------+
    |Access Profile                              | VDI_Combined_webtop        |
    +--------------------------------------------+----------------------------+
@@ -203,31 +196,43 @@ Task 1 – Build a VIP with an Access Policy allowing access to VMware and Citri
    |VDI Profile                                 | vdi                        |
    +--------------------------------------------+----------------------------+
 
-#. Update the VIP 
+#. Click “Finished” at the bottom of the screen
 
-   - Click “Finished” at the bottom of the screen
 
 Test Connectivity
 -----------------
 
-#. Test the connectovity to VMware ad Citrix
+Verify connectivity to VMware ad Citrix
+=======================================
 
-   - From “home-pc” 
-   - Launch IE and browse to https://vdi.demoisfun.net (192.168.3.157)
-   - When prompted for credentials
+#. From *“home-pc”*
+
+#. Open IE and browse to ``https://vdi.demoisfun.net``. Note this address has been configured in DNS to resolve to the VIP 192.168.3.157
+
+#. When prompted for credentials
+
    - Username: demo01
    - Password: password
-   - APM webtop is displayed with Agility - Vmware View Desktop and Agility - Agility VDI Class (Citrix) 
-   - Click on Agility - Agility VDI Class to launch XenDesktop
-   - Click Open to launch the Citrix ICA client (pop up box at bottom) 
-   - Verify that desktop is functional
-   - In Citrix Agility desktop, click on Start and Logoff
-   - This will return you to the webtop
-   - Click on Agility - Vmware View Desktop
-   - At the Cert Warning, click “Continue to this website”
-   - Verify that the Agility desktop functions
-   - Close the IE browser window (Scroll to the upper right corner of the window and hit the “X”
-   - Close the browser window
+
+#. APM webtop is displayed with
+   - Agility - Vmware View Desktop
+   - Agility - Agility VDI Class (Citrix)
+   
+#. Click **Agility - Agility VDI Class** to launch XenDesktop
+
+#. In *Select client** pop-up, click **Citrix Receiver** button
+
+#. Verify that desktop is functional
+
+#. In Citrix Agility desktop, click **Start -> Disconnect**. This will return you to APM webtop
+
+#. Click **Agility - Vmware View Desktop**
+
+#. In *Select client* pop-up, click **VMware Horizon** button
+
+# Verify that the VMware desktop functions
+
+# Close *View* client
 
 .. image:: /_static/class1/image44.png
    :scale: 75 %

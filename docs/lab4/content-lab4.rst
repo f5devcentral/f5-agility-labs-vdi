@@ -8,65 +8,63 @@ Task 1 – Access Terminal Server from external network
    *BIG-IP proxy RDP connection*
 
 
-Deploy the iApp
----------------
+Create and bind NTLM Machine Account
+------------------------------------
 
 #. From "corporate-pc"
 
-#. Connect to the F5 config GUI
-
-   - ``https://f5-bigip1a.demosifun.net``
+#. Open IE to access F5 Admin GUI at,
+   ``https://f5-bigip1a.demosifun.net``
 
    - Username: ``admin``
-
    - Password: ``password``
 
-#. Create an NTLM Machine Account
+#. Create on BIG-IP and bind to an NTLM Machine Account. On the left menu,
 
-   - Access >>Authentication>>NTLM>>Machine Account
+   - Click **Access -> Authentication -> NTLM -> Machine Account**
+   
+   - Click the **Create** button on the upper right corner
 
-     +--------------------------+-------------------------+
-     | Name                     | AD1-f5-bigip1a          |
-     +--------------------------+-------------------------+
-     | Machine Account Name     | f5-bigip1a              |
-     +--------------------------+-------------------------+
-     | Domain FQDN              | demoisfun.net           |
-     +--------------------------+-------------------------+
-     | Domain Controller FQDN   | dif-ad1.demoisfun.net   |
-     +--------------------------+-------------------------+
-     | Admin User               | administrator           |
-     +--------------------------+-------------------------+
-     | Password                 | password                |
-     +--------------------------+-------------------------+
+     +--------------------------+-----------------------------+
+     | Name                     | ``AD1-f5-bigip1a``          |
+     +--------------------------+-----------------------------+
+     | Machine Account Name     | ``f5-bigip1a``              |
+     +--------------------------+-----------------------------+
+     | Domain FQDN              | ``demoisfun.net``           |
+     +--------------------------+-----------------------------+
+     | Domain Controller FQDN   | ``dif-ad1.demoisfun.net``   |
+     +--------------------------+-----------------------------+
+     | Admin User               | ``administrator``           |
+     +--------------------------+-----------------------------+
+     | Password                 | ``password``                |
+     +--------------------------+-----------------------------+
 
 #. Click the **JOIN** button to create the machine account
 
-#. Create a new Application Service by selecting iApps -> Application
-   Services and selecting Create
-
-   - iApps >> Application Services
-
-   - Press the **Create** button
-
-   - Name the Application Service ``VM_LAB_3_RDS``
-
-   - Select ``f5.microsoft_rds_remote_access.v1.0.3`` for the
-      template
 
 
 iApp Configuration
 ------------------
 
-#. Review the **Welcome to the iApp template for Remote Desktop
-   Gateway**
+#. Create a new Application Service.
 
-#. **Template Options**
+#. **iApps -> Application Services -> Applications**
+
+#. Click the **Create** button
+
+#. In the Name field, type in ``lab4-rds``
+
+#. In the Template pulldown, select ``f5.microsoft_rds_remote_access.v1.0.3``
+
+#. Review the *Welcome to the iApp template for Remote Desktop Gateway* section
+
+#. *Template Options* section,
 
    +-----------------------------------------------------+--------------------------------------------+
-   | Do you want to deploy BIG-IP APM as an RDP proxy?   | Yes, deploy BIG-IP Access Policy Manager   |
+   | Do you want to deploy BIG-IP APM as an RDP proxy?   | Yes, deploy BIG-IP Access Policy...        |
    +-----------------------------------------------------+--------------------------------------------+
 
-#. **Access Policy Manager**
+#. *Access Policy Manager* section,
 
    +--------------------------------------------------------------------------+------------------+
    | Do you want to create a new AAA server, or use an existing AAA server?   | AD1              |
@@ -74,7 +72,7 @@ iApp Configuration
    | Which NTLM machine account should be used for Kerberos delegation?       | AD1-f5-bigip1a   |
    +--------------------------------------------------------------------------+------------------+
 
-#. **SSL Encryption**
+#. *SSL Encryption* section,
 
    +---------------------------------------------+--------------------------+
    | Which SSL certificate do you want to use?   | wild.demoisfun.net.crt   |
@@ -82,7 +80,7 @@ iApp Configuration
    | Which SSL private key do you want to use?   | wild.demoisfun.net.key   |
    +---------------------------------------------+--------------------------+
 
-#. **Virtual Servers and Pools**
+#. *Virtual Servers and Pools* section,
 
    +-----------------------------------------------------------------+------------------+
    | What IP address do you want to use for the virtual server(s)?   | 192.168.3.156    |
@@ -90,68 +88,60 @@ iApp Configuration
    | How would you like to secure your hosts?                        | Allow any host   |
    +-----------------------------------------------------------------+------------------+
 
-#. Press the **Finished** button
+#. Click the **Finished** button
 
 
 Test the RDS proxy functionality using RDS Client
 -------------------------------------------------
 
-#. From "home-pc"
+#. From *"home-pc"*
 
-#. Launch RDS client (on desktop).
+#. Launch RDS client (on desktop)
 
-   - Select the "Show Options" Pulldown
+#. Click the **Show Options** pulldown
 
-   - Select the "Advanced" tab
+#. Click the **Advanced** tab
 
-   - Click the Settings button
+#. Click the **Settings** button
 
-   - In the "RDS Gateway..." window,
+#. In the *"RDS Gateway..."* window,
 
-     -  In Server name field, type in ``msft-proxy-rds.demoisfun.net``.
-        Note this address resolves to the address ``192.168.3.156`` which
-        was configured in the iApp
+   - Select **"Use these RD Gateway..."** radio button
+   - In *Server name* field, type in ``msft-proxy-rds.demoisfun.net``. Note this address resolves to the address *192.168.3.156* which        was configured in the iApp
+   - Select the **"Use my RD Gateway credential..."** checkbox
+   - Click **OK**
 
         |image16|
 
-     -  Verify the other default settings on this window
-
-     -  Click OK
-
-#. Under "General" tab, in the "Computer" field, type in the name of the
+#. Under *"General"* tab, in the *"Computer"* field, type in the name of the
    host you want to RDP to which is ``dif-termsvr.demoisfun.net``
 
-   - In the "User name" field, type in ``demoisfun\demo01``
-
-     |image17|
-
-   - Click "Save"
-
-   - Click "Connect"
+   - In the *User name* field, type in ``demoisfun\demo01``
+   - Click **Save**
+   - Click **Connect**
+   
+          |image17|
 
 #. When prompted for credentials
 
    - Username: ``demo01``
-
    - Password: ``password``
 
-#. Accept Certificate warning
+#. Click **Yes** to the Certificate warning
 
    |image18|
 
-#. You are connected to dif-termsvr.demoisfun.net
+#. You are connected to dif-termsvr.demoisfun.net server
 
-#. From "corporate-pc", open IE to Connect to BIG-IP GUI at
+#. You can verify this connection through the BIG-IP. From *"corporate-pc"*, open IE to Connect to BIG-IP GUI
 
-   - ``https://f5-bigip1a.demoisfun.net``
-
-#. On the left side menu, click Access -> Overview -> Active Sessions
+#. On the left side menu, click **Access -> Overview -> Active Sessions**
 
 #. Click on the session to view details
 
    |image19|
 
-#. Log off using the windows start icon in the lower left corner
+#. Log off RDS session by clicking **Start -> Logoff**
 
 
 .. |image15| image:: /_static/class1/image17.png

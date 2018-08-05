@@ -4,23 +4,22 @@ Task 1 – Build a VIP with an Access Policy allowing access to VMware and Citri
 
 #. From the "corporate-pc".
 
-#. Connect to the F5 config GUI 
+#. Connect to the F5 config GUI
 
-   - https://f5-bigip1a.demosifun.net
-   - Username: admin
-   - Password: password 
+#. Disable *Stict Updates* for the *lab1-proxy* Application
 
-#. Copy the VM_LAB_1_PCOIP access profile to VDI_Combined_webtop
-
-   - Turn off Strict Updates on th VM_LAB_1_PROXY iApp
    - iApps>>Application Services
    - Select VMW_LAB_1_PROXY 
    - Select the Properties Tab
    - Use the pulldown to select Advanced from Application Service 
    - Uncheck Strict Updates
    - Click the “Update” button
-   - Access>>Profiles/Policies>>Access Profiles
-   - Click the “Copy” hyperlink on the VM_LAB_1_PCOIP  line
+
+
+#. Copy the VM_LAB_1_PCOIP access profile to VDI_Combined_webtop
+
+   - **Access -> Profiles/Policies -> "Access Profiles..."**
+   - Click the “Copy” hyperlink on the *lab1-proxy* line
    - Name the profile VDI_Combined_webtop
    - Press the "Copy" button (bottom left)
 

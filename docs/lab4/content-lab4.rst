@@ -46,34 +46,17 @@ Create and bind NTLM Machine Account
 iApp Configuration
 ------------------
 
-#. Create a new Application Service by selecting *iApps -> Application
-   Services and selecting Create
+#. Create a new Application Service.
 
-   - iApps >> Application Services
+#. **iApps -> Application Services -> Applications**
 
-   - Press the **Create** button
+#. Click the **Create** button
 
-   - Name the Application Service ``VM_LAB_3_RDS``
+#. In the Name field, type in ``lab4-rds``
 
-   - Select ``f5.microsoft_rds_remote_access.v1.0.3`` for the
-      template
-      
+#. In the Template pulldown, select ``f5.microsoft_rds_remote_access.v1.0.3``
 
-#. Create a new Application Service by selecting iApps -> Application
-   Services and selecting Create
-
-   - iApps >> Application Services
-
-   - Press the **Create** button
-
-   - Name the Application Service ``VM_LAB_3_RDS``
-
-   - Select ``f5.microsoft_rds_remote_access.v1.0.3`` for the
-      template
-      
-      
-#. Review the **Welcome to the iApp template for Remote Desktop
-   Gateway**
+#. Review the *Welcome to the iApp template for Remote Desktop Gateway* section
 
 #. **Template Options**
 

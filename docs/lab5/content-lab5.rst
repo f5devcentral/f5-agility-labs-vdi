@@ -23,7 +23,7 @@ Task 1 – Build a VIP with an Access Policy allowing access to VMware and Citri
    - Name the profile VDI_Combined_webtop
    - Press the "Copy" button (bottom left)
 
-#. View the characteristics of the VDI_Combined_webtop  and VM_LAB_2_LBSS access policies
+#. View the characteristics of the *VDI_Combined_webtop* and *lab3-lb-sf* access policies
 
    - View the VM_LAB_2_LB_SF Access profile. The subsequent steps will integrate the required components from that Citrix  policy with the copy of the VM_LAB_1_PCOIP we created (VDI_Combined_webtop- Access>>Profiles/Policies>>Access Profiles
    - Click the “Edit” hyperlink on the VM_LAB_2_LB_SF
@@ -204,19 +204,24 @@ Task 1 – Build a VIP with an Access Policy allowing access to VMware and Citri
 
 #. Update the VIP 
 
-   - Click “Finished” at the bottom of the screen
+#. Click “Finished” at the bottom of the screen
+
 
 Test Connectivity
 -----------------
 
-#. Test the connectovity to VMware ad Citrix
+Verify connectivity to VMware ad Citrix
+=======================================
 
-   - From “home-pc” 
-   - Launch IE and browse to https://vdi.demoisfun.net (192.168.3.157)
-   - When prompted for credentials
+#. From *“home-pc”*
+
+#. Launch IE and browse to https://vdi.demoisfun.net (192.168.3.157)
+
+#. When prompted for credentials
    - Username: demo01
    - Password: password
-   - APM webtop is displayed with Agility - Vmware View Desktop and Agility - Agility VDI Class (Citrix) 
+
+#. APM webtop is displayed with Agility - Vmware View Desktop and Agility - Agility VDI Class (Citrix) 
    - Click on Agility - Agility VDI Class to launch XenDesktop
    - Click Open to launch the Citrix ICA client (pop up box at bottom) 
    - Verify that desktop is functional

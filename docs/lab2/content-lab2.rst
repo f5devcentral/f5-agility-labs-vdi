@@ -73,9 +73,10 @@ Deploy the iApp
 
    - Go to **iApps -> Application Services -> Applications**
    - On the right side of the GUI, click the **Create** button
-   - In the *Name* field, type in ``VM_LAB_1_LBCS``
+   - In the *Name* field, type in ``lab2-lb-cs``
    - In the *Template* pulldown, select ``f5.vmware_view.v1.5.4``
 
+.. NOTE:: The tables for iApp questions list just the values that need to change. Leave other values as degault.
 
 #. Review the *Welcome to the iAPP template for VMware Horizon View* section
 
@@ -274,7 +275,7 @@ Deploy the iApp
 
    - Go to **iApps -> Application Services -> Applications**
    - On the right side of the GUI, click the **Create** button
-   - In the *Name* field, type in ``VM_LAB_1_LBUAG``
+   - In the *Name* field, type in ``lab2-lb-uag``
    - In the *Template* pulldown, select ``f5.vmware_view.v1.5.4``
      
 
@@ -430,7 +431,7 @@ Deploy the iApp
 
    - Go to **iApps -> Application Services -> Applications**
    - On the right side of the GUI, click the **Create** button
-   - In the *Name* field, type in ``VM_LAB_1_PROXY``
+   - In the *Name* field, type in ``lab2-proxy``
    - In the *Template* pulldown, select ``f5.vmware_view.v1.5.4``
    
 

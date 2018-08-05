@@ -1,4 +1,4 @@
-Task 1 – Access Terminal Server from external network
+TASK 1 – Access Terminal Server from external network
 =====================================================
 
 .. figure:: /_static/class1/image_lab4task1.png
@@ -22,7 +22,6 @@ Create and bind NTLM Machine Account
 #. Create on BIG-IP and bind to an NTLM Machine Account. On the left menu,
 
    - Click **Access -> Authentication -> NTLM -> Machine Account**
-   
    - Click the **Create** button on the upper right corner
 
      +--------------------------+-----------------------------+
@@ -42,9 +41,8 @@ Create and bind NTLM Machine Account
 #. Click the **JOIN** button to create the machine account
 
 
-
-iApp Configuration
-------------------
+Deploy iApp
+-----------
 
 #. Create a new Application Service.
 
@@ -56,39 +54,33 @@ iApp Configuration
 
 #. In the Template pulldown, select ``f5.microsoft_rds_remote_access.v1.0.3``
 
-#. Review the *Welcome to the iApp template for Remote Desktop Gateway* section
+   +--------------------------------------------------------------------------+--------------------------------------------------------+
+   | **Welcome to the iApp template for Remote Desktop Gateway* section**     | *Please review*                                        |
+   +--------------------------------------------------------------------------+--------------------------------------------------------+
+   | **Template Options**                                                                                                              |
+   +--------------------------------------------------------------------------+--------------------------------------------------------+
+   | Do you want to deploy BIG-IP APM as an RDP proxy?                        | *Yes, deploy BIG-IP Access Policy...*                  |
+   +--------------------------------------------------------------------------+--------------------------------------------------------+
+   | **Access Policy Manager**                                                                                                         |
+   +--------------------------------------------------------------------------+--------------------------------------------------------+
+   | Do you want to create a new AAA server, or use an existing AAA server?   | *AD1*                                                  |
+   +--------------------------------------------------------------------------+--------------------------------------------------------+
+   | Which NTLM machine account should be used for Kerberos delegation?       | *AD1-f5-bigip1a*                                       |
+   +--------------------------------------------------------------------------+--------------------------------------------------------+
+   | **SSL Encryption**                                                                                                                |
+   +--------------------------------------------------------------------------+--------------------------------------------------------+
+   | Which SSL certificate do you want to use?                                | ``wild.demoisfun.net.crt``                             |
+   +--------------------------------------------------------------------------+--------------------------------------------------------+
+   | Which SSL private key do you want to use?                                | ``wild.demoisfun.net.key``                             |
+   +--------------------------------------------------------------------------+--------------------------------------------------------+
+   | **Virtual Servers and Pools**                                                                                                     |
+   +--------------------------------------------------------------------------+--------------------------------------------------------+
+   | What IP address do you want to use for the virtual server(s)?            | ``192.168.3.156``                                      |
+   +--------------------------------------------------------------------------+--------------------------------------------------------+
+   | How would you like to secure your hosts?                                 | *Allow any host*                                       |
+   +--------------------------------------------------------------------------+--------------------------------------------------------+
 
-#. *Template Options* section,
-
-   +-----------------------------------------------------+--------------------------------------------+
-   | Do you want to deploy BIG-IP APM as an RDP proxy?   | Yes, deploy BIG-IP Access Policy...        |
-   +-----------------------------------------------------+--------------------------------------------+
-
-#. *Access Policy Manager* section,
-
-   +--------------------------------------------------------------------------+------------------+
-   | Do you want to create a new AAA server, or use an existing AAA server?   | AD1              |
-   +--------------------------------------------------------------------------+------------------+
-   | Which NTLM machine account should be used for Kerberos delegation?       | AD1-f5-bigip1a   |
-   +--------------------------------------------------------------------------+------------------+
-
-#. *SSL Encryption* section,
-
-   +---------------------------------------------+--------------------------+
-   | Which SSL certificate do you want to use?   | wild.demoisfun.net.crt   |
-   +---------------------------------------------+--------------------------+
-   | Which SSL private key do you want to use?   | wild.demoisfun.net.key   |
-   +---------------------------------------------+--------------------------+
-
-#. *Virtual Servers and Pools* section,
-
-   +-----------------------------------------------------------------+------------------+
-   | What IP address do you want to use for the virtual server(s)?   | 192.168.3.156    |
-   +-----------------------------------------------------------------+------------------+
-   | How would you like to secure your hosts?                        | Allow any host   |
-   +-----------------------------------------------------------------+------------------+
-
-#. Click the **Finished** button
+#. Click **Finished** button
 
 
 Test the RDS proxy functionality using RDS Client
@@ -145,17 +137,7 @@ Test the RDS proxy functionality using RDS Client
 
 
 .. |image15| image:: /_static/class1/image17.png
-   :width: 5.58333in
-   :height: 2.96875in
 .. |image16| image:: /_static/class1/image18.png
-   :width: 3.25126in
-   :height: 3.65672in
 .. |image17| image:: /_static/class1/image19.png
-   :width: 3.28358in
-   :height: 3.79055in
 .. |image18| image:: /_static/class1/image20.png
-   :width: 1.82813in
-   :height: 1.68013in
 .. |image19| image:: /_static/class1/image21.png
-   :width: 5.25486in
-   :height: 1.65269in

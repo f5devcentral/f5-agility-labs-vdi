@@ -75,7 +75,7 @@ Deploy the iApp
    - In the *Name* field, type in ``lab2-lb-cs``
    - In the *Template* pulldown, select ``f5.vmware_view.v1.5.4``
 
-.. NOTE:: The tables for iApp questions list just the values that need to change. Leave other values as degault.
+.. NOTE:: The tables for iApp questions list just the values that need to change
 
    +------------------------------------------------------------------------------+----------------------------------------------------+
    | **Welcome to the iAPP template for VMware Horizon**                          | Please review                                      |

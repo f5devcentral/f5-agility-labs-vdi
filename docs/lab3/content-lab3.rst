@@ -7,32 +7,29 @@ Task 1 – Access XenDesktop without F5
    
    *Access XenDesktop through StoreFront*
 
-#. From "corporate-pc"
+#. From *corporate-pc*
 
-#. Use IE and browse to Citrix Storefront
-
-   - ``http://ctx-sf1a.demoisfun.net/Citrix/AgilityStoreWeb/``
+#. Open Use IE and browse to Citrix Storefront at,
+   ``http://ctx-sf1a.demoisfun.net/Citrix/AgilityStoreWeb/``
+   .. NOTE:: Storefront first launch takes a bit of time
 
 #. When prompted for credentials
 
    - Username: ``demoisfun\demo01``
-
    - Password: ``password``
 
-#. Click "Agility" to launch XenDesktop. 
-
-   .. NOTE:: This takes a long time due to the Ravello implementation*
+#. Click **Agility** to launch XenDesktop. 
 
 #. Citrix "Desktop Viewer" launches and connects to XenDesktop
 
 #. Verify virtual desktop function
 
-#. In Citrix Agility desktop, click Start and Logoff
+#. In *Citrix Agility* desktop, click Start and Logoff
 
-#. Log off the Citrix receiver client using the ``01 Demo`` pulldown in the
+#. Log off the Citrix receiver client using the **01 Demo** pulldown in the
    upper right corner
 
-#. Close the browser Window
+#. Close IE
 
 
 Task 2 – Load Balance StoreFront
@@ -50,18 +47,18 @@ Deploy the iApp
 
 #. From *"corporate-pc"*
 
-#. Create a new Application Service
+#. Create a new Application Service.
 
-   - *iApps >> Application Services*
-   - Press the **Create** button
-   - Name the Application Service ``VM_LAB_2_LBSF``
-   - Select **f5.citrix_vdi.v2.4.4** for the template
+   - **iApps -> Application Services -> Applications**
+   - Click the **Create** button
+   - In the *Name* field, type in ``lab3-lb-sf``
+   - In the *Template* pulldown, select **f5.citrix_vdi.v2.4.4**
 
 
 iApp Configuration
 ------------------
 
-#. Review the *Welcome to the iApp template for XenDesktop and XenApp*
+#. Review the *Welcome to the iApp template for XenDesktop and XenApp* section
 
 #. In *General* section
 

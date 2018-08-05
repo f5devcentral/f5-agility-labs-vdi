@@ -1,4 +1,4 @@
-TASK 1 – Access VMware Horizon Desktop environment without F5 
+TASK 1 – Access Horizon Desktop environment without F5 
 =============================================================
 
 Access the Horizon Desktop using the Horizon Client on the internal network. Horizon Client points directly to a Connection Server. This step is to verify Horizon is working and BIG-IP is not in the path. (Internal use case without F5 integration)
@@ -343,8 +343,8 @@ Configure UAG to use load balance address
 #. Repeat for the other UAG *vmw-uag1b* at ``https://192.168.10.215:9443/admin``
 
 
-Test the UAG Server load balancing using both View and HTML5 client access methods
--------------------------------------------------------------------------------------------
+Test the UAG load balancing using Horizon and HTML5 client access methods
+-------------------------------------------------------------------------
 
 #. From *"home-pc"*
 
@@ -382,7 +382,7 @@ Test the UAG Server load balancing using both View and HTML5 client access metho
 
 
 
-Task 5 – BIG-IP proxy View traffic in place of UAG
+TASK 5 – BIG-IP proxy View traffic in place of UAG
 ==================================================
 
 In this configuration, we will consolidate authentication, load balance and proxy View traffic on a single BIG-IP. This can bypass the UAG's to access View desktop from external network. 
@@ -462,8 +462,8 @@ View the objects which were created by the iApp
 #. Review the remaining parameters (any questions)
 
 
-Test the APM functionality using both Horizon client and HTML5 access methods
------------------------------------------------------------------------------
+Test the APM webtop using Horizon and HTML5 client access methods
+-----------------------------------------------------------------
 
 #. From *"home-pc"*
 

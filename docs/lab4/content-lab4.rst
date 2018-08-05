@@ -8,38 +8,56 @@ Task 1 – Access Terminal Server from external network
    *BIG-IP proxy RDP connection*
 
 
-Deploy the iApp
----------------
+Create and bind NTLM Machine Account
+------------------------------------
 
 #. From "corporate-pc"
 
-#. Connect to the F5 config GUI
-
-   - ``https://f5-bigip1a.demosifun.net``
+#. Open IE to access F5 Admin GUI at,
+   ``https://f5-bigip1a.demosifun.net``
 
    - Username: ``admin``
-
    - Password: ``password``
 
-#. Create an NTLM Machine Account
+#. Create on BIG-IP and bind to an NTLM Machine Account. On the left menu,
 
-   - Access >>Authentication>>NTLM>>Machine Account
+   - Click **Access -> Authentication -> NTLM -> Machine Account**
+   
+   - Click the **Create** button on the upper right corner
 
-     +--------------------------+-------------------------+
-     | Name                     | AD1-f5-bigip1a          |
-     +--------------------------+-------------------------+
-     | Machine Account Name     | f5-bigip1a              |
-     +--------------------------+-------------------------+
-     | Domain FQDN              | demoisfun.net           |
-     +--------------------------+-------------------------+
-     | Domain Controller FQDN   | dif-ad1.demoisfun.net   |
-     +--------------------------+-------------------------+
-     | Admin User               | administrator           |
-     +--------------------------+-------------------------+
-     | Password                 | password                |
-     +--------------------------+-------------------------+
+     +--------------------------+-----------------------------+
+     | Name                     | ``AD1-f5-bigip1a``          |
+     +--------------------------+-----------------------------+
+     | Machine Account Name     | ``f5-bigip1a``              |
+     +--------------------------+-----------------------------+
+     | Domain FQDN              | ``demoisfun.net``           |
+     +--------------------------+-----------------------------+
+     | Domain Controller FQDN   | ``dif-ad1.demoisfun.net``   |
+     +--------------------------+-----------------------------+
+     | Admin User               | ``administrator``           |
+     +--------------------------+-----------------------------+
+     | Password                 | ``password``                |
+     +--------------------------+-----------------------------+
 
 #. Click the **JOIN** button to create the machine account
+
+
+
+iApp Configuration
+------------------
+
+#. Create a new Application Service by selecting *iApps -> Application
+   Services and selecting Create
+
+   - iApps >> Application Services
+
+   - Press the **Create** button
+
+   - Name the Application Service ``VM_LAB_3_RDS``
+
+   - Select ``f5.microsoft_rds_remote_access.v1.0.3`` for the
+      template
+      
 
 #. Create a new Application Service by selecting iApps -> Application
    Services and selecting Create
@@ -52,11 +70,8 @@ Deploy the iApp
 
    - Select ``f5.microsoft_rds_remote_access.v1.0.3`` for the
       template
-
-
-iApp Configuration
-------------------
-
+      
+      
 #. Review the **Welcome to the iApp template for Remote Desktop
    Gateway**
 

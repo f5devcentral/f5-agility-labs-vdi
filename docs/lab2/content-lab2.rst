@@ -126,7 +126,7 @@ View the objects which were created by the iApp
 #. Note that a persistence profile was created
 
    - Check Match Across Services
-   - Press **Update**
+   - Click **Update**
    - Note the error at the top of the page
 
 
@@ -266,48 +266,41 @@ Deploy the iApp
    - In the *Name* field, type in ``lab2-lb-uag``
    - In the *Template* pulldown, select ``f5.vmware_view.v1.5.4``
      
+   +------------------------------------------------------------------------------+----------------------------------------------------+
+   | **Big-IP Access Policy Manager**                                                                                                  |
+   +------------------------------------------------------------------------------+----------------------------------------------------+
+   | Do you want to deploy BIG-IP Access Policy Manager?                          | *No, do not deploy BIG-IP Access Policy Manager*   |
+   +------------------------------------------------------------------------------+----------------------------------------------------+
+   | **SSL Encryption**                                                                                                                |
+   +------------------------------------------------------------------------------+----------------------------------------------------+
+   | How should the BIG-IP system handle encrypted traffic?                       | *Terminate SSL for clients,...(SSL-bridging)*      |
+   +------------------------------------------------------------------------------+----------------------------------------------------+
+   | Which SSL certificate do you want to use?                                    | *wild.demoisfun.net.crt*                           |
+   +------------------------------------------------------------------------------+----------------------------------------------------+
+   | Which SSL private key do you want to use                                     | *wild.demoisfun.net.key*                           |
+   +------------------------------------------------------------------------------+----------------------------------------------------+
+   | **Virtual Servers and Pools**                                                                                                     |
+   +------------------------------------------------------------------------------+----------------------------------------------------+
+   | What virtual server IP address...for remote, untrusted clients?              | ``192.168.3.150``                                  |
+   +------------------------------------------------------------------------------+----------------------------------------------------+
+   | What FQDN will clients use to access the View environment                    | ``vmw-LB-UAG.demoisfun.net``                       |
+   +------------------------------------------------------------------------------+----------------------------------------------------+
+   | Which Servers should be included in this pool                                | ``192.168.3.214``                                  |
+   |                                                                              |                                                    |
+   |                                                                              | ``192.168.3.215``                                  |
+   +------------------------------------------------------------------------------+----------------------------------------------------+
+   | **Application Health**                                                                                                            |
+   +------------------------------------------------------------------------------+----------------------------------------------------+
+   | Create a new health monitor or use existing one?                             | *https*                                            |
+   +------------------------------------------------------------------------------+----------------------------------------------------+
 
-#. In *Big-IP Access Policy Manager* section
-
-   +----------------------------------------------------------+-----------------------------------------------------------------------+
-   | Do you want to deploy BIG-IP Access Policy Manager?      | *No, do not deploy BIG-IP Access Policy Manager*                      |
-   +----------------------------------------------------------+-----------------------------------------------------------------------+
-
-#. In *SSL Encryption* section
-
-   +----------------------------------------------------------+------------------------------------------------------------------------+
-   | How should the BIG-IP system handle encrypted traffic?   | *Terminate SSL for clients, re-encrypt...servers (SSL-bridging)*       |
-   +----------------------------------------------------------+------------------------------------------------------------------------+
-   | Which SSL certificate do you want to use?                | *wild.demoisfun.net.crt*                                               |
-   +----------------------------------------------------------+------------------------------------------------------------------------+
-   | Which SSL private key do you want to use                 | *wild.demoisfun.net.key*                                               |
-   +----------------------------------------------------------+------------------------------------------------------------------------+
-
-#. In *Virtual Servers and Pools* section
-
-   +------------------------------------------------------------------------------------+----------------------------------------------+
-   | What virtual server IP address do you want to use for remote, untrusted clients?   | ``192.168.3.150``                            |
-   +------------------------------------------------------------------------------------+----------------------------------------------+
-   | What FQDN will clients use to access the View environment                          | ``vmw-LB-UAG.demoisfun.net``                 |
-   +------------------------------------------------------------------------------------+----------------------------------------------+
-   | Which Servers should be included in this pool                                      | ``192.168.3.214``                            |
-   |                                                                                    |                                              |
-   |                                                                                    | ``192.168.3.215``                            |
-   +------------------------------------------------------------------------------------+----------------------------------------------+
-
-#. In *Application Health* section
-
-   +------------------------------------------------------------------------------------+----------------------------------------------+
-   | Create a new health monitor or use existing one?                                   | *https*                                      |
-   +------------------------------------------------------------------------------------+----------------------------------------------+
-
-#. Click the **Finished** button
+#. Click **Finished** button
 
 
 View the objects which were created by the iApp
 -----------------------------------------------
 
-#. Select the **Components** tab at the top of the page
+#. Click **Components** tab at the top of the page
 
 #. Is the Virtual server available?
 
@@ -330,7 +323,6 @@ Configure UAG to use load balance address
 
    - Username: ``admin``
    - Password: ``F5@gility``
-     
    
 #. On the right side, under *Configure Manually*, click **Select**
 
@@ -367,7 +359,6 @@ Test the UAG Server load balancing using both View and HTML5 client access metho
    - Username: ``demo01``
    - Password: ``password``
      
-
 #. Open the **Agility** desktop
 
 #. Verify that the *Agility* desktop functions
@@ -383,12 +374,11 @@ Test the UAG Server load balancing using both View and HTML5 client access metho
    - Username: ``demo01``
    - Password: ``password``
      
+#.  Open **Agility** desktop
 
-#.  Open the **Agility** desktop
+#.  Verify that *Agility* desktop functions
 
-#.  Verify that the *Agility* desktop functions
-
-#.  Close the IE *VMware Horizon* tab
+#.  Close IE *VMware Horizon* tab
 
 
 
@@ -414,7 +404,6 @@ Deploy the iApp
    - Username: ``admin``
    - Password: ``password``
 
-
 #. Create a new Application Service. On the left side menu
 
    - Go to **iApps -> Application Services -> Applications**
@@ -422,60 +411,47 @@ Deploy the iApp
    - In the *Name* field, type in ``lab2-proxy``
    - In the *Template* pulldown, select ``f5.vmware_view.v1.5.4``
    
+   +------------------------------------------------------------------------------+----------------------------------------------------+
+   | **BIG-IP Access Policy Manager**                                                                                                  |
+   +------------------------------------------------------------------------------+----------------------------------------------------+
+   | Do you want to deploy BIG-IP Access Policy Manager?                          | *Yes, deploy BIG-IP Access Policy Manager*         |
+   +------------------------------------------------------------------------------+----------------------------------------------------+
+   | Do you want to support browser based connections...HTML5 client?             | *Yes, support HTML 5 view clientless browser       |
+   +------------------------------------------------------------------------------+----------------------------------------------------+
+   | What is the NetBIOS domain name for your environment?                        | ``demoisfun``                                      |
+   +------------------------------------------------------------------------------+----------------------------------------------------+
+   | Create a new AAA Server object or select an existing one                     | *AD1*                                              |
+   +------------------------------------------------------------------------------+------ ---------------------------------------------+
+   | **SSL Encryption* section**                                                                                                       |
+   +------------------------------------------------------------------------------+----------------------------------------------------+
+   | How should the BIG-IP system handle encrypted traffic?                       | *Terminate SSL for clients,...(SSL-Bridging)*      |
+   +------------------------------------------------------------------------------+----------------------------------------------------+
+   | Which SSL certificate do you want to use?                                    | ``wild.demoisfun.net.crt``                         |
+   +------------------------------------------------------------------------------+----------------------------------------------------+
+   | Which SSL private key do you want to use?                                    | ``wild.demoisfun.net.key``                         |
+   +------------------------------------------------------------------------------+----------------------------------------------------+
+   | **Virtual Servers and Pools**                                                                                                     |
+   +------------------------------------------------------------------------------+----------------------------------------------------+
+   | What virtual server IP address...for remote, untrusted clients?              | ``192.168.3.152``                                  |
+   +------------------------------------------------------------------------------+----------------------------------------------------+
+   | What FQDN will clients use to access the View environment?                   | ``vmw-PROXY-VIEW.demoisfun.net``                   |
+   +------------------------------------------------------------------------------+----------------------------------------------------+
+   | Which Servers should be included in this pool?                               | ``192.168.10.210``                                 |
+   |                                                                              |                                                    |
+   |                                                                              | ``192.168.10.211``                                 |
+   +------------------------------------------------------------------------------+----------------------------------------------------+
+   | **Application Health**                                                                                                            |
+   +------------------------------------------------------------------------------+----------------------------------------------------+
+   | Create a new health monitor or use existing one?                             | *https*                                            |
+   +------------------------------------------------------------------------------+----------------------------------------------------+
 
-#. In *BIG-IP Access Policy Manager* section
-
-   +---------------------------------------------------------------------+-------------------------------------------------------------+
-   | Do you want to deploy BIG-IP Access Policy Manager?                 | *Yes, deploy BIG-IP Access Policy Manager*                  |
-   +---------------------------------------------------------------------+-------------------------------------------------------------+
-   | Do you want to support browser based connections,                   |                                                             |
-   | including the View HTML5 client?                                    | *Yes, support HTML 5 view clientless browser connections*   |
-   +---------------------------------------------------------------------+-------------------------------------------------------------+
-   | Should the BIG-IP system support RSA SecureID two-factor            |                                                             |
-   | authentication?                                                     | *No, do not support RSA SecureID two-factor authentication* |
-   +---------------------------------------------------------------------+-------------------------------------------------------------+
-   | Should the BIG-IP system show a message to View users during logon  | *No, do not add a message during logon*                     |
-   +---------------------------------------------------------------------+-------------------------------------------------------------+
-   | What is the NetBIOS domain name for your environment?               | ``demoisfun``                                               |
-   +---------------------------------------------------------------------+-------------------------------------------------------------+
-   | Create a new AAA Server object or select an existing one            | *AD1*                                                       |
-   +---------------------------------------------------------------------+-------------------------------------------------------------+
-
-#. In *SSL Encryption* section
-
-   +----------------------------------------------------------+--------------------------------------------------------------+
-   | How should the BIG-IP system handle encrypted traffic?   | *Terminate SSL for clients, re-encrypt… (SSL-Bridging)*      |
-   +----------------------------------------------------------+--------------------------------------------------------------+
-   | Which SSL certificate do you want to use?                | ``wild.demoisfun.net.crt``                                   |
-   +----------------------------------------------------------+--------------------------------------------------------------+
-   | Which SSL private key do you want to use?                | ``wild.demoisfun.net.key``                                   |
-   +----------------------------------------------------------+--------------------------------------------------------------+
-
-#. In *Virtual Servers and Pools* section
-
-   +------------------------------------------------------------------------------------+------------------------------------+
-   | What virtual server IP address do you want to use for remote, untrusted clients?   | ``192.168.3.152``                  |
-   +------------------------------------------------------------------------------------+------------------------------------+
-   | What FQDN will clients use to access the View environment?                         | ``vmw-PROXY-VIEW.demoisfun.net``   |    
-   +------------------------------------------------------------------------------------+------------------------------------+
-   | Which Servers should be included in this pool?                                     | ``192.168.10.210``                 |
-   |                                                                                    |                                    |
-   |                                                                                    | ``192.168.10.211``                 |
-   +------------------------------------------------------------------------------------+------------------------------------+
-
-#. In *Application Health* section
-
-   +------------------------------------------------------------------------------------+----------------------------------------------+
-   | Create a new health monitor or use existing one?                                   | *https*                                      |
-   +------------------------------------------------------------------------------------+----------------------------------------------+
-
-#. Click the **Finished** button.
+#. Click **Finished** button.
 
 
 View the objects which were created by the iApp
 -----------------------------------------------
 
-#. Select the **Components** tab at the top of the page
+#. Click **Components** tab at the top of the page
 
 #. Note the increase in objects compared to Task 2 and Task 4
 
@@ -486,8 +462,8 @@ View the objects which were created by the iApp
 #. Review the remaining parameters (any questions)
 
 
-Test the APM (PCoIP) functionality using both VMware View client and browser access methods
--------------------------------------------------------------------------------------------
+Test the APM functionality using both Horizon client and HTML5 access methods
+-----------------------------------------------------------------------------
 
 #. From *"home-pc"*
 
@@ -502,7 +478,7 @@ Test the APM (PCoIP) functionality using both VMware View client and browser acc
    - Password: ``password``
    
    
-#. Click the Agility icon
+#. Click **Agility** icon
 
 #. Close the session by clicking the X in the upper  toolbar
 
@@ -514,7 +490,6 @@ Test the APM (PCoIP) functionality using both VMware View client and browser acc
 
    - Username: ``demo01``
    - Password: ``password``
-
 
 #. Click **Agility** to launch desktop
 

@@ -58,13 +58,13 @@ iApp Configuration
 
 #. Review the *Welcome to the iApp template for Remote Desktop Gateway* section
 
-#. **Template Options**
+#. *Template Options* section,
 
    +-----------------------------------------------------+--------------------------------------------+
-   | Do you want to deploy BIG-IP APM as an RDP proxy?   | Yes, deploy BIG-IP Access Policy Manager   |
+   | Do you want to deploy BIG-IP APM as an RDP proxy?   | Yes, deploy BIG-IP Access Policy...        |
    +-----------------------------------------------------+--------------------------------------------+
 
-#. **Access Policy Manager**
+#. *Access Policy Manager* section,
 
    +--------------------------------------------------------------------------+------------------+
    | Do you want to create a new AAA server, or use an existing AAA server?   | AD1              |
@@ -72,7 +72,7 @@ iApp Configuration
    | Which NTLM machine account should be used for Kerberos delegation?       | AD1-f5-bigip1a   |
    +--------------------------------------------------------------------------+------------------+
 
-#. **SSL Encryption**
+#. *SSL Encryption* section,
 
    +---------------------------------------------+--------------------------+
    | Which SSL certificate do you want to use?   | wild.demoisfun.net.crt   |
@@ -80,7 +80,7 @@ iApp Configuration
    | Which SSL private key do you want to use?   | wild.demoisfun.net.key   |
    +---------------------------------------------+--------------------------+
 
-#. **Virtual Servers and Pools**
+#. *Virtual Servers and Pools* section,
 
    +-----------------------------------------------------------------+------------------+
    | What IP address do you want to use for the virtual server(s)?   | 192.168.3.156    |
@@ -88,68 +88,60 @@ iApp Configuration
    | How would you like to secure your hosts?                        | Allow any host   |
    +-----------------------------------------------------------------+------------------+
 
-#. Press the **Finished** button
+#. Click the **Finished** button
 
 
 Test the RDS proxy functionality using RDS Client
 -------------------------------------------------
 
-#. From "home-pc"
+#. From *"home-pc"*
 
-#. Launch RDS client (on desktop).
+#. Launch RDS client (on desktop)
 
-   - Select the "Show Options" Pulldown
+#. Click the **Show Options** pulldown
 
-   - Select the "Advanced" tab
+#. Click the **Advanced** tab
 
-   - Click the Settings button
+#. Click the **Settings** button
 
-   - In the "RDS Gateway..." window,
+#. In the *"RDS Gateway..."* window,
 
-     -  In Server name field, type in ``msft-proxy-rds.demoisfun.net``.
-        Note this address resolves to the address ``192.168.3.156`` which
-        was configured in the iApp
+   - Select **"Use these RD Gateway..."** radio button
+   - In *Server name* field, type in ``msft-proxy-rds.demoisfun.net``. Note this address resolves to the address *192.168.3.156* which        was configured in the iApp
+   - Select the **"Use my RD Gateway credential..."** checkbox
+   - Click **OK**
 
         |image16|
 
-     -  Verify the other default settings on this window
-
-     -  Click OK
-
-#. Under "General" tab, in the "Computer" field, type in the name of the
+#. Under *"General"* tab, in the *"Computer"* field, type in the name of the
    host you want to RDP to which is ``dif-termsvr.demoisfun.net``
 
-   - In the "User name" field, type in ``demoisfun\demo01``
-
-     |image17|
-
-   - Click "Save"
-
-   - Click "Connect"
+   - In the *User name* field, type in ``demoisfun\demo01``
+   - Click **Save**
+   - Click **Connect**
+   
+          |image17|
 
 #. When prompted for credentials
 
    - Username: ``demo01``
-
    - Password: ``password``
 
-#. Accept Certificate warning
+#. Click **Yes** to the Certificate warning
 
    |image18|
 
-#. You are connected to dif-termsvr.demoisfun.net
+#. You are connected to dif-termsvr.demoisfun.net server
 
-#. From "corporate-pc", open IE to Connect to BIG-IP GUI at
+#. You can verify this connection through the BIG-IP. From *"corporate-pc"*, open IE to Connect to BIG-IP GUI
 
-   - ``https://f5-bigip1a.demoisfun.net``
-
-#. On the left side menu, click Access -> Overview -> Active Sessions
+#. On the left side menu, click **Access -> Overview -> Active Sessions**
 
 #. Click on the session to view details
 
    |image19|
 
-#. Log off using the windows start icon in the lower left corner
+#. Log off RDS session by clicking **Start -> Logoff**
 
 
 .. |image15| image:: /_static/class1/image17.png

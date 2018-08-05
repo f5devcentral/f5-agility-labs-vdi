@@ -54,10 +54,6 @@ Deploy the iApp
    - In the *Name* field, type in ``lab3-lb-sf``
    - In the *Template* pulldown, select **f5.citrix_vdi.v2.4.4**
 
-
-iApp Configuration
-------------------
-
 #. Review the *Welcome to the iApp template for XenDesktop and XenApp* section
 
 #. In *General* section
@@ -168,10 +164,6 @@ Deploy the iApp
    - Click the **Create** button
    - In the *Name* field, type in ``lab3-lb-sf``
    - Click the **Reconfigure** link near the top
-
-
-iApp Configuration
-------------------
 
 #. In *BIG-IP Access Policy Manager* section
 

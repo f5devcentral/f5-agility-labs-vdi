@@ -1,4 +1,4 @@
-TASK 1 – Access Terminal Server from external network
+Task 1 – Access Terminal Server from external network
 =====================================================
 
 .. figure:: /_static/class1/image_lab4task1.png

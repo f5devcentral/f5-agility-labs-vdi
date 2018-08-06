@@ -57,13 +57,13 @@ Deploy the iApp
 
 
    +---------------------------------------------------------------------------+-------------------------------------------------------+
-   | **Welcome to the iApp template for XenDesktop and XenApp**                | *Review this section*                                  |
+   | **Welcome to the iApp template for XenDesktop and XenApp**                | *Review this section*                                 |
    +---------------------------------------------------------------------------+-------------------------------------------------------+
    | **General**                                                                                                                       |
    +---------------------------------------------------------------------------+-------------------------------------------------------+
-   | Use APM to securely proxy application (ICA)...Citrix environment?         | *Yes, Proxy ICA traffic...with BIG-IP*                 |
+   | Use APM to securely proxy application (ICA)...Citrix environment?         | *Yes, Proxy ICA traffic...with BIG-IP*                |
    +---------------------------------------------------------------------------+-------------------------------------------------------+
-   | What is the Active Directory NetBIOS Domain Name...Citrix servers?        | demoisfun                                              |
+   | What is the Active Directory NetBIOS Domain Name...Citrix servers?        | demoisfun                                             |
    +---------------------------------------------------------------------------+-------------------------------------------------------+
    | **BIG-IP Access Policy Manager**                                                                                                  |
    +---------------------------------------------------------------------------+-------------------------------------------------------+

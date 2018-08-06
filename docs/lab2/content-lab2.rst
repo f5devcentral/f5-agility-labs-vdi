@@ -1,4 +1,4 @@
-TASK 1 – Access Horizon Desktop environment without F5 
+Task 1 – Access Horizon Desktop environment without F5 
 =============================================================
 
 Access the Horizon Desktop using the Horizon Client on the internal network. Horizon Client points directly to a Connection Server. This step is to verify Horizon is working and BIG-IP is not in the path. (Internal use case without F5 integration)
@@ -44,7 +44,7 @@ Access the Horizon Desktop using the Horizon Client on the internal network. Hor
 #. Keep the RDP session open for Task 2
 
 
-TASK 2 – Load Balance Connection Servers
+Task 2 – Load Balance Connection Servers
 ========================================
 
 Use the F5 iApp for VMware View to configure a load balancing environment for the Connection Servers. This will increase the number of
@@ -192,7 +192,7 @@ Test the connection server load balancing using both VMware View client and brow
 #.  Close the IE *VMWare Horizon* tab
 
 
-TASK 3 – Access Horizon Desktop through the UAG Server
+Task 3 – Access Horizon Desktop through the UAG Server
 ======================================================
 
 Access Horizon Desktop from external network through UAG. (External use case without F5 integration)
@@ -236,7 +236,7 @@ Access Horizon Desktop from external network through UAG. (External use case wit
 #.  Close the IE *VMware Horizon* tab
 
 
-TASK 4 – Load Balance UAG Servers
+Task 4 – Load Balance UAG Servers
 ======================================
 
 Use the F5 iApp for VMware Horizon to configure a load balancing UAG's. This will increase the number of UAG servers available to external  users and load balance access to these resources (External use case with F5 load balancing)
@@ -382,7 +382,7 @@ Test the UAG load balancing using Horizon and HTML5 client access methods
 
 
 
-TASK 5 – BIG-IP proxy View traffic in place of UAG
+Task 5 – BIG-IP proxy View traffic in place of UAG
 ==================================================
 
 In this configuration, we will consolidate authentication, load balance and proxy View traffic on a single BIG-IP. This can bypass the UAG's to access View desktop from external network. 

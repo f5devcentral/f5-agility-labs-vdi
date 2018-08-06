@@ -81,7 +81,7 @@ Deploy the iApp
    +--------------------------------------------------------------------------+--------------------------------------------------------+
    | What IP address will clients use to access...or the F5 Webtop?           | ``192.168.3.160``                                      |
    +--------------------------------------------------------------------------+--------------------------------------------------------+
-   | Did you deploy Citrix StoreFront?                                        | *Yes, ...StoreFront 3.0 or above                       |
+   | Did you deploy Citrix StoreFront?                                        | *Yes, ...StoreFront 3.0 or above*                      |
    +--------------------------------------------------------------------------+--------------------------------------------------------+
    | What is the URI used on StoreFront...for XenApp or XenDesktop?           | ``/Citrix/AgilityStoreWeb/``                           |
    +--------------------------------------------------------------------------+--------------------------------------------------------+
@@ -119,9 +119,6 @@ Test Connectivity
 -----------------
 
 #. From *"home-pc"*
-   +-------------------------------------------------------------------------+--------------------------+
-   | Do you want to replace Citrix Web Interface...with the BIG-IP system?   | "Yes, replace Citrix…"   |
-   +-------------------------------------------------------------------------+--------------------------+
    
 #. OpenIE and go to the StoreFront load balanced address,
    ``http://ctx-lb-sf.demoisfun.net``

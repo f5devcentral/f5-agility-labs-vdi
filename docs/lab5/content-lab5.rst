@@ -4,18 +4,18 @@ Task 1 – Build a VIP with an Access Policy allowing access to VMware and Citri
 
 #. From *"corporate-pc"*
 
-#. Connect to the F5 config GUI
+#. Open F5 config GUI
 
 #. Disable *Strict Updates* for the *lab2-proxy* Application
 
    - Go to **iApps -> Application Services**
-   - Click **lab1-proxy** 
+   - Click **lab2-proxy** 
    - Click **Properties** tab
    - In *Application Service* pulldown, select **Advanced** 
    - Uncheck **Strict Updates** checkbox
    - Click **Update** button
 
-#. To save time, we removed "Strict Updates" so we can copy some objects created in prvious labs. Copy *lab1-proxy* Access profile
+#. To save lab time, we removed "Strict Updates" so we can copy *lab2-proxy* Access profile objects 
 
    - Go to **Access -> Profiles/Policies -> Access Profiles...**
    - Click “Copy” hyperlink on the *lab2-proxy* line
@@ -24,7 +24,6 @@ Task 1 – Build a VIP with an Access Policy allowing access to VMware and Citri
 
 #. View the characteristics of the *lab5-webtop* and *lab3-lb-sf* Access policies. To consolidate Citrix and VMware access, the subsequent steps will incorporate the components from Citrix policy into the copy of the VMware policy.
 
-   - View the VM_LAB_2_LB_SF Access profile. The subsequent steps will integrate the required components from that Citrix  policy with the copy of the VM_LAB_1_PCOIP we created (VDI_Combined_webtop- 
    - Go to **Access -> Profiles/Policies -> Access Profiles...**
    - On the *lab2-proxy* line, click **Edit** link. Review components and click **Close**
    - on the *lab3-lb-sf* line, click **Edit** link. Review components and click **Close**
@@ -37,21 +36,21 @@ Task 1 – Build a VIP with an Access Policy allowing access to VMware and Citri
 #. Add Citrix to the *Browser Resource Assign* on the *Full or Mobile Browser* branch
  
    - Click **Browser Resource Assign** object on the right end or the branch
-   - In the *Browser Resource Assign* pop-up, click “Add/Delete”
-   - Click *Remote Desktop...* tab 
-   - Select */Common/lab3-lb-sf.app/lab3-lb-sf_remote_desktop_1* checkbox. (Both check boxes should be selected)
-   - Press *Update* button
-   - Pres the “Save” button
+   - In the *Browser Resource Assign* pop-up, click **Add/Delete**
+   - Click **Remote Desktop...** tab 
+   - Select **/Common/lab3-lb-sf.app/lab3-lb-sf_remote_desktop_1** checkbox. (Both check boxes should be selected)
+   - Click **Update** button
+   - Click **Save** button
    
-.. image:: /_static/class1/image41.png
-   :align: center
+   .. image:: /_static/class1/image41.png
+      :align: center
 
 #. Add a branch for the *Citrix Receiver* to *Client Type*
 
    - Click **Client Type** object
    - Click **Branch Rules** tab
    - Click **Add Branch Rule** button
-   - In the *Name* field, replace *Branch Rule 1* with ``Citrix Receiver``
+   - In *Name* field, replace *Branch Rule 1* with ``Citrix Receiver``
    - Under *Citrix Receiver*, click **change** link
    - Click **Add Expression** button
    - In the *UI Mode is* pulldown, select **Citrix Reciever**
@@ -80,8 +79,8 @@ Task 1 – Build a VIP with an Access Policy allowing access to VMware and Citri
    - Click **Finished** button
    - Click **Save** button
 
-.. image:: /_static/class1/image42.png
-   :align: center
+   .. image:: /_static/class1/image42.png
+      :align: center
    
 #. Add an *AD Auth* object to the Citrix Receiver branch
 
@@ -111,8 +110,8 @@ Task 1 – Build a VIP with an Access Policy allowing access to VMware and Citri
    - Click **Save** button
    - On the upper right corner, click **Close** the VPE. Click **YES** on the IE pop-up
 
-.. image:: /_static/class1/image43.png
-   :align: center
+   .. image:: /_static/class1/image43.png
+      :align: center
 
 #. Apply the access policy
 
@@ -120,8 +119,8 @@ Task 1 – Build a VIP with an Access Policy allowing access to VMware and Citri
    - Select all policies, click **Apply**
    - Verify that all Access policies status is Green (refresh browser if necessary) 
 
-.. image:: /_static/class1/image45.png
-   :align: center
+   .. image:: /_static/class1/image45.png
+      :align: center
 
 #. Create a Virtual Server for PCOIP traffic 
 
@@ -220,9 +219,9 @@ Test Connectivity
 
 #. In *Select client* pop-up, click **VMware Horizon** button
 
-# Verify that the VMware desktop functions
+#. Verify that the VMware desktop functions
 
-# Close *View* client
+#. Close *View* client
 
-.. image:: /_static/class1/image44.png
-   :align: center
+   .. image:: /_static/class1/image44.png
+      :align: center

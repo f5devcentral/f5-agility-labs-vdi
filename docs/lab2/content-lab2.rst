@@ -1,4 +1,4 @@
-TASK 1 – Access Horizon Desktop environment without F5 
+Task 1 – Access Horizon Desktop environment without F5 
 =============================================================
 
 Access the Horizon Desktop using the Horizon Client on the internal network. Horizon Client points directly to a Connection Server. This step is to verify Horizon is working and BIG-IP is not in the path. (Internal use case without F5 integration)
@@ -44,7 +44,7 @@ Access the Horizon Desktop using the Horizon Client on the internal network. Hor
 #. Keep the RDP session open for Task 2
 
 
-TASK 2 – Load Balance Connection Servers
+Task 2 – Load Balance Connection Servers
 ========================================
 
 Use the F5 iApp for VMware View to configure a load balancing environment for the Connection Servers. This will increase the number of
@@ -77,35 +77,35 @@ Deploy the iApp
 
    .. NOTE:: The tables for iApp questions list just the values that need to change
 
-   +------------------------------------------------------------------------------+----------------------------------------------------+
-   | **Welcome to the iAPP template for VMware Horizon**                          | Please review                                      |
-   +------------------------------------------------------------------------------+----------------------------------------------------+
-   | **Big-IP Access Policy Manager**                                                                                                  |
-   +------------------------------------------------------------------------------+----------------------------------------------------+
-   | Do you want to deploy BIG-IP Access Policy Manager?                          | *No, do not deploy BIG-IP Access...*               |
-   +------------------------------------------------------------------------------+----------------------------------------------------+
-   | **In *SSL Encryption* section**                                                                                                   |
-   +------------------------------------------------------------------------------+----------------------------------------------------+
-   | How should the BIG-IP system handle encrypted traffic?                       | *Terminate SSL for clients, ...(SSL-bridging)*     |
-   +------------------------------------------------------------------------------+----------------------------------------------------+
-   | Which SSL certificate do you want to use?                                    | *wild.demoisfun.net.crt* (Cert preloaded)          |
-   +------------------------------------------------------------------------------+----------------------------------------------------+
-   | Which SSL private key do you want to use                                     | *wild.demoisfun.net.key* (Key preloaded)           |
-   +------------------------------------------------------------------------------+----------------------------------------------------+
-   | **Virtual Servers and Pools**                                                                                                     |
-   +------------------------------------------------------------------------------+----------------------------------------------------+
-   | What virtual server IP address...?                                           | ``192.168.10.150``                                 |
-   +------------------------------------------------------------------------------+----------------------------------------------------+
-   | What FQDN will clients use to access the View environment?                   | ``vmw-LB-CS.demoisfun.net``                        |
-   +------------------------------------------------------------------------------+----------------------------------------------------+
-   | Which Servers should be included in this pool                                | ``192.168.10.210``                                 |
-   |                                                                              |                                                    |
-   |                                                                              | ``192.168.10.211``                                 |
-   +------------------------------------------------------------------------------+----------------------------------------------------+
-   | **Application Health**                                                                                                            |
-   +------------------------------------------------------------------------------+----------------------------------------------------+
-   | Create a new health monitor or use existing one?                             | ``https``                                          |
-   +------------------------------------------------------------------------------+----------------------------------------------------+
+   +--------------------------------------------------------------------+----------------------------------------------------+
+   | **Welcome to the iAPP template for VMware Horizon**                | Please review                                      |
+   +--------------------------------------------------------------------+----------------------------------------------------+
+   | **Big-IP Access Policy Manager**                                                                                        |
+   +--------------------------------------------------------------------+----------------------------------------------------+
+   | Do you want to deploy BIG-IP Access Policy Manager?                | *No, do not deploy BIG-IP Access...*               |
+   +--------------------------------------------------------------------+----------------------------------------------------+
+   | **SSL Encryption**                                                                                                      |
+   +--------------------------------------------------------------------+----------------------------------------------------+
+   | How should the BIG-IP system handle encrypted traffic?             | *Terminate SSL for clients, ...(SSL-bridging)*     |
+   +--------------------------------------------------------------------+----------------------------------------------------+
+   | Which SSL certificate do you want to use?                          | *wild.demoisfun.net.crt* (Cert preloaded)          |
+   +--------------------------------------------------------------------+----------------------------------------------------+
+   | Which SSL private key do you want to use                           | *wild.demoisfun.net.key* (Key preloaded)           |
+   +--------------------------------------------------------------------+----------------------------------------------------+
+   | **Virtual Servers and Pools**                                                                                           |
+   +--------------------------------------------------------------------+----------------------------------------------------+
+   | What virtual server IP address...?                                 | ``192.168.10.150``                                 |
+   +--------------------------------------------------------------------+----------------------------------------------------+
+   | What FQDN will clients use to access the View environment?         | ``vmw-LB-CS.demoisfun.net``                        |
+   +--------------------------------------------------------------------+----------------------------------------------------+
+   | Which Servers should be included in this pool                      | ``192.168.10.210``                                 |
+   |                                                                    |                                                    |
+   |                                                                    | ``192.168.10.211``                                 |
+   +--------------------------------------------------------------------+----------------------------------------------------+
+   | **Application Health**                                                                                                  |
+   +--------------------------------------------------------------------+----------------------------------------------------+
+   | Create a new health monitor or use existing one?                   | ``https``                                          |
+   +--------------------------------------------------------------------+----------------------------------------------------+
 
 #. Click the **Finished** button
 
@@ -113,7 +113,7 @@ Deploy the iApp
 View the objects which were created by the iApp
 -----------------------------------------------
 
-#. Select the Components tab at the top of the page
+#. Click **Components** tab at the top of the page
 
    |image6|
 
@@ -192,7 +192,7 @@ Test the connection server load balancing using both VMware View client and brow
 #.  Close the IE *VMWare Horizon* tab
 
 
-TASK 3 – Access Horizon Desktop through the UAG Server
+Task 3 – Access Horizon Desktop through the UAG Server
 ======================================================
 
 Access Horizon Desktop from external network through UAG. (External use case without F5 integration)
@@ -236,7 +236,7 @@ Access Horizon Desktop from external network through UAG. (External use case wit
 #.  Close the IE *VMware Horizon* tab
 
 
-TASK 4 – Load Balance UAG Servers
+Task 4 – Load Balance UAG Servers
 ======================================
 
 Use the F5 iApp for VMware Horizon to configure a load balancing UAG's. This will increase the number of UAG servers available to external  users and load balance access to these resources (External use case with F5 load balancing)
@@ -340,7 +340,7 @@ Configure UAG to use load balance address
 
 #. Click **Save**
 
-#. Repeat for the other UAG *vmw-uag1b* at ``https://192.168.10.215:9443/admin``
+#. Make same changes for the other UAG *vmw-uag1b* at ``https://192.168.10.215:9443/admin``
 
 
 Test the UAG load balancing using Horizon and HTML5 client access methods
@@ -382,7 +382,7 @@ Test the UAG load balancing using Horizon and HTML5 client access methods
 
 
 
-TASK 5 – BIG-IP proxy View traffic in place of UAG
+Task 5 – BIG-IP proxy View traffic in place of UAG
 ==================================================
 
 In this configuration, we will consolidate authentication, load balance and proxy View traffic on a single BIG-IP. This can bypass the UAG's to access View desktop from external network. 

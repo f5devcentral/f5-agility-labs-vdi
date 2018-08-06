@@ -1,4 +1,4 @@
-TASK 1 – Access Terminal Server from external network
+Task 1 – Access Terminal Server from external network
 =====================================================
 
 .. figure:: /_static/class1/image_lab4task1.png
@@ -54,31 +54,31 @@ Deploy iApp
 
 #. In the Template pulldown, select ``f5.microsoft_rds_remote_access.v1.0.3``
 
-   +--------------------------------------------------------------------------+--------------------------------------------------------+
-   | **Welcome to the iApp template for Remote Desktop Gateway* section**     | *Please review*                                        |
-   +--------------------------------------------------------------------------+--------------------------------------------------------+
-   | **Template Options**                                                                                                              |
-   +--------------------------------------------------------------------------+--------------------------------------------------------+
-   | Do you want to deploy BIG-IP APM as an RDP proxy?                        | *Yes, deploy BIG-IP Access Policy...*                  |
-   +--------------------------------------------------------------------------+--------------------------------------------------------+
-   | **Access Policy Manager**                                                                                                         |
-   +--------------------------------------------------------------------------+--------------------------------------------------------+
-   | Do you want to create a new AAA server, or use an existing AAA server?   | *AD1*                                                  |
-   +--------------------------------------------------------------------------+--------------------------------------------------------+
-   | Which NTLM machine account should be used for Kerberos delegation?       | *AD1-f5-bigip1a*                                       |
-   +--------------------------------------------------------------------------+--------------------------------------------------------+
-   | **SSL Encryption**                                                                                                                |
-   +--------------------------------------------------------------------------+--------------------------------------------------------+
-   | Which SSL certificate do you want to use?                                | ``wild.demoisfun.net.crt``                             |
-   +--------------------------------------------------------------------------+--------------------------------------------------------+
-   | Which SSL private key do you want to use?                                | ``wild.demoisfun.net.key``                             |
-   +--------------------------------------------------------------------------+--------------------------------------------------------+
-   | **Virtual Servers and Pools**                                                                                                     |
-   +--------------------------------------------------------------------------+--------------------------------------------------------+
-   | What IP address do you want to use for the virtual server(s)?            | ``192.168.3.156``                                      |
-   +--------------------------------------------------------------------------+--------------------------------------------------------+
-   | How would you like to secure your hosts?                                 | *Allow any host*                                       |
-   +--------------------------------------------------------------------------+--------------------------------------------------------+
+   +-------------------------------------------------------------------+--------------------------------------------------------+
+   | **Welcome to the iApp template for Remote Desktop Gateway**       | *Please review*                                        |
+   +-------------------------------------------------------------------+--------------------------------------------------------+
+   | **Template Options**                                                                                                       |
+   +-------------------------------------------------------------------+--------------------------------------------------------+
+   | Do you want to deploy BIG-IP APM as an RDP proxy?                 | *Yes, deploy BIG-IP Access Policy...*                  |
+   +-------------------------------------------------------------------+--------------------------------------------------------+
+   | **Access Policy Manager**                                                                                                  |
+   +-------------------------------------------------------------------+--------------------------------------------------------+
+   | Do you want to create...or use an existing AAA server?            | *AD1*                                                  |
+   +-------------------------------------------------------------------+--------------------------------------------------------+
+   | Which NTLM machine account...for Kerberos delegation?             | *AD1-f5-bigip1a*                                       |
+   +-------------------------------------------------------------------+--------------------------------------------------------+
+   | **SSL Encryption**                                                                                                         |
+   +-------------------------------------------------------------------+--------------------------------------------------------+
+   | Which SSL certificate do you want to use?                         | ``wild.demoisfun.net.crt``                             |
+   +-------------------------------------------------------------------+--------------------------------------------------------+
+   | Which SSL private key do you want to use?                         | ``wild.demoisfun.net.key``                             |
+   +-------------------------------------------------------------------+--------------------------------------------------------+
+   | **Virtual Servers and Pools**                                                                                              |
+   +-------------------------------------------------------------------+--------------------------------------------------------+
+   | What IP address do you want to use for the virtual server(s)?     | ``192.168.3.156``                                      |
+   +-------------------------------------------------------------------+--------------------------------------------------------+
+   | How would you like to secure your hosts?                          | *Allow any host*                                       |
+   +-------------------------------------------------------------------+--------------------------------------------------------+
 
 #. Click **Finished** button
 
@@ -90,25 +90,25 @@ Test the RDS proxy functionality using RDS Client
 
 #. Launch RDS client (on desktop)
 
-#. Click the **Show Options** pulldown
+#. Click **Show Options** pulldown
 
-#. Click the **Advanced** tab
+#. Click **Advanced** tab
 
-#. Click the **Settings** button
+#. Click **Settings** button
 
-#. In the *"RDS Gateway..."* window,
+#. In *"RDS Gateway..."* window,
 
    - Select **"Use these RD Gateway..."** radio button
    - In *Server name* field, type in ``msft-proxy-rds.demoisfun.net``. Note this address resolves to the address *192.168.3.156* which        was configured in the iApp
-   - Select the **"Use my RD Gateway credential..."** checkbox
+   - Select **"Use my RD Gateway credential..."** checkbox
    - Click **OK**
 
         |image16|
 
-#. Under *"General"* tab, in the *"Computer"* field, type in the name of the
+#. Under *"General"* tab, in *"Computer"* field, type in the name of the
    host you want to RDP to which is ``dif-termsvr.demoisfun.net``
 
-   - In the *User name* field, type in ``demoisfun\demo01``
+   - In *User name* field, type in ``demoisfun\demo01``
    - Click **Save**
    - Click **Connect**
    
@@ -138,6 +138,9 @@ Test the RDS proxy functionality using RDS Client
 
 .. |image15| image:: /_static/class1/image17.png
 .. |image16| image:: /_static/class1/image18.png
+   :scale: 80 %
 .. |image17| image:: /_static/class1/image19.png
+   :scale: 80 %
 .. |image18| image:: /_static/class1/image20.png
+   :scale: 80 %
 .. |image19| image:: /_static/class1/image21.png

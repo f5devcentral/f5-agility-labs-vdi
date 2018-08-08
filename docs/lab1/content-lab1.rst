@@ -56,7 +56,7 @@ To connect to jump hosts,
    Leave this connection for entire lab duration.
 
    +------------+--------------------------------------------------------------------+
-   | |image1|   | Username: ``agility`` (actual display name is *Student Agility)    |
+   | |image1|   | Username: ``agility`` (actual display name is *Student Agility*)   |
    |            |                                                                    |
    |            | Password: ``F5Agility``                                            |
    +------------+--------------------------------------------------------------------+
@@ -65,7 +65,7 @@ To connect to jump hosts,
    this connection for entire lab duration.
 
    +------------+--------------------------------------------------------------------+
-   | |image2|   | Username: ``agility`` (actual display name is *Student Agility*)    |
+   | |image2|   | Username: ``agility`` (actual display name is *Student Agility*)   |
    |            |                                                                    |
    |            | Password: ``F5Agility``                                            |
    +------------+--------------------------------------------------------------------+

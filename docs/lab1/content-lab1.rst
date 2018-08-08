@@ -1,13 +1,9 @@
 Jump Host
 =========
 
-Please follow the instructions provided by the instructor to start your
-lab and access your jump host.
+Please follow the instructions provided by the instructor to start your lab and access your jump host.
 
-.. NOTE::
-	 All work for this lab will be performed exclusively from the Windows
-	 jumphost. No installation or interaction with your local system is
-	 required.
+.. NOTE:: All work for this lab will be performed exclusively from the Windows jumphost. No installation or interaction with your local system is required.
 
 
 Lab Network Setup
@@ -47,9 +43,9 @@ imagine you are sitting at your office desk. Likewise, viewing the
 *“home-pc”* session is like you are sitting at home, or anywhere outside
 of the company network.
 
-The lab is hosted in a cloud provider Ravello. Lab instructors will
+The lab is hosted in our cloud provider: Ravello. Lab instructors will
 provide a URL and a unique student number to access the environment.
-Each attendee is expected to have a computer with a modern browser and a
+Each attendee is expected to have a computer with a modern browser and an
 RDP client.
 
 To connect to jump hosts,
@@ -59,20 +55,20 @@ To connect to jump hosts,
 #. Scroll down and find *“corporate-pc”*. Choose to connect with RDP.
    Leave this connection for entire lab duration.
 
-   +------------+---------------------------+
-   | |image1|   | Username: ``agility``     |
-   |            |                           |
-   |            | Password: ``F5Agility``   |
-   +------------+---------------------------+
+   +------------+--------------------------------------------------------------------+
+   | |image1|   | Username: ``agility`` (actual display name is *Student Agility)    |
+   |            |                                                                    |
+   |            | Password: ``F5Agility``                                            |
+   +------------+--------------------------------------------------------------------+
 
 #. Scroll down and find *“home-pc”*. Choose to connect with RDP. Leave
    this connection for entire lab duration.
 
-   +------------+---------------------------+
-   | |image2|   | Username: ``agility``     |
-   |            |                           |
-   |            | Password: ``F5Agility``   |
-   +------------+---------------------------+
+   +------------+--------------------------------------------------------------------+
+   | |image2|   | Username: ``agility`` (actual display name is *Student Agility*)    |
+   |            |                                                                    |
+   |            | Password: ``F5Agility``                                            |
+   +------------+--------------------------------------------------------------------+
 
 .. |image1| image:: /_static/class1/image3.png
    :width: 1.86762in

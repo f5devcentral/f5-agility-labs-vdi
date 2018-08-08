@@ -125,12 +125,13 @@ View the objects which were created by the iApp
 
 #. Note that a persistence profile was created
 
-   - Check Match Across Services
+   - Click **lab2-lb-cs** to edit the object
+   - Check **Match Across Services**
    - Click **Update**
    - Note the error at the top of the page
 
 
-#. Return to *iApp -> Application Services*
+#. Return to *iApp -> Application Services* -> *lab2-lb-cs*
 
 #. Review the remaining parameters (any questions)
 
@@ -146,7 +147,7 @@ View the properties of the iApp
 
 #. Note the *Strict Updates* checkbox is selected
    
-   - Is this related to the screen when editing the persistence profile?
+   - Is this related to the error observed when editing the persistence profile?
    - What are the pro’s and con’s of unchecking this parameter?
    
 

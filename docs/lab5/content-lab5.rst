@@ -53,7 +53,8 @@ Task 1 – Build a VIP with an Access Policy allowing access to VMware and Citri
    - In *Name* field, replace *Branch Rule 1* with ``Citrix Receiver``
    - Under *Citrix Receiver*, click **change** link
    - Click **Add Expression** button
-   - In the *UI Mode is* pulldown, select **Citrix Reciever**
+   - In *Agent Sel* pulldown, select **UI Mode**
+   - In *UI Mode is* pulldown, select **Citrix Reciever**
    - Click **Add Expression** button
    - Click **Finished** button
    - Click **Save** button (this takes a while) 
@@ -131,23 +132,23 @@ Task 1 – Build a VIP with an Access Policy allowing access to VMware and Citri
    - Configure the VIP with the variables below
 
    +--------------------------------------------+-----------------------------+
-   |General Properties                                                        |
+   | **General Properties**                                                   |
    +--------------------------------------------+-----------------------------+
-   |Name                                        | lab5-pcoip                  |
+   | Name                                       | ``lab5-pcoip``              |
    +--------------------------------------------+-----------------------------+
-   |Destination Address/Mask                    | 192.168.3.157               |
+   | Destination Address/Mask                   | ``192.168.3.157``           |
    +--------------------------------------------+-----------------------------+
-   |Service Port                                | 4172                        +
+   | Service Port                               | ``4172``                    |
    +--------------------------------------------+-----------------------------+
-   |Configuration                                                             |
+   | **Configuration**                                                        |
    +--------------------------------------------+-----------------------------+
-   |Protocol                                    | UDP                         |
+   | Protocol                                   | *UDP*                       |
    +--------------------------------------------+-----------------------------+
-   |Source Address Translation                  | Auto Map                    |
+   | Source Address Translation                 | *Auto Map*                  |
    +--------------------------------------------+-----------------------------+
-   |Access Policy                                                             |
+   | **Access Policy**                                                        |
    +--------------------------------------------+-----------------------------+
-   |Application Tunnels (Jave & Per-App VPN)    | Enabled - Checked           |
+   | Application Tunnels (Jave & Per-App VPN)   | Enabled - **Checked**       |
    +--------------------------------------------+-----------------------------+
 
    - Click **Finished** button
@@ -167,7 +168,7 @@ Task 1 – Build a VIP with an Access Policy allowing access to VMware and Citri
    +--------------------------------------------+----------------------------+
    |Destination Address/Mask                    | ``192.168.3.157``          |
    +--------------------------------------------+----------------------------+
-   |Service Port                                | ``443``                    +
+   |Service Port                                | ``443``                    |
    +--------------------------------------------+----------------------------+
    |**Configuration**                                                        |
    +--------------------------------------------+----------------------------+

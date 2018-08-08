@@ -71,9 +71,9 @@ Deploy the iApp
 #. Create a new Application Service. On the left side menu
 
    - Go to **iApps -> Application Services -> Applications**
-   - On the right side of the GUI, click the **Create** button
-   - In the *Name* field, type in ``lab2-lb-cs``
-   - In the *Template* pulldown, select ``f5.vmware_view.v1.5.4``
+   - On the right side of the GUI, click **Create** button
+   - In *Name* field, type in ``lab2-lb-cs``
+   - In *Template* pulldown, select ``f5.vmware_view.v1.5.4``
 
    .. NOTE:: The tables for iApp questions list just the values that need to change
 

@@ -417,7 +417,7 @@ Deploy the iApp
    +------------------------------------------------------------------------------+----------------------------------------------------+
    | Do you want to deploy BIG-IP Access Policy Manager?                          | *Yes, deploy BIG-IP Access Policy Manager*         |
    +------------------------------------------------------------------------------+----------------------------------------------------+
-   | Do you want to support browser based connections...HTML5 client?             | *Yes, support HTML 5 view clientless browser       |
+   | Do you want to support browser based connections...HTML5 client?             | *Yes, support HTML 5 view clientless browser*      |
    +------------------------------------------------------------------------------+----------------------------------------------------+
    | What is the NetBIOS domain name for your environment?                        | ``demoisfun``                                      |
    +------------------------------------------------------------------------------+----------------------------------------------------+

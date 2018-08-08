@@ -153,9 +153,8 @@ Deploy the iApp
 #. Create a new Application Service.
 
    - **iApps -> Application Services -> Applications**
-   - Click the **Create** button
-   - In the *Name* field, type in ``lab3-lb-sf``
-   - Click the **Reconfigure** link near the top
+   - Click **lab3-lb-sf**
+   - Click **Reconfigure** link near the top
    
    +-------------------------------------------------------------------------+--------------------------+
    | **BIG-IP Access Policy Manager**                                                                   |
@@ -186,7 +185,7 @@ Test Connectivity
 
 #.  Click on **Agility** to launch XenDesktop
 
-#.  On the bottome pop-up, click Open to launch the Citrix ICA client
+#.  On the bottom pop-up, click **Citrix Receiver** to launch the Citrix ICA client
 
 #.  Verify that desktop is functional
 

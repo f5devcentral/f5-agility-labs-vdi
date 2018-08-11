@@ -1,5 +1,5 @@
 ********************************
-Lab 1: Solutions for VMware View
+Lab 2 - Solutions for VMware View
 ********************************
 
 The purpose of this lab is to build out 3 basic VMware View
@@ -11,10 +11,10 @@ functionality.
 
 -  Familiarize student with F5 iApp templates
 
-Estimated completion time: 60 Minutes
+Estimated completion time: *60 Minutes*
 
 .. toctree::
    :maxdepth: 1
    :glob:
 
-   lab*
+   content*

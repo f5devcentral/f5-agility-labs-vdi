@@ -1,3 +1,4 @@
+
 Jump Host
 =========
 
@@ -11,7 +12,7 @@ lab and access your jump host.
 
 
 Lab Network Setup
-~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^
 
 In the interest of focusing as much time as possible on this solution,
 we have provided some resources and basic setup ahead of time. These
@@ -32,14 +33,17 @@ are:
 .. figure:: /_static/class1/image2.png
    :scale: 50 %
    :align: center
+   
+   Figure 1 - Complete lab setup
+  
 
 Connect to Lab Environment 
-~~~~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Please refer to Figure 1. We are simulating internal and external access
-to VDI with 2 Windows desktops. When viewing the “corporate-pc” session,
+to VDI with 2 Windows desktops. When viewing the *“corporate-pc”* session,
 imagine you are sitting at your office desk. Likewise, viewing the
-“home-pc” session is like you are sitting at home, or anywhere outside
+*“home-pc”* session is like you are sitting at home, or anywhere outside
 of the company network.
 
 The lab is hosted in a cloud provider Ravello. Lab instructors will
@@ -47,9 +51,9 @@ provide a URL and a unique student number to access the environment.
 Each attendee is expected to have a computer with a modern browser and a
 RDP client.
 
-1. Open browser and go to the URL provided by instructor.
+#. Open browser and go to the URL provided by instructor.
 
-2. Scroll down and find “corporate-pc”. Choose to connect with RDP.
+#. Scroll down and find “corporate-pc”. Choose to connect with RDP.
    Leave this connection for entire lab duration.
 
    +------------+---------------------------+
@@ -58,7 +62,7 @@ RDP client.
    |            | Password: ``F5Agility``   |
    +------------+---------------------------+
 
-1. Scroll down and find “home-pc”. Choose to connect with RDP. Leave
+#. Scroll down and find “home-pc”. Choose to connect with RDP. Leave
    this connection for entire lab duration.
 
    +------------+---------------------------+
@@ -67,9 +71,6 @@ RDP client.
    |            | Password: ``F5Agility``   |
    +------------+---------------------------+
 
-.. |image0| image:: /_static/class1/image2.png
-   :width: 7.38542in
-   :height: 4.13542in
 .. |image1| image:: /_static/class1/image3.png
    :width: 1.86762in
    :height: 2.56604in

@@ -1,6 +1,3 @@
-Lab 1.1: Solutions for VMware View
-==================================
-
 Task 1 – Access VMware View Desktop environment without F5 
 -----------------------------------------------------------
 

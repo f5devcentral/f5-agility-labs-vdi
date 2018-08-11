@@ -1,5 +1,6 @@
-201: VDI the F5 Way
-===================
+***************
+Getting Started
+***************
 
 Welcome to “VDI the F5 Way” lab. This guide is intended to complement
 lecture material provided by “VDI the F5 Way” course. The purpose of
@@ -9,7 +10,8 @@ will take you through the process of current deployment to a simplified
 and more secure topology with F5 BIG-IP.
 
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 4
+   :caption: Contents:
    :glob:
 
    labinfo
